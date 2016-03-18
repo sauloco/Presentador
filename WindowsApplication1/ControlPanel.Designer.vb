@@ -144,6 +144,7 @@ Partial Class ControlPanel
         Me.StatusBar = New System.Windows.Forms.StatusStrip()
         Me.ToolTipDestination = New System.Windows.Forms.ToolStripStatusLabel()
         Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
+        Me.btnReacomodar = New System.Windows.Forms.Button()
         CType(Me.numCanciones, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.trackPDFZoom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -628,7 +629,7 @@ Partial Class ControlPanel
         Me.btnConfiguracion.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnConfiguracion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnConfiguracion.Location = New System.Drawing.Point(1228, 0)
+        Me.btnConfiguracion.Location = New System.Drawing.Point(1166, 0)
         Me.btnConfiguracion.Name = "btnConfiguracion"
         Me.btnConfiguracion.Size = New System.Drawing.Size(50, 25)
         Me.btnConfiguracion.TabIndex = 4
@@ -918,7 +919,7 @@ Partial Class ControlPanel
         Me.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnMinimizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMinimizar.Location = New System.Drawing.Point(1278, 0)
+        Me.btnMinimizar.Location = New System.Drawing.Point(1216, 0)
         Me.btnMinimizar.Name = "btnMinimizar"
         Me.btnMinimizar.Size = New System.Drawing.Size(50, 25)
         Me.btnMinimizar.TabIndex = 5
@@ -1215,7 +1216,7 @@ Partial Class ControlPanel
         Me.btnBug.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnBug.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.btnBug.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBug.Location = New System.Drawing.Point(1177, 0)
+        Me.btnBug.Location = New System.Drawing.Point(1115, 0)
         Me.btnBug.Name = "btnBug"
         Me.btnBug.Size = New System.Drawing.Size(50, 25)
         Me.btnBug.TabIndex = 73
@@ -1741,12 +1742,30 @@ Partial Class ControlPanel
         Me.AxWindowsMediaPlayer1.TabIndex = 68
         Me.AxWindowsMediaPlayer1.Visible = False
         '
+        'btnReacomodar
+        '
+        Me.btnReacomodar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnReacomodar.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.btnReacomodar.BackgroundImage = Global.Presentador.My.Resources.Resources.AjustarImagen
+        Me.btnReacomodar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnReacomodar.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnReacomodar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.btnReacomodar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReacomodar.Location = New System.Drawing.Point(1272, 0)
+        Me.btnReacomodar.Name = "btnReacomodar"
+        Me.btnReacomodar.Size = New System.Drawing.Size(50, 25)
+        Me.btnReacomodar.TabIndex = 75
+        Me.btnReacomodar.TabStop = False
+        Me.btnReacomodar.UseVisualStyleBackColor = False
+        '
         'ControlPanel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1378, 780)
+        Me.Controls.Add(Me.btnReacomodar)
         Me.Controls.Add(Me.pnlCitas)
         Me.Controls.Add(Me.StatusBar)
         Me.Controls.Add(Me.AxWindowsMediaPlayer1)
@@ -1944,4 +1963,5 @@ Partial Class ControlPanel
     Friend WithEvents cmbIdioma As ComboBox
     Friend WithEvents lblIdioma As Label
     Friend WithEvents chkMelodias As CheckBox
+    Friend WithEvents btnReacomodar As Button
 End Class

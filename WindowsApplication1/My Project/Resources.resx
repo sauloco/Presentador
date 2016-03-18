@@ -1433,10 +1433,10 @@
     <value>Panel de Control</value>
   </data>
   <data name="str_version_EN" xml:space="preserve">
-    <value>1.1.0</value>
+    <value>1.1.1</value>
   </data>
   <data name="str_version_ES_AR" xml:space="preserve">
-    <value>1.1.0</value>
+    <value>1.1.1</value>
   </data>
   <data name="text_chkMelodias_EN" xml:space="preserve">
     <value>Prefer melodic version</value>
@@ -1449,5 +1449,11 @@
   </data>
   <data name="ttip_chkMelodias_ES_AR" xml:space="preserve">
     <value>Al elegir la canción buscará primero la versión melódica, si no existe una versión melódica para dicha canción aún se elegirá automáticamente la versión de piano.</value>
+  </data>
+  <data name="ttip_btnReacomodar_EN" xml:space="preserve">
+    <value>Adjust window to fit in screen.</value>
+  </data>
+  <data name="ttip_btnReacomodar_ES_AR" xml:space="preserve">
+    <value>Volver a acomodar la ventana para ajustar a la posición actual.</value>
   </data>
 </root>

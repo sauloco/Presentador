@@ -2009,7 +2009,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 1.1.0.
+        '''  Looks up a localized string similar to 1.1.1.
         '''</summary>
         Friend ReadOnly Property str_version_EN() As String
             Get
@@ -2018,7 +2018,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 1.1.0.
+        '''  Looks up a localized string similar to 1.1.1.
         '''</summary>
         Friend ReadOnly Property str_version_ES_AR() As String
             Get
@@ -3769,6 +3769,24 @@ Namespace My.Resources
         Friend ReadOnly Property ttip_btnPDFZoomOut_ES_AR() As String
             Get
                 Return ResourceManager.GetString("ttip_btnPDFZoomOut_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Adjust window to fit in screen..
+        '''</summary>
+        Friend ReadOnly Property ttip_btnReacomodar_EN() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnReacomodar_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Volver a acomodar la ventana para ajustar a la posición actual..
+        '''</summary>
+        Friend ReadOnly Property ttip_btnReacomodar_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnReacomodar_ES_AR", resourceCulture)
             End Get
         End Property
         

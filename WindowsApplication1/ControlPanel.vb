@@ -974,6 +974,9 @@
     Private Sub ControlPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Revisa la integridad de todas las cadenas de texto utilizadas en el sistema
         'intentarDev()
+        Me.ResizeRedraw = True
+        Me.StartPosition = FormStartPosition.Manual
+        Me.Location = Screen.AllScreens(0).Bounds.Location + New Point(Screen.PrimaryScreen.WorkingArea.Left, Screen.PrimaryScreen.WorkingArea.Top)
         'Para que el maximizar no tape la barra de inicio lo hago a mano.
         Me.Width = Screen.PrimaryScreen.WorkingArea.Width
         Me.Height = Screen.PrimaryScreen.WorkingArea.Height
@@ -1066,8 +1069,7 @@
             Next
         Next
         establecerIdioma(LanguageID)
-        'Actualiza el nombre de la ventana
-        lblTitle.Text = "            " + devuelveResourceString("str", "programa_nombre") + " " + devuelveResourceString("str", "version") + " | " + devuelveResourceString("str", "ventana_panel_control_nombre")
+
         'verifica que no haya una versión superior
         revisarVersion()
     End Sub
@@ -1091,6 +1093,8 @@
         For Each libro In libros.Split("|")
             ComboBox1.Items.Add(libro)
         Next
+        'Actualiza el nombre de la ventana
+        lblTitle.Text = "            " + devuelveResourceString("str", "programa_nombre") + " " + devuelveResourceString("str", "version") + " | " + devuelveResourceString("str", "ventana_panel_control_nombre")
     End Sub
     Private Sub customTooltipShow(sender As Object, e As EventArgs) Handles _
         btnBug.MouseEnter,
@@ -1152,8 +1156,8 @@
         btnCancelarCita.MouseEnter,
         ComboBox1.MouseEnter,
         btnAgregaCitaLista.MouseEnter,
-        chkMelodias.MouseEnter
-
+        chkMelodias.MouseEnter,
+        btnReacomodar.MouseEnter
         Dim texto As String = My.Resources.ResourceManager.GetObject("ttip_" + sender.Name + "_" + LanguageID)
         If Not texto = "" Then
             ToolTipDestination.Text = texto
@@ -1219,7 +1223,8 @@
         btnCancelarCita.MouseLeave,
         ComboBox1.MouseLeave,
         btnAgregaCitaLista.MouseLeave,
-        chkMelodias.MouseLeave
+        chkMelodias.MouseLeave,
+        btnReacomodar.MouseLeave
         ToolTipDestination.Text = ""
     End Sub
     Private Sub restableceValoresPorDefecto()
@@ -1734,5 +1739,14 @@
         devuelveResourceString("msgb_title", "atencion")
         devuelveResourceString("msgb_title", "atencion")
 
+    End Sub
+
+    Private Sub lblTitle_DoubleClick(sender As Object, e As EventArgs) Handles lblTitle.DoubleClick, btnReacomodar.Click
+        Me.StartPosition = FormStartPosition.Manual
+        Me.Location = Screen.AllScreens(0).Bounds.Location + New Point(Screen.PrimaryScreen.WorkingArea.Left, Screen.PrimaryScreen.WorkingArea.Top)
+        Me.Width = Screen.PrimaryScreen.WorkingArea.Width
+        Me.Height = Screen.PrimaryScreen.WorkingArea.Height
+
+        Me.Refresh()
     End Sub
 End Class
