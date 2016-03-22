@@ -1403,10 +1403,10 @@
     <value>Idioma:</value>
   </data>
   <data name="str_actualizar_final_EN" xml:space="preserve">
-    <value>Do you want visit the download site?</value>
+    <value>Do you want start the download?</value>
   </data>
   <data name="str_actualizar_final_ES_AR" xml:space="preserve">
-    <value>¿Desea visitar el sitio de descarga?</value>
+    <value>¿Desea comenzar la descarga?</value>
   </data>
   <data name="str_actualizar_medio_EN" xml:space="preserve">
     <value> of Presentador is already available.</value>
@@ -1433,10 +1433,10 @@
     <value>Panel de Control</value>
   </data>
   <data name="str_version_EN" xml:space="preserve">
-    <value>1.1.1</value>
+    <value>1.2.1</value>
   </data>
   <data name="str_version_ES_AR" xml:space="preserve">
-    <value>1.1.1</value>
+    <value>1.2.1</value>
   </data>
   <data name="text_chkMelodias_EN" xml:space="preserve">
     <value>Prefer melodic version</value>
@@ -1455,5 +1455,29 @@
   </data>
   <data name="ttip_btnReacomodar_ES_AR" xml:space="preserve">
     <value>Volver a acomodar la ventana para ajustar a la posición actual.</value>
+  </data>
+  <data name="msgb_instalar_EN" xml:space="preserve">
+    <value>Are you sure to install it now? During the process the application will be closed.</value>
+  </data>
+  <data name="msgb_instalar_ES_AR" xml:space="preserve">
+    <value>¿Está seguro que desea comenzar la instalación en este momento? Se cerrará la aplicación durante el proceso.</value>
+  </data>
+  <data name="text_lblInstalarNuevaVersion_EN" xml:space="preserve">
+    <value>Install new version</value>
+  </data>
+  <data name="text_lblInstalarNuevaVersion_ES_AR" xml:space="preserve">
+    <value>Instalar nueva version</value>
+  </data>
+  <data name="msgb_instalacion_ya_lista_EN" xml:space="preserve">
+    <value>The new version's installer is already available in your device. Do you want start the instalation immediatly? The process just take a few minutes (if any)</value>
+  </data>
+  <data name="msgb_instalacion_ya_lista_ES_AR" xml:space="preserve">
+    <value>El archivo para instalar la nueva versión ya ha sido descargado previamente. ¿Desea comenzar la instalación en este momento? Solo tomará pocos minutos.</value>
+  </data>
+  <data name="msgb_instalar_no_archivo_EN" xml:space="preserve">
+    <value>Instalation file missing.</value>
+  </data>
+  <data name="msgb_instalar_no_archivo_ES_AR" xml:space="preserve">
+    <value>No se encontró el archivo de instalación.</value>
   </data>
 </root>

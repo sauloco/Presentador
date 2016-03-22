@@ -901,6 +901,60 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to The new version&apos;s installer is already available in your device. Do you want start the instalation immediatly? The process just take a few minutes (if any).
+        '''</summary>
+        Friend ReadOnly Property msgb_instalacion_ya_lista_EN() As String
+            Get
+                Return ResourceManager.GetString("msgb_instalacion_ya_lista_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to El archivo para instalar la nueva versión ya ha sido descargado previamente. ¿Desea comenzar la instalación en este momento? Solo tomará pocos minutos..
+        '''</summary>
+        Friend ReadOnly Property msgb_instalacion_ya_lista_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("msgb_instalacion_ya_lista_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Are you sure to install it now? During the process the application will be closed..
+        '''</summary>
+        Friend ReadOnly Property msgb_instalar_EN() As String
+            Get
+                Return ResourceManager.GetString("msgb_instalar_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to ¿Está seguro que desea comenzar la instalación en este momento? Se cerrará la aplicación durante el proceso..
+        '''</summary>
+        Friend ReadOnly Property msgb_instalar_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("msgb_instalar_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Instalation file missing..
+        '''</summary>
+        Friend ReadOnly Property msgb_instalar_no_archivo_EN() As String
+            Get
+                Return ResourceManager.GetString("msgb_instalar_no_archivo_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to No se encontró el archivo de instalación..
+        '''</summary>
+        Friend ReadOnly Property msgb_instalar_no_archivo_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("msgb_instalar_no_archivo_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to There aren&apos;t a valid file inside the especified path: .
         '''</summary>
         Friend ReadOnly Property msgb_no_hay_canciones_en_carpeta_EN() As String
@@ -1451,7 +1505,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Do you want visit the download site?.
+        '''  Looks up a localized string similar to Do you want start the download?.
         '''</summary>
         Friend ReadOnly Property str_actualizar_final_EN() As String
             Get
@@ -1460,7 +1514,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to ¿Desea visitar el sitio de descarga?.
+        '''  Looks up a localized string similar to ¿Desea comenzar la descarga?.
         '''</summary>
         Friend ReadOnly Property str_actualizar_final_ES_AR() As String
             Get
@@ -2009,7 +2063,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 1.1.1.
+        '''  Looks up a localized string similar to 1.2.1.
         '''</summary>
         Friend ReadOnly Property str_version_EN() As String
             Get
@@ -2018,7 +2072,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 1.1.1.
+        '''  Looks up a localized string similar to 1.2.1.
         '''</summary>
         Friend ReadOnly Property str_version_ES_AR() As String
             Get
@@ -2851,6 +2905,24 @@ Namespace My.Resources
         Friend ReadOnly Property text_lblIdioma_ES_AR() As String
             Get
                 Return ResourceManager.GetString("text_lblIdioma_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Install new version.
+        '''</summary>
+        Friend ReadOnly Property text_lblInstalarNuevaVersion_EN() As String
+            Get
+                Return ResourceManager.GetString("text_lblInstalarNuevaVersion_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Instalar nueva version.
+        '''</summary>
+        Friend ReadOnly Property text_lblInstalarNuevaVersion_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("text_lblInstalarNuevaVersion_ES_AR", resourceCulture)
             End Get
         End Property
         

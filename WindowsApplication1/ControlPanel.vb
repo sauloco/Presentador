@@ -1,4 +1,6 @@
 ﻿Public Class ControlPanel
+    'Valor fijo
+    Dim df_CarpetaRecursos = Microsoft.VisualBasic.FileIO.SpecialDirectories.MyDocuments + "\Presentaciones Recursos"
     ' POR DEFECTO
     Dim df_videoFilters As String = "*.mp4;*.webm;*.3gp".ToUpper
     Dim df_imageFilters As String = "*.bmp;*.jpg;*.png;*.gif;*.jpeg".ToUpper
@@ -8,8 +10,8 @@
     Dim df_sitioWOL As String = "http://wol.jw.org/es/"
     Dim df_sitioBroadcasting As String = "http://tv.jw.org/#es"
     Dim df_fileImageBackgroundDefault As String = "Por defecto"
-    Dim df_CarpetaCanciones As String = Microsoft.VisualBasic.FileIO.SpecialDirectories.MyDocuments + "\Presentaciones Recursos\Canciones\"
-    Dim df_CarpetaGrabaciones As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Presentaciones Recursos\Grabaciones\"
+    Dim df_CarpetaCanciones As String = df_CarpetaRecursos + "\Canciones\"
+    Dim df_CarpetaGrabaciones As String = df_CarpetaRecursos + "\Grabaciones\"
     Dim df_NombreArchivoCancionesAntes = "iasn_S_"
     Dim df_NombreArchivoCancionesDespues = ".mp3"
     Dim df_LanguageID = "ES_AR"
@@ -30,6 +32,7 @@
     Dim LanguageID = df_LanguageID
     Dim Melodias = df_Melodias
     ' Variables de entorno
+    Private WithEvents webClient As System.Net.WebClient
     Dim Presentacion As Presentacion
     Dim panelsTop As Integer = 299
     Dim panelLeft As Integer = 12
@@ -43,6 +46,7 @@
     Dim grabacionInteligentePausada As Boolean = False
     Dim PointerOverAudioTrack As Boolean = False
     Dim PointerOverVideoTrack As Boolean = False
+    Dim versionEnDescarga As String = ""
     Private Sub btnIniciaPresentador_Click(sender As Object, e As EventArgs) Handles btnIniciaPresentador.Click
         tooglePresentacion()
     End Sub
@@ -957,19 +961,43 @@
         lblNombreArchivo.Text = ""
     End Sub
     Private Sub revisarVersion()
-        Dim webClient As System.Net.WebClient = New System.Net.WebClient()
+        Dim webClient = New System.Net.WebClient()
         webClient.Encoding = System.Text.Encoding.UTF8
-        Dim sourceString As String = ""
+        versionEnDescarga = ""
         Try
-            sourceString = webClient.DownloadString("http://rusticit.com/presentador/version/")
-            If Not devuelveResourceString("str", "version") = sourceString Then
-                If MsgBox(devuelveResourceString("str", "actualizar_principio") + sourceString + devuelveResourceString("str", "actualizar_medio") + vbCrLf + devuelveResourceString("str", "actualizar_final"), MsgBoxStyle.YesNo, devuelveResourceString("msgb_title", "confirmacion")) = MsgBoxResult.Yes Then
-                    openURL("https://drive.google.com/folderview?id=0B6HC_BnW5KrqRW1rZHhRZ2ZTRWM&usp=sharing")
+            versionEnDescarga = webClient.DownloadString("http://rusticit.com/presentador/version/")
+
+            If Not devuelveResourceString("str", "version") = versionEnDescarga Then
+                If My.Computer.FileSystem.FileExists(df_CarpetaRecursos + "\Instalar Presentador_" + versionEnDescarga + ".exe") Then
+                    If MsgBox(devuelveResourceString("msgb", "instalacion_ya_lista"), MsgBoxStyle.YesNo, devuelveResourceString("msgb_title", "atencion")) = MsgBoxResult.Yes Then
+                        Process.Start(df_CarpetaRecursos + "\Instalar Presentador_" + versionEnDescarga + ".exe")
+                    Else
+                        lblInstalarNuevaVersion.Visible = True
+                    End If
+                    Exit Sub
+                End If
+
+                If MsgBox(devuelveResourceString("str", "actualizar_principio") + versionEnDescarga + devuelveResourceString("str", "actualizar_medio") + vbCrLf + devuelveResourceString("str", "actualizar_final"), MsgBoxStyle.YesNo, devuelveResourceString("msgb_title", "confirmacion")) = MsgBoxResult.Yes Then
+                    Dim remoteFileID As String = webClient.DownloadString("http://rusticit.com/presentador/archivo/")
+                    Dim UpdateFileDownload As Uri = New Uri("https://drive.google.com/uc?export=download&id=" + remoteFileID)
+                    AddHandler webClient.DownloadFileCompleted, AddressOf Downloaded
+                    DownloadingUpdateProgressBar.Visible = True
+                    webClient.DownloadFileAsync(UpdateFileDownload, df_CarpetaRecursos + "\Instalar Presentador_" + versionEnDescarga + ".exe")
+
+                    'openURL("https://drive.google.com/uc?export=download&id=" + remoteFileID)
                 End If
             End If
         Catch ex As Exception
             'MsgBox(ex.Message, MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, devuelveResourceString("msgb_title", "error"))
         End Try
+    End Sub
+    Private Sub dpc(ByVal sender As Object, ByVal e As System.Net.DownloadProgressChangedEventArgs) Handles webClient.DownloadProgressChanged
+        DownloadingUpdateProgressBar.Value = e.ProgressPercentage
+    End Sub
+
+    Private Sub Downloaded()
+        lblInstalarNuevaVersion.Visible = True
+        DownloadingUpdateProgressBar.Visible = False
     End Sub
     Private Sub ControlPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Revisa la integridad de todas las cadenas de texto utilizadas en el sistema
@@ -995,7 +1023,7 @@
             If Not keyExistente Then
                 My.Computer.Registry.ClassesRoot.CreateSubKey(".jwp").SetValue("", "JWP", Microsoft.Win32.RegistryValueKind.String)
                 My.Computer.Registry.ClassesRoot.CreateSubKey("JWP\shell\open\command").SetValue("", Application.ExecutablePath & " ""%l"" ", Microsoft.Win32.RegistryValueKind.String)
-                My.Computer.Registry.ClassesRoot.CreateSubKey("JWP\DefaultIcon").SetValue("", Microsoft.VisualBasic.FileIO.SpecialDirectories.MyDocuments + "\Presentaciones Recursos\VistaPrevia.ico", Microsoft.Win32.RegistryValueKind.ExpandString)
+                My.Computer.Registry.ClassesRoot.CreateSubKey("JWP\DefaultIcon").SetValue("", df_CarpetaRecursos + "\VistaPrevia.ico", Microsoft.Win32.RegistryValueKind.ExpandString)
             Else
                 If keyNecesitaActualizar Then
                     My.Computer.Registry.ClassesRoot.DeleteSubKeyTree("JWP\shell")
@@ -1007,8 +1035,8 @@
         End Try
 
         'Si no encuentro el archivo de configuración lo creo con los valores por defecto.
-        If My.Computer.FileSystem.FileExists(Microsoft.VisualBasic.FileIO.SpecialDirectories.MyDocuments + "\Presentaciones Recursos\config.jwpc") Then
-            Dim result = My.Computer.FileSystem.ReadAllText(Microsoft.VisualBasic.FileIO.SpecialDirectories.MyDocuments + "\Presentaciones Recursos\config.jwpc")
+        If My.Computer.FileSystem.FileExists(df_CarpetaRecursos + "\config.jwpc") Then
+            Dim result = My.Computer.FileSystem.ReadAllText(df_CarpetaRecursos + "\config.jwpc")
             Dim count = 1
             For Each line In result.Split(vbCr)
                 Select Case count
@@ -1252,10 +1280,10 @@
                                 + vbCr + sitioOficial + vbCr + sitioWOL + vbCr + sitioBroadcasting + vbCr +
                                 fileImageBackgroundDefault + vbCr + CarpetaCanciones + vbCr + NombreArchivoCancionesAntes +
                                 vbCr + NombreArchivoCancionesDespues + vbCr + CarpetaGrabaciones + vbCr + LanguageID + vbCr + Melodias.ToString
-        If Not My.Computer.FileSystem.DirectoryExists(Microsoft.VisualBasic.FileIO.SpecialDirectories.MyDocuments + "\Presentaciones Recursos\") Then
-            My.Computer.FileSystem.CreateDirectory(Microsoft.VisualBasic.FileIO.SpecialDirectories.MyDocuments + "\Presentaciones Recursos\")
+        If Not My.Computer.FileSystem.DirectoryExists(df_CarpetaRecursos) Then
+            My.Computer.FileSystem.CreateDirectory(df_CarpetaRecursos)
         End If
-        My.Computer.FileSystem.WriteAllText(Microsoft.VisualBasic.FileIO.SpecialDirectories.MyDocuments + "\Presentaciones Recursos\config.jwpc", result, False)
+        My.Computer.FileSystem.WriteAllText(df_CarpetaRecursos + "\config.jwpc", result, False)
         'Creo las carpetas por defecto del sistema.
         If Not My.Computer.FileSystem.DirectoryExists(df_CarpetaCanciones) Then
             My.Computer.FileSystem.CreateDirectory(df_CarpetaCanciones)
@@ -1264,8 +1292,8 @@
             My.Computer.FileSystem.CreateDirectory(df_CarpetaGrabaciones)
         End If
         'Copio el ícono
-        If Not My.Computer.FileSystem.FileExists(Microsoft.VisualBasic.FileIO.SpecialDirectories.MyDocuments + "\Presentaciones Recursos\VistaPrevia.ico") Then
-            FileSystem.FileCopy(Application.ExecutablePath + "\VistaPrevia.ico", Microsoft.VisualBasic.FileIO.SpecialDirectories.MyDocuments + "\Presentaciones Recursos\VistaPrevia.ico")
+        If Not My.Computer.FileSystem.FileExists(df_CarpetaRecursos + "\VistaPrevia.ico") Then
+            FileSystem.FileCopy(Application.ExecutablePath + "\VistaPrevia.ico", df_CarpetaRecursos + "\VistaPrevia.ico")
         End If
     End Sub
     Function presionoEnter(e As KeyPressEventArgs)
@@ -1748,5 +1776,17 @@
         Me.Height = Screen.PrimaryScreen.WorkingArea.Height
 
         Me.Refresh()
+    End Sub
+
+    Private Sub lblInstalarNuevaVersion_Click(sender As Object, e As EventArgs) Handles lblInstalarNuevaVersion.Click
+        If MsgBox(devuelveResourceString("msgb", "instalar"), MsgBoxStyle.YesNo, devuelveResourceString("msgb_title", "confirmacion")) = MsgBoxResult.No Then
+            Exit Sub
+        End If
+
+        If System.IO.File.Exists(df_CarpetaRecursos + "\Instalar Presentador_" + versionEnDescarga + ".exe") = True Then
+            Process.Start(df_CarpetaRecursos + "\Instalar Presentador_" + versionEnDescarga + ".exe")
+        Else
+            MsgBox(devuelveResourceString("msgb", "instalar_no_archivo"), MsgBoxStyle.Critical, devuelveResourceString("msgb_title", "error"))
+        End If
     End Sub
 End Class

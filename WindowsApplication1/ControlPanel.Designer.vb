@@ -142,6 +142,8 @@ Partial Class ControlPanel
         Me.timVideoPosicionActual = New System.Windows.Forms.Timer(Me.components)
         Me.Label18 = New System.Windows.Forms.Label()
         Me.StatusBar = New System.Windows.Forms.StatusStrip()
+        Me.DownloadingUpdateProgressBar = New System.Windows.Forms.ToolStripProgressBar()
+        Me.lblInstalarNuevaVersion = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTipDestination = New System.Windows.Forms.ToolStripStatusLabel()
         Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
         Me.btnReacomodar = New System.Windows.Forms.Button()
@@ -1718,13 +1720,33 @@ Partial Class ControlPanel
         Me.StatusBar.AutoSize = False
         Me.StatusBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.StatusBar.Dock = System.Windows.Forms.DockStyle.None
-        Me.StatusBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolTipDestination})
+        Me.StatusBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DownloadingUpdateProgressBar, Me.lblInstalarNuevaVersion, Me.ToolTipDestination})
         Me.StatusBar.Location = New System.Drawing.Point(3, 758)
         Me.StatusBar.Name = "StatusBar"
         Me.StatusBar.Size = New System.Drawing.Size(1375, 22)
         Me.StatusBar.SizingGrip = False
         Me.StatusBar.TabIndex = 74
         Me.StatusBar.Text = "StatusStrip1"
+        '
+        'DownloadingUpdateProgressBar
+        '
+        Me.DownloadingUpdateProgressBar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.DownloadingUpdateProgressBar.AutoSize = False
+        Me.DownloadingUpdateProgressBar.Enabled = False
+        Me.DownloadingUpdateProgressBar.Name = "DownloadingUpdateProgressBar"
+        Me.DownloadingUpdateProgressBar.Size = New System.Drawing.Size(100, 16)
+        Me.DownloadingUpdateProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee
+        Me.DownloadingUpdateProgressBar.Visible = False
+        '
+        'lblInstalarNuevaVersion
+        '
+        Me.lblInstalarNuevaVersion.ForeColor = System.Drawing.Color.White
+        Me.lblInstalarNuevaVersion.IsLink = True
+        Me.lblInstalarNuevaVersion.LinkColor = System.Drawing.Color.White
+        Me.lblInstalarNuevaVersion.Name = "lblInstalarNuevaVersion"
+        Me.lblInstalarNuevaVersion.Size = New System.Drawing.Size(121, 17)
+        Me.lblInstalarNuevaVersion.Text = "Instalar nueva versión"
+        Me.lblInstalarNuevaVersion.Visible = False
         '
         'ToolTipDestination
         '
@@ -1964,4 +1986,6 @@ Partial Class ControlPanel
     Friend WithEvents lblIdioma As Label
     Friend WithEvents chkMelodias As CheckBox
     Friend WithEvents btnReacomodar As Button
+    Friend WithEvents DownloadingUpdateProgressBar As ToolStripProgressBar
+    Friend WithEvents lblInstalarNuevaVersion As ToolStripStatusLabel
 End Class
