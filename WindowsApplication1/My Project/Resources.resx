@@ -467,7 +467,7 @@
     <value>Reportar un problema / Contactarse con el desarrollador</value>
   </data>
   <data name="ttip_btnBuscaCarpetaCanciones_ES_AR" xml:space="preserve">
-    <value>Busca la carpeta donde se han guardado los archivos de audio de la publicación "Canten alabanzas a Jehová". De la correcta configuración de este parámetro depende como funcionará el botón "Canción".</value>
+    <value>Busca la carpeta donde se han guardado los archivos de audio de la publicación "Cantemos a Jehová". De la correcta configuración de este parámetro depende como funcionará el botón "Canción".</value>
   </data>
   <data name="ttip_btnBuscaCarpetaGrabaciones_ES_AR" xml:space="preserve">
     <value>Establece la carpeta donde se guardarán los archivos de grabaciones de audio.</value>
@@ -788,7 +788,7 @@
     <value>Report a bug / Contact with the developer</value>
   </data>
   <data name="ttip_btnBuscaCarpetaCanciones_EN" xml:space="preserve">
-    <value>Search path to songs of "Song to Jehovah" files. Setting this content "Songs" will work properly.</value>
+    <value>Search path to songs of "Sing to Jehovah" files. Setting this content "Songs" will work properly.</value>
   </data>
   <data name="ttip_btnBuscaCarpetaGrabaciones_EN" xml:space="preserve">
     <value>Set recording files path suggest destination</value>
@@ -1151,16 +1151,16 @@
     <value>Presentación muestra contenido obtenido desde la WOL. Resultado de la búsqueda de '</value>
   </data>
   <data name="status_default_en_presentacion_EN" xml:space="preserve">
-    <value>Presentation is showing the default background image in second display.</value>
+    <value>Presentation is showing a black screen in the second display.</value>
   </data>
   <data name="status_default_en_presentacion_ES_AR" xml:space="preserve">
-    <value>Presentación muestra la imagen por defecto en la pantalla auxiliar.</value>
+    <value>Presentación se muestra con fondo negro en la pantalla auxiliar.</value>
   </data>
   <data name="status_default_en_presentacion_principal_EN" xml:space="preserve">
-    <value>Presentation is showing the default background image in first display. (Use Alt+tab combination to change the active window)</value>
+    <value>Presentation is showing a black screen in the first display. (Use Alt+Tab combination to change the active window)</value>
   </data>
   <data name="status_default_en_presentacion_principal_ES_AR" xml:space="preserve">
-    <value>Presentación muestra la imagen por defecto en la pantalla principal (Utilice las teclas Alt+Tab para cambiar de ventana.)</value>
+    <value>Presentación se muestra con fondo negro en la pantalla principal (Utilice las teclas Alt+Tab para cambiar de ventana.)</value>
   </data>
   <data name="status_imagen_en_presentacion_EN" xml:space="preserve">
     <value>Presentation is showing the image: </value>
@@ -1433,10 +1433,10 @@
     <value>Panel de Control</value>
   </data>
   <data name="str_version_EN" xml:space="preserve">
-    <value>1.2.1</value>
+    <value>1.3.1</value>
   </data>
   <data name="str_version_ES_AR" xml:space="preserve">
-    <value>1.2.1</value>
+    <value>1.3.1</value>
   </data>
   <data name="text_chkMelodias_EN" xml:space="preserve">
     <value>Prefer melodic version</value>
@@ -1479,5 +1479,17 @@
   </data>
   <data name="msgb_instalar_no_archivo_ES_AR" xml:space="preserve">
     <value>No se encontró el archivo de instalación.</value>
+  </data>
+  <data name="text_chkMostrarCancioneroPDF_EN" xml:space="preserve">
+    <value>Show PDF with lyrics while new songs are playing</value>
+  </data>
+  <data name="text_chkMostrarCancioneroPDF_ES_AR" xml:space="preserve">
+    <value>Mostrar cancionero PDF con canciones nuevas</value>
+  </data>
+  <data name="msgb_no_hay_cancion_EN" xml:space="preserve">
+    <value>The specified song isn't in the indicated folder.</value>
+  </data>
+  <data name="msgb_no_hay_cancion_ES_AR" xml:space="preserve">
+    <value>La canción especificada no se encuentra en la carpeta indicada.</value>
   </data>
 </root>

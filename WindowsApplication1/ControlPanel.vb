@@ -50,6 +50,10 @@
     Private Sub btnIniciaPresentador_Click(sender As Object, e As EventArgs) Handles btnIniciaPresentador.Click
         tooglePresentacion()
     End Sub
+    ''' <summary>
+    ''' Inicia o cierra el Presentador, según sea el caso, verificando si hay un segundo monitor, de lo contrario se mostrará en el monitor principal, previa confirmación.
+    ''' </summary>
+    ''' <returns>Devuelve true/false en caso de que se haya completado la tarea o no.</returns>
     Function tooglePresentacion()
         Dim monitorPrincipal As Boolean = False
         If Not PresentadorDisponible() Then
@@ -79,7 +83,7 @@
             Presentacion.FormBorderStyle = FormBorderStyle.None
             Presentacion.WindowState = FormWindowState.Maximized
             Presentacion.Show()
-            ActivarContenido(0)
+            ActivarContenido(-1)
             Me.btnIniciaPresentador.BackgroundImage = My.Resources.Resources.CerrarPresentador
             btnReestablecePresentador.Enabled = True
             btnReestablecePresentador.BackColor = Color.FromArgb(64, 0, 64)
@@ -88,6 +92,7 @@
             Return True
         Else
             Try
+                ActivarContenido(-1)
                 Presentacion.Close()
                 Presentacion.Dispose()
                 Presentacion = Nothing
@@ -104,6 +109,10 @@
             Return True
         End If
     End Function
+    ''' <summary>
+    ''' Verifica que la ventana de Presentación esté encendida.
+    ''' </summary>
+    ''' <returns>True si está encendida, False si no.</returns>
     Function PresentadorDisponible()
         Dim frmCollection = Application.OpenForms()
         For Each form As Form In frmCollection
@@ -113,6 +122,19 @@
         Next
         Return False
     End Function
+    ''' <summary>
+    ''' Activa el contenido en la pantalla de Presentación y los controles para dicho contenido en el Panel de Control.
+    ''' </summary>
+    ''' <param name="objeto">
+    ''' -1. Muestra el fondo negro
+    ''' 0. Muestra la imagen por defecto
+    ''' 1. Habilita el navegador web
+    ''' 2. Habilita el reproductor de video
+    ''' 3. Habilita el Adobe PDF Reader
+    ''' 4. Habilita la galería de imágenes
+    ''' 5. Habilita el reproductor de música
+    ''' </param>
+    ''' <returns></returns>
     Function ActivarContenido(objeto As Integer)
         If Not objeto = 5 Then
             If PresentadorDisponibleContinuar() Then
@@ -237,6 +259,9 @@
         End Select
         Return True
     End Function
+    ''' <summary>
+    ''' Esconde los paneles de control de contenido en Presentación
+    ''' </summary>
     Private Sub esconderPanelesControl()
         Dim control As Control = New Control()
         For Each control In Me.Controls
@@ -264,6 +289,10 @@
         End If
 
     End Sub
+    ''' <summary>
+    ''' Verifica que el archivo abierto haya sido editado o que no haya ningún archivo guardado pero la lista no esté vacía
+    ''' </summary>
+    ''' <returns>Si hay cambios retorna true sino false</returns>
     Function hayCambios()
         If nombreGlobalArchivo = "" Then
             Return False
@@ -281,6 +310,9 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
+    ''' <summary>
+    ''' Cuando no se guardan las configuraciones reestablece los campos y muestra lo que está guardado en este momento.
+    ''' </summary>
     Private Sub refrescaConfiguraciones()
         txtFormatoImagenes.Text = imageFilters
         txtFormatoVideos.Text = videoFilters
@@ -294,12 +326,17 @@
         txtCarpetaGrabaciones.Text = CarpetaGrabaciones
         txtPatronAntesCanciones.Text = NombreArchivoCancionesAntes
         txtPatronDespuesCanciones.Text = NombreArchivoCancionesDespues
+        chkMelodias.Checked = Melodias
         cmbIdioma.Text = LanguageID
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnConfiguracion.Click
         refrescaConfiguraciones()
         panConfigs.Visible = True
     End Sub
+    ''' <summary>
+    ''' En el label de status establece el texto que se mostrará.
+    ''' </summary>
+    ''' <param name="Status"></param>
     Public Sub MostrarStatus(Status As String)
         lblStatus.Text = devuelveResourceString("str", "lblStatus") + Status
     End Sub
@@ -309,6 +346,10 @@
             MostrarStatus(devuelveResourceString("status", "presentacion_imagen_por_defecto"))
         End If
     End Sub
+    ''' <summary>
+    ''' Cuando el presentador se encuentra apagado y se intenta reproducir un contenido solicita la información y luego la confirmación para encenderlo.
+    ''' </summary>
+    ''' <returns>El resultado de tooglePresentador o true si ya estaba encendido</returns>
     Function PresentadorDisponibleContinuar()
         If Not PresentadorDisponible() Then
             If MsgBox(devuelveResourceString("msgb", "presentacion_no_disponible_encender"), MsgBoxStyle.YesNo, devuelveResourceString("msgb_title", "atencion")) = MsgBoxResult.Yes Then
@@ -321,10 +362,9 @@
     End Function
     Private Sub btnAgregaCancion_Click(sender As Object, e As EventArgs) Handles btnAgregaCancion.Click
         esconderPaneles()
-        Dim counter As System.Collections.ObjectModel.ReadOnlyCollection(Of String)
-
-        counter = My.Computer.FileSystem.GetFiles(CarpetaCanciones)
-        numCanciones.Maximum = counter.Count
+        'Dim counter As System.Collections.ObjectModel.ReadOnlyCollection(Of String)
+        'counter = My.Computer.FileSystem.GetFiles(CarpetaCanciones)
+        'numCanciones.Maximum = counter.Count
         pnlCanciones.Left = panelLeft
         pnlCanciones.Top = panelsTop
         pnlCanciones.Visible = True
@@ -338,6 +378,10 @@
             chkAgregaAutomaticamente.Checked = False
         End If
     End Sub
+    ''' <summary>
+    ''' Inicia el presentador y muestra un sitio web en el navegador del mismo
+    ''' </summary>
+    ''' <param name="sitio">url del sitio a presentar</param>
     Private Sub abreWeb(sitio As String)
         If Not PresentadorDisponible() Then
             If MsgBox(devuelveResourceString("msgb", "presentacion_no_disponible_encender"), MsgBoxStyle.YesNo, devuelveResourceString("msgb_title", "atencion")) = MsgBoxResult.Yes Then
@@ -368,6 +412,12 @@
             chkAgregaAutomaticamente.Checked = False
         End If
     End Sub
+    ''' <summary>
+    ''' Agrega el contenido seleccionado a la lista
+    ''' </summary>
+    ''' <param name="tipo">Determina el tipo de contenido que se va a presentar</param>
+    ''' <param name="archivo">Dirección del contenido. Número de canción, URL o ubicación de archivo.</param>
+    ''' <param name="sender">Determina con precisión el tipo de contenido y el color a utilizar</param>
     Private Sub agregaContenidoALista(tipo As String, archivo As String, sender As Object)
         Dim lstItem = New ListViewItem()
         lstItem.Text = tipo
@@ -382,6 +432,10 @@
         agregarCancion(sender)
 
     End Sub
+    ''' <summary>
+    ''' Agrega el contenido tipo Canción a la lista y la reproduce si así se ha indicado.
+    ''' </summary>
+    ''' <param name="sender">El botón de canción se envía como parametro para establecer el color en la lista</param>
     Private Sub agregarCancion(sender As Object)
         agregaContenidoALista(devuelveResourceString("str", "cancion"), numCanciones.Value.ToString, sender)
         If chkAgregaAutomaticamente.Checked Then
@@ -389,17 +443,31 @@
             chkAgregaAutomaticamente.Checked = False
         End If
     End Sub
+    ''' <summary>
+    ''' Activa los controles de música, envía el archivo a reproducir y detiene la grabación
+    ''' </summary>
     Private Sub suenaMusica()
-        AxWindowsMediaPlayer1.URL = buscaArchivoCancion(numCanciones.Value)
-        ActivarContenido(5)
-        If chkGrabacionInteligente.Checked And grabacionEnProgreso Then
-            grabacionInteligentePausada = True
-            btnGrabarToogle.PerformClick()
+        Dim cancion As String = buscaArchivoCancion(numCanciones.Value)
+        If My.Computer.FileSystem.FileExists(cancion) Then
+            AxWindowsMediaPlayer1.URL = cancion
+            ActivarContenido(5)
+            If chkGrabacionInteligente.Checked And grabacionEnProgreso Then
+                grabacionInteligentePausada = True
+                btnGrabarToogle.PerformClick()
+            End If
+            AxWindowsMediaPlayer1.Ctlcontrols.play()
+            trackAudioPosition.Maximum = Integer.Parse(AxWindowsMediaPlayer1.currentMedia.duration) + 1
+            btnAudioPlayPausa.BackgroundImage = My.Resources.Pausa
+        Else
+            MsgBox(devuelveResourceString("msgb", "no_hay_cancion"), MsgBoxStyle.Information, devuelveResourceString("msgb_title", "atencion"))
         End If
-        AxWindowsMediaPlayer1.Ctlcontrols.play()
-        trackAudioPosition.Maximum = Integer.Parse(AxWindowsMediaPlayer1.currentMedia.duration) + 1
-        btnAudioPlayPausa.BackgroundImage = My.Resources.Pausa
+
     End Sub
+    ''' <summary>
+    ''' Busca el archivo de audio correspondiente al número ingresado de canción. Utiliza los parametros establecidos en el panel de configuración para ubicar la carpeta de recursos y el nombre de los archivos.
+    ''' </summary>
+    ''' <param name="numero">Número de canción a reproducir.</param>
+    ''' <returns>Una cadena de texto con el nombre completo de la ruta al archivo</returns>
     Function buscaArchivoCancion(numero As Integer)
         Dim auxCarpetaCanciones As String = CarpetaCanciones
         If Not auxCarpetaCanciones.EndsWith("\") Then
@@ -419,6 +487,12 @@
         End If
         Return auxCarpetaCanciones + NombreArchivoCancionesAntes + numero.ToString.Trim().PadLeft(3, "0") + NombreArchivoCancionesDespues
     End Function
+    ''' <summary>
+    ''' Devuelve una cadena de texto especificada en el archivo de recursos del proyecto, esto permite usar una nomenclatura para las cadenas en distintos idiomas. El nombre de dichas cadenas se forma con el siguiente formato {prefijo}_{nombre}_{codigo_idioma}
+    ''' </summary>
+    ''' <param name="prefijo">El prefijo se usa para separar las cadenas de caracteres en grupos como msgb, para contenidos de los mensajes, msgb_title, para los títulos de los mensajes, text y ttip para los textos y los tips de los controles y str para cualquier otro string. Por ejemplo.</param>
+    ''' <param name="nombre">El nombre del control o de la cadena para identificar</param>
+    ''' <returns>Devuelve el contenido del recurso especificado en el idioma deseado.</returns>
     Function devuelveResourceString(prefijo As String, nombre As String)
         If Not prefijo.EndsWith("_") Then
             prefijo += "_"
@@ -428,6 +502,9 @@
         End If
         Return My.Resources.ResourceManager.GetObject(prefijo + nombre + "_" + LanguageID)
     End Function
+    ''' <summary>
+    ''' Verifica el tipo de contenido seleccionado y lanza la función que lo reproduce o muestra
+    ''' </summary>
     Private Sub ejecutarContenido()
 
 
@@ -473,6 +550,10 @@
     Private Sub lstContenidos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstContenidos.DoubleClick
         ejecutarContenido()
     End Sub
+    ''' <summary>
+    ''' Habilita el Presentador para mostrar PDFs, activa el contenido, abre el archivo en el visor y establece el status correspondiente.
+    ''' </summary>
+    ''' <param name="archivo">Ubicación del archivo a mostrar</param>
     Private Sub muestraPDF(archivo As String)
         If PresentadorDisponibleContinuar() Then
             Presentacion.AxAcroPDF1.LoadFile(archivo)
@@ -489,6 +570,9 @@
         ComboBox1.SelectAll()
         ComboBox1.Focus()
     End Sub
+    ''' <summary>
+    ''' Oculta los paneles de controles de contenido en Presentación
+    ''' </summary>
     Private Sub esconderPaneles()
         Dim control As Control = New Control()
         For Each control In Me.Controls
@@ -501,6 +585,10 @@
     Private Sub btnAgregaCitaLista_Click(sender As Object, e As EventArgs) Handles btnAgregaCitaLista.Click
         agregarCita(sender)
     End Sub
+    ''' <summary>
+    ''' Verifica que haya algo escrito en el campo de cita bíblica y lo agrega a la lista, de lo contrario envía un error.
+    ''' </summary>
+    ''' <param name="sender">Envía el botón como parámetro para establecer el color en la lista</param>
     Private Sub agregarCita(sender As Object)
         If Not ComboBox1.Text.Equals("") Then
             agregaContenidoALista(devuelveResourceString("text", btnAgregaCita.Name), ComboBox1.Text, sender)
@@ -512,6 +600,9 @@
             MsgBox(devuelveResourceString("msgb", "no_versiculo"), MsgBoxStyle.OkOnly, devuelveResourceString("msgb_title", "atencion"))
         End If
     End Sub
+    ''' <summary>
+    ''' Habilita Presentación para mostrar citas bíblicas, solicita la cita desde la ubicación que esté configurada y la muestra o coloca el cartel de error.
+    ''' </summary>
     Private Sub muestraCita()
         If Not PresentadorDisponibleContinuar() Then
             Return
@@ -546,6 +637,10 @@
             chkAgregaAutomaticamente.Checked = False
         End If
     End Sub
+    ''' <summary>
+    ''' Habilita Presentación para mostrar imágenes, muestra los controles de imagen y muestra la imagen.
+    ''' </summary>
+    ''' <param name="imagen">Ruta completa a la ubicación del archivo de imagen a mostrar</param>
     Private Sub muestraImagen(imagen As String)
         If PresentadorDisponibleContinuar() Then
             Presentacion.PictureBox1.BackgroundImage = Image.FromFile(imagen)
@@ -560,6 +655,13 @@
             MostrarStatus(devuelveResourceString("status", "imagen_en_presentacion") + imagen)
         End If
     End Sub
+    ''' <summary>
+    ''' Permite seleccionar archivos del sistema de archivos de la PC para luego agregarlos a la lista.
+    ''' </summary>
+    ''' <param name="sender">Envía el control que ha realizado la llamada a esta función para luego establecer el estilo en la lista</param>
+    ''' <param name="tipo">Coloca el tipo en la primer columna de la lista</param>
+    ''' <param name="filtro">El filtro de extensiones disponibles de archivo a seleccionar en base al tipo de contenido</param>
+    ''' <returns>Arreglo de strings con las rutas a los archivos seleccionados</returns>
     Function buscarArchivos(sender As Object, tipo As String, filtro As String)
 
         Dim openFileDialog1 As New OpenFileDialog()
@@ -603,6 +705,10 @@
             chkAgregaAutomaticamente.Checked = False
         End If
     End Sub
+    ''' <summary>
+    ''' Prepara los controles y comienza a reproducir la música 
+    ''' </summary>
+    ''' <param name="musica"></param>
     Private Sub suenaOtraMusica(musica As String)
         AxWindowsMediaPlayer1.URL = musica
         ActivarContenido(5)
@@ -1002,12 +1108,7 @@
     Private Sub ControlPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Revisa la integridad de todas las cadenas de texto utilizadas en el sistema
         'intentarDev()
-        Me.ResizeRedraw = True
-        Me.StartPosition = FormStartPosition.Manual
-        Me.Location = Screen.AllScreens(0).Bounds.Location + New Point(Screen.PrimaryScreen.WorkingArea.Left, Screen.PrimaryScreen.WorkingArea.Top)
-        'Para que el maximizar no tape la barra de inicio lo hago a mano.
-        Me.Width = Screen.PrimaryScreen.WorkingArea.Width
-        Me.Height = Screen.PrimaryScreen.WorkingArea.Height
+        ajustarAPantalla()
         'Verifica si los archivos .jwp se abren con esta aplicación. En esta ubicación.
         Dim keyExistente = False
         Dim keyNecesitaActualizar = False
@@ -1123,6 +1224,7 @@
         Next
         'Actualiza el nombre de la ventana
         lblTitle.Text = "            " + devuelveResourceString("str", "programa_nombre") + " " + devuelveResourceString("str", "version") + " | " + devuelveResourceString("str", "ventana_panel_control_nombre")
+        Me.Text = devuelveResourceString("str", "programa_nombre") + " " + devuelveResourceString("str", "version") + " | " + devuelveResourceString("str", "ventana_panel_control_nombre")
     End Sub
     Private Sub customTooltipShow(sender As Object, e As EventArgs) Handles _
         btnBug.MouseEnter,
@@ -1293,7 +1395,9 @@
         End If
         'Copio el ícono
         If Not My.Computer.FileSystem.FileExists(df_CarpetaRecursos + "\VistaPrevia.ico") Then
-            FileSystem.FileCopy(Application.ExecutablePath + "\VistaPrevia.ico", df_CarpetaRecursos + "\VistaPrevia.ico")
+            Dim file As System.IO.FileInfo
+            file = My.Computer.FileSystem.GetFileInfo(Application.ExecutablePath)
+            FileSystem.FileCopy(file.DirectoryName + "\VistaPrevia.ico", df_CarpetaRecursos + "\VistaPrevia.ico")
         End If
     End Sub
     Function presionoEnter(e As KeyPressEventArgs)
@@ -1466,6 +1570,7 @@
             MsgBox(devuelveResourceString("msgb", "grabacion_compartir_no"), MsgBoxStyle.OkOnly, devuelveResourceString("msgb_title", "atencion"))
             Exit Sub
         End If
+
         Dim ShareAudio As SaveFileDialog = New SaveFileDialog()
         Dim archivo As String() = lblGrabarFilename.Text.Split("\")
         ShareAudio.FileName = archivo(archivo.Length - 1)
@@ -1541,6 +1646,7 @@
             trackVideoPosicionActual.Value = 0
             btnVideoPlayPausa.BackgroundImage = My.Resources.Play
             timVideoPosicionActual.Enabled = False
+            ActivarContenido(-1)
         Else
             trackVideoPosicionActual.Maximum = Convert.ToInt64(Presentacion.AxWindowsMediaPlayer1.currentMedia.duration) + 1
             lblVideoPosition.Text = Presentacion.AxWindowsMediaPlayer1.Ctlcontrols.currentPositionString + " / " + Presentacion.AxWindowsMediaPlayer1.currentMedia.durationString
@@ -1769,15 +1875,22 @@
 
     End Sub
 
-    Private Sub lblTitle_DoubleClick(sender As Object, e As EventArgs) Handles lblTitle.DoubleClick, btnReacomodar.Click
+    Private Sub Ajustar(sender As Object, e As EventArgs) Handles lblTitle.DoubleClick, btnReacomodar.Click
+        ajustarAPantalla()
+    End Sub
+    Private Sub ajustarAPantalla()
         Me.StartPosition = FormStartPosition.Manual
-        Me.Location = Screen.AllScreens(0).Bounds.Location + New Point(Screen.PrimaryScreen.WorkingArea.Left, Screen.PrimaryScreen.WorkingArea.Top)
-        Me.Width = Screen.PrimaryScreen.WorkingArea.Width
-        Me.Height = Screen.PrimaryScreen.WorkingArea.Height
-
+        Me.Location = Screen.PrimaryScreen.Bounds.Location + New Point(Screen.PrimaryScreen.WorkingArea.Left, Screen.PrimaryScreen.WorkingArea.Top)
+        Me.Size = New Drawing.Size(Screen.PrimaryScreen.WorkingArea.Width, Screen.PrimaryScreen.WorkingArea.Height)
+        btnCerrar.Left = Me.Width - btnCerrar.Width
+        btnReacomodar.Left = btnCerrar.Left - btnReacomodar.Width
+        btnMinimizar.Left = btnReacomodar.Left - btnMinimizar.Width
+        btnConfiguracion.Left = btnMinimizar.Left - btnConfiguracion.Width
+        btnBug.Left = btnConfiguracion.Left - btnBug.Width
+        'StatusBar.Width = Me.Width
+        'StatusBar.Left = 0
         Me.Refresh()
     End Sub
-
     Private Sub lblInstalarNuevaVersion_Click(sender As Object, e As EventArgs) Handles lblInstalarNuevaVersion.Click
         If MsgBox(devuelveResourceString("msgb", "instalar"), MsgBoxStyle.YesNo, devuelveResourceString("msgb_title", "confirmacion")) = MsgBoxResult.No Then
             Exit Sub
@@ -1789,4 +1902,14 @@
             MsgBox(devuelveResourceString("msgb", "instalar_no_archivo"), MsgBoxStyle.Critical, devuelveResourceString("msgb_title", "error"))
         End If
     End Sub
+
+    Private Sub ControlPanel_Scroll(sender As Object, e As ScrollEventArgs) Handles MyBase.Scroll
+        If e.ScrollOrientation = ScrollOrientation.HorizontalScroll Then
+            ajustarAPantalla()
+        End If
+    End Sub
+    Private Sub ControlPanel_MouseWheel(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseWheel
+        ajustarAPantalla()
+    End Sub
+
 End Class

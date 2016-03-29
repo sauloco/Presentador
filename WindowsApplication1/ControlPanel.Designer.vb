@@ -103,7 +103,6 @@ Partial Class ControlPanel
         Me.chkGrabacionInteligente = New System.Windows.Forms.CheckBox()
         Me.btnCancionCancelar = New System.Windows.Forms.Button()
         Me.btnCancelarCita = New System.Windows.Forms.Button()
-        Me.trackAudioPosition = New System.Windows.Forms.TrackBar()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.pnlCanciones = New System.Windows.Forms.Panel()
@@ -112,11 +111,13 @@ Partial Class ControlPanel
         Me.Label6 = New System.Windows.Forms.Label()
         Me.panelControlPDF = New System.Windows.Forms.Panel()
         Me.panelControlAudio = New System.Windows.Forms.Panel()
+        Me.trackAudioPosition = New System.Windows.Forms.TrackBar()
         Me.panelControlVideo = New System.Windows.Forms.Panel()
         Me.trackVideoPosicionActual = New System.Windows.Forms.TrackBar()
         Me.lblNombreArchivo = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.panConfigs = New System.Windows.Forms.Panel()
+        Me.chkMostrarCancioneroPDF = New System.Windows.Forms.CheckBox()
         Me.chkMelodias = New System.Windows.Forms.CheckBox()
         Me.cmbIdioma = New System.Windows.Forms.ComboBox()
         Me.lblIdioma = New System.Windows.Forms.Label()
@@ -151,11 +152,11 @@ Partial Class ControlPanel
         CType(Me.trackPDFZoom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.trackVideoVolume, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.trackAudioPosition, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlCanciones.SuspendLayout()
         Me.pnlCitas.SuspendLayout()
         Me.panelControlPDF.SuspendLayout()
         Me.panelControlAudio.SuspendLayout()
+        CType(Me.trackAudioPosition, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelControlVideo.SuspendLayout()
         CType(Me.trackVideoPosicionActual, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panConfigs.SuspendLayout()
@@ -191,11 +192,11 @@ Partial Class ControlPanel
         Me.lstContenidos.FullRowSelect = True
         Me.lstContenidos.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.lstContenidos.HideSelection = False
-        Me.lstContenidos.Location = New System.Drawing.Point(526, 217)
+        Me.lstContenidos.Location = New System.Drawing.Point(526, 218)
         Me.lstContenidos.MultiSelect = False
         Me.lstContenidos.Name = "lstContenidos"
         Me.lstContenidos.ShowItemToolTips = True
-        Me.lstContenidos.Size = New System.Drawing.Size(840, 450)
+        Me.lstContenidos.Size = New System.Drawing.Size(828, 404)
         Me.lstContenidos.TabIndex = 43
         Me.lstContenidos.UseCompatibleStateImageBehavior = False
         Me.lstContenidos.View = System.Windows.Forms.View.Details
@@ -214,7 +215,7 @@ Partial Class ControlPanel
         '
         Me.numCanciones.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numCanciones.Location = New System.Drawing.Point(280, 12)
-        Me.numCanciones.Maximum = New Decimal(New Integer() {142, 0, 0, 0})
+        Me.numCanciones.Maximum = New Decimal(New Integer() {200, 0, 0, 0})
         Me.numCanciones.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numCanciones.Name = "numCanciones"
         Me.numCanciones.Size = New System.Drawing.Size(74, 21)
@@ -574,7 +575,7 @@ Partial Class ControlPanel
         Me.btnCancelarConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelarConfig.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelarConfig.ForeColor = System.Drawing.Color.White
-        Me.btnCancelarConfig.Location = New System.Drawing.Point(308, 368)
+        Me.btnCancelarConfig.Location = New System.Drawing.Point(308, 386)
         Me.btnCancelarConfig.Name = "btnCancelarConfig"
         Me.btnCancelarConfig.Size = New System.Drawing.Size(110, 23)
         Me.btnCancelarConfig.TabIndex = 46
@@ -588,7 +589,7 @@ Partial Class ControlPanel
         Me.btnGuardarConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardarConfig.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardarConfig.ForeColor = System.Drawing.Color.White
-        Me.btnGuardarConfig.Location = New System.Drawing.Point(193, 368)
+        Me.btnGuardarConfig.Location = New System.Drawing.Point(193, 386)
         Me.btnGuardarConfig.Name = "btnGuardarConfig"
         Me.btnGuardarConfig.Size = New System.Drawing.Size(110, 23)
         Me.btnGuardarConfig.TabIndex = 93
@@ -615,7 +616,7 @@ Partial Class ControlPanel
         Me.btnReestablecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReestablecer.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReestablecer.ForeColor = System.Drawing.Color.White
-        Me.btnReestablecer.Location = New System.Drawing.Point(19, 368)
+        Me.btnReestablecer.Location = New System.Drawing.Point(19, 386)
         Me.btnReestablecer.Name = "btnReestablecer"
         Me.btnReestablecer.Size = New System.Drawing.Size(110, 23)
         Me.btnReestablecer.TabIndex = 96
@@ -631,7 +632,7 @@ Partial Class ControlPanel
         Me.btnConfiguracion.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnConfiguracion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnConfiguracion.Location = New System.Drawing.Point(1166, 0)
+        Me.btnConfiguracion.Location = New System.Drawing.Point(1820, 0)
         Me.btnConfiguracion.Name = "btnConfiguracion"
         Me.btnConfiguracion.Size = New System.Drawing.Size(50, 25)
         Me.btnConfiguracion.TabIndex = 4
@@ -653,14 +654,13 @@ Partial Class ControlPanel
         '
         'btnLimpiaItem
         '
-        Me.btnLimpiaItem.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnLimpiaItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnLimpiaItem.BackgroundImage = Global.Presentador.My.Resources.Resources.Eliminar
         Me.btnLimpiaItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnLimpiaItem.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnLimpiaItem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnLimpiaItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLimpiaItem.Location = New System.Drawing.Point(1204, 161)
+        Me.btnLimpiaItem.Location = New System.Drawing.Point(1192, 161)
         Me.btnLimpiaItem.Name = "btnLimpiaItem"
         Me.btnLimpiaItem.Size = New System.Drawing.Size(50, 50)
         Me.btnLimpiaItem.TabIndex = 40
@@ -668,14 +668,13 @@ Partial Class ControlPanel
         '
         'btnValidarContenido
         '
-        Me.btnValidarContenido.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnValidarContenido.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnValidarContenido.BackgroundImage = Global.Presentador.My.Resources.Resources.ValidarTodo
         Me.btnValidarContenido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnValidarContenido.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnValidarContenido.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnValidarContenido.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnValidarContenido.Location = New System.Drawing.Point(1316, 161)
+        Me.btnValidarContenido.Location = New System.Drawing.Point(1304, 161)
         Me.btnValidarContenido.Name = "btnValidarContenido"
         Me.btnValidarContenido.Size = New System.Drawing.Size(50, 50)
         Me.btnValidarContenido.TabIndex = 42
@@ -683,14 +682,13 @@ Partial Class ControlPanel
         '
         'btnBajarItem
         '
-        Me.btnBajarItem.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnBajarItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnBajarItem.BackgroundImage = Global.Presentador.My.Resources.Resources.FlechaAbajo
         Me.btnBajarItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnBajarItem.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnBajarItem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnBajarItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBajarItem.Location = New System.Drawing.Point(1148, 161)
+        Me.btnBajarItem.Location = New System.Drawing.Point(1136, 161)
         Me.btnBajarItem.Name = "btnBajarItem"
         Me.btnBajarItem.Size = New System.Drawing.Size(50, 50)
         Me.btnBajarItem.TabIndex = 39
@@ -726,14 +724,13 @@ Partial Class ControlPanel
         '
         'btnSubirItem
         '
-        Me.btnSubirItem.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSubirItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnSubirItem.BackgroundImage = Global.Presentador.My.Resources.Resources.FlechaArriba
         Me.btnSubirItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnSubirItem.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnSubirItem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnSubirItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSubirItem.Location = New System.Drawing.Point(1092, 161)
+        Me.btnSubirItem.Location = New System.Drawing.Point(1080, 161)
         Me.btnSubirItem.Name = "btnSubirItem"
         Me.btnSubirItem.Size = New System.Drawing.Size(50, 50)
         Me.btnSubirItem.TabIndex = 38
@@ -741,14 +738,13 @@ Partial Class ControlPanel
         '
         'btnLimpiarContenido
         '
-        Me.btnLimpiarContenido.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnLimpiarContenido.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnLimpiarContenido.BackgroundImage = Global.Presentador.My.Resources.Resources.LimpiarLista
         Me.btnLimpiarContenido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnLimpiarContenido.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnLimpiarContenido.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnLimpiarContenido.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLimpiarContenido.Location = New System.Drawing.Point(1260, 161)
+        Me.btnLimpiarContenido.Location = New System.Drawing.Point(1248, 161)
         Me.btnLimpiarContenido.Name = "btnLimpiarContenido"
         Me.btnLimpiarContenido.Size = New System.Drawing.Size(50, 50)
         Me.btnLimpiarContenido.TabIndex = 41
@@ -921,7 +917,7 @@ Partial Class ControlPanel
         Me.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnMinimizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMinimizar.Location = New System.Drawing.Point(1216, 0)
+        Me.btnMinimizar.Location = New System.Drawing.Point(1870, 0)
         Me.btnMinimizar.Name = "btnMinimizar"
         Me.btnMinimizar.Size = New System.Drawing.Size(50, 25)
         Me.btnMinimizar.TabIndex = 5
@@ -937,7 +933,7 @@ Partial Class ControlPanel
         Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.Location = New System.Drawing.Point(1328, 0)
+        Me.btnCerrar.Location = New System.Drawing.Point(1970, 0)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(50, 25)
         Me.btnCerrar.TabIndex = 6
@@ -1188,7 +1184,7 @@ Partial Class ControlPanel
         Me.lblAudioPosition.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.lblAudioPosition.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAudioPosition.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.lblAudioPosition.Location = New System.Drawing.Point(583, 50)
+        Me.lblAudioPosition.Location = New System.Drawing.Point(568, 50)
         Me.lblAudioPosition.Name = "lblAudioPosition"
         Me.lblAudioPosition.Size = New System.Drawing.Size(86, 13)
         Me.lblAudioPosition.TabIndex = 36
@@ -1202,7 +1198,7 @@ Partial Class ControlPanel
         Me.lblVideoPosition.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.lblVideoPosition.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblVideoPosition.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.lblVideoPosition.Location = New System.Drawing.Point(583, 50)
+        Me.lblVideoPosition.Location = New System.Drawing.Point(574, 49)
         Me.lblVideoPosition.Name = "lblVideoPosition"
         Me.lblVideoPosition.Size = New System.Drawing.Size(86, 13)
         Me.lblVideoPosition.TabIndex = 37
@@ -1218,7 +1214,7 @@ Partial Class ControlPanel
         Me.btnBug.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnBug.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.btnBug.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBug.Location = New System.Drawing.Point(1115, 0)
+        Me.btnBug.Location = New System.Drawing.Point(1770, 0)
         Me.btnBug.Name = "btnBug"
         Me.btnBug.Size = New System.Drawing.Size(50, 25)
         Me.btnBug.TabIndex = 73
@@ -1282,19 +1278,6 @@ Partial Class ControlPanel
         Me.btnCancelarCita.TabIndex = 46
         Me.btnCancelarCita.UseVisualStyleBackColor = False
         '
-        'trackAudioPosition
-        '
-        Me.trackAudioPosition.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.trackAudioPosition.AutoSize = False
-        Me.trackAudioPosition.BackColor = System.Drawing.Color.Coral
-        Me.trackAudioPosition.Location = New System.Drawing.Point(224, 0)
-        Me.trackAudioPosition.Maximum = 204
-        Me.trackAudioPosition.Name = "trackAudioPosition"
-        Me.trackAudioPosition.Size = New System.Drawing.Size(445, 50)
-        Me.trackAudioPosition.TabIndex = 35
-        Me.trackAudioPosition.TickStyle = System.Windows.Forms.TickStyle.Both
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -1323,9 +1306,9 @@ Partial Class ControlPanel
         Me.pnlCanciones.Controls.Add(Me.btnAgregarCancionLista)
         Me.pnlCanciones.Controls.Add(Me.numCanciones)
         Me.pnlCanciones.Controls.Add(Me.Label5)
-        Me.pnlCanciones.Location = New System.Drawing.Point(12, 309)
+        Me.pnlCanciones.Location = New System.Drawing.Point(12, 292)
         Me.pnlCanciones.Name = "pnlCanciones"
-        Me.pnlCanciones.Size = New System.Drawing.Size(478, 42)
+        Me.pnlCanciones.Size = New System.Drawing.Size(478, 49)
         Me.pnlCanciones.TabIndex = 43
         Me.pnlCanciones.Visible = False
         '
@@ -1385,17 +1368,30 @@ Partial Class ControlPanel
         Me.panelControlAudio.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.panelControlAudio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.panelControlAudio.Controls.Add(Me.lblAudioPosition)
         Me.panelControlAudio.Controls.Add(Me.trackAudioPosition)
+        Me.panelControlAudio.Controls.Add(Me.lblAudioPosition)
         Me.panelControlAudio.Controls.Add(Me.btnAudioMute)
         Me.panelControlAudio.Controls.Add(Me.TrackBar1)
         Me.panelControlAudio.Controls.Add(Me.btnAudioPlayPausa)
         Me.panelControlAudio.ForeColor = System.Drawing.SystemColors.ControlText
         Me.panelControlAudio.Location = New System.Drawing.Point(694, 92)
         Me.panelControlAudio.Name = "panelControlAudio"
-        Me.panelControlAudio.Size = New System.Drawing.Size(672, 63)
+        Me.panelControlAudio.Size = New System.Drawing.Size(660, 63)
         Me.panelControlAudio.TabIndex = 57
         Me.panelControlAudio.Visible = False
+        '
+        'trackAudioPosition
+        '
+        Me.trackAudioPosition.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.trackAudioPosition.AutoSize = False
+        Me.trackAudioPosition.BackColor = System.Drawing.Color.Coral
+        Me.trackAudioPosition.Location = New System.Drawing.Point(224, -1)
+        Me.trackAudioPosition.Maximum = 204
+        Me.trackAudioPosition.Name = "trackAudioPosition"
+        Me.trackAudioPosition.Size = New System.Drawing.Size(430, 50)
+        Me.trackAudioPosition.TabIndex = 37
+        Me.trackAudioPosition.TickStyle = System.Windows.Forms.TickStyle.Both
         '
         'panelControlVideo
         '
@@ -1411,7 +1407,7 @@ Partial Class ControlPanel
         Me.panelControlVideo.ForeColor = System.Drawing.SystemColors.ControlText
         Me.panelControlVideo.Location = New System.Drawing.Point(694, 92)
         Me.panelControlVideo.Name = "panelControlVideo"
-        Me.panelControlVideo.Size = New System.Drawing.Size(672, 63)
+        Me.panelControlVideo.Size = New System.Drawing.Size(660, 63)
         Me.panelControlVideo.TabIndex = 58
         Me.panelControlVideo.Visible = False
         '
@@ -1424,7 +1420,7 @@ Partial Class ControlPanel
         Me.trackVideoPosicionActual.Location = New System.Drawing.Point(279, 0)
         Me.trackVideoPosicionActual.Maximum = 100
         Me.trackVideoPosicionActual.Name = "trackVideoPosicionActual"
-        Me.trackVideoPosicionActual.Size = New System.Drawing.Size(390, 50)
+        Me.trackVideoPosicionActual.Size = New System.Drawing.Size(378, 50)
         Me.trackVideoPosicionActual.TabIndex = 32
         Me.trackVideoPosicionActual.TickStyle = System.Windows.Forms.TickStyle.Both
         '
@@ -1455,6 +1451,7 @@ Partial Class ControlPanel
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.panConfigs.AutoScroll = True
         Me.panConfigs.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.panConfigs.Controls.Add(Me.chkMostrarCancioneroPDF)
         Me.panConfigs.Controls.Add(Me.chkMelodias)
         Me.panConfigs.Controls.Add(Me.cmbIdioma)
         Me.panConfigs.Controls.Add(Me.lblIdioma)
@@ -1495,9 +1492,21 @@ Partial Class ControlPanel
         Me.panConfigs.Controls.Add(Me.lblConfiguracion)
         Me.panConfigs.Location = New System.Drawing.Point(12, 356)
         Me.panConfigs.Name = "panConfigs"
-        Me.panConfigs.Size = New System.Drawing.Size(480, 399)
+        Me.panConfigs.Size = New System.Drawing.Size(480, 353)
         Me.panConfigs.TabIndex = 70
         Me.panConfigs.Visible = False
+        '
+        'chkMostrarCancioneroPDF
+        '
+        Me.chkMostrarCancioneroPDF.AutoSize = True
+        Me.chkMostrarCancioneroPDF.ForeColor = System.Drawing.Color.White
+        Me.chkMostrarCancioneroPDF.Location = New System.Drawing.Point(149, 339)
+        Me.chkMostrarCancioneroPDF.Name = "chkMostrarCancioneroPDF"
+        Me.chkMostrarCancioneroPDF.Size = New System.Drawing.Size(81, 17)
+        Me.chkMostrarCancioneroPDF.TabIndex = 103
+        Me.chkMostrarCancioneroPDF.Text = "CheckBox1"
+        Me.chkMostrarCancioneroPDF.UseVisualStyleBackColor = True
+        Me.chkMostrarCancioneroPDF.Visible = False
         '
         'chkMelodias
         '
@@ -1514,7 +1523,7 @@ Partial Class ControlPanel
         '
         Me.cmbIdioma.FormattingEnabled = True
         Me.cmbIdioma.Items.AddRange(New Object() {"ES_AR", "EN"})
-        Me.cmbIdioma.Location = New System.Drawing.Point(149, 341)
+        Me.cmbIdioma.Location = New System.Drawing.Point(149, 359)
         Me.cmbIdioma.Name = "cmbIdioma"
         Me.cmbIdioma.Size = New System.Drawing.Size(269, 21)
         Me.cmbIdioma.TabIndex = 101
@@ -1524,7 +1533,7 @@ Partial Class ControlPanel
         Me.lblIdioma.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.lblIdioma.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIdioma.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.lblIdioma.Location = New System.Drawing.Point(5, 344)
+        Me.lblIdioma.Location = New System.Drawing.Point(5, 362)
         Me.lblIdioma.Name = "lblIdioma"
         Me.lblIdioma.Size = New System.Drawing.Size(139, 13)
         Me.lblIdioma.TabIndex = 100
@@ -1640,7 +1649,7 @@ Partial Class ControlPanel
         Me.lblTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lblTitle.Location = New System.Drawing.Point(0, 0)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(1378, 25)
+        Me.lblTitle.Size = New System.Drawing.Size(2020, 25)
         Me.lblTitle.TabIndex = 0
         Me.lblTitle.Text = "            Presentador 1.1.0 | Panel de Control"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1655,7 +1664,7 @@ Partial Class ControlPanel
         Me.panelControlImagen.ForeColor = System.Drawing.SystemColors.ControlText
         Me.panelControlImagen.Location = New System.Drawing.Point(694, 91)
         Me.panelControlImagen.Name = "panelControlImagen"
-        Me.panelControlImagen.Size = New System.Drawing.Size(548, 63)
+        Me.panelControlImagen.Size = New System.Drawing.Size(660, 63)
         Me.panelControlImagen.TabIndex = 71
         Me.panelControlImagen.Visible = False
         '
@@ -1670,9 +1679,9 @@ Partial Class ControlPanel
         Me.PanelDeGrabacion.Controls.Add(Me.btnGrabarCompartir)
         Me.PanelDeGrabacion.Controls.Add(Me.btnGrabarToogle)
         Me.PanelDeGrabacion.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.PanelDeGrabacion.Location = New System.Drawing.Point(526, 699)
+        Me.PanelDeGrabacion.Location = New System.Drawing.Point(526, 653)
         Me.PanelDeGrabacion.Name = "PanelDeGrabacion"
-        Me.PanelDeGrabacion.Size = New System.Drawing.Size(784, 56)
+        Me.PanelDeGrabacion.Size = New System.Drawing.Size(828, 56)
         Me.PanelDeGrabacion.TabIndex = 72
         '
         'lblGrabarFilename
@@ -1707,7 +1716,7 @@ Partial Class ControlPanel
         Me.Label18.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.White
-        Me.Label18.Location = New System.Drawing.Point(525, 671)
+        Me.Label18.Location = New System.Drawing.Point(525, 625)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(204, 20)
         Me.Label18.TabIndex = 68
@@ -1721,9 +1730,9 @@ Partial Class ControlPanel
         Me.StatusBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.StatusBar.Dock = System.Windows.Forms.DockStyle.None
         Me.StatusBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DownloadingUpdateProgressBar, Me.lblInstalarNuevaVersion, Me.ToolTipDestination})
-        Me.StatusBar.Location = New System.Drawing.Point(3, 758)
+        Me.StatusBar.Location = New System.Drawing.Point(0, 745)
         Me.StatusBar.Name = "StatusBar"
-        Me.StatusBar.Size = New System.Drawing.Size(1375, 22)
+        Me.StatusBar.Size = New System.Drawing.Size(1360, 22)
         Me.StatusBar.SizingGrip = False
         Me.StatusBar.TabIndex = 74
         Me.StatusBar.Text = "StatusStrip1"
@@ -1757,7 +1766,7 @@ Partial Class ControlPanel
         'AxWindowsMediaPlayer1
         '
         Me.AxWindowsMediaPlayer1.Enabled = True
-        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(1291, 689)
+        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(1235, 698)
         Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
         Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
         Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(75, 23)
@@ -1773,7 +1782,7 @@ Partial Class ControlPanel
         Me.btnReacomodar.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnReacomodar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.btnReacomodar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnReacomodar.Location = New System.Drawing.Point(1272, 0)
+        Me.btnReacomodar.Location = New System.Drawing.Point(1920, 0)
         Me.btnReacomodar.Name = "btnReacomodar"
         Me.btnReacomodar.Size = New System.Drawing.Size(50, 25)
         Me.btnReacomodar.TabIndex = 75
@@ -1786,7 +1795,8 @@ Partial Class ControlPanel
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1378, 780)
+        Me.ClientSize = New System.Drawing.Size(1360, 768)
+        Me.Controls.Add(Me.pnlCanciones)
         Me.Controls.Add(Me.btnReacomodar)
         Me.Controls.Add(Me.pnlCitas)
         Me.Controls.Add(Me.StatusBar)
@@ -1806,7 +1816,6 @@ Partial Class ControlPanel
         Me.Controls.Add(Me.btnSubirItem)
         Me.Controls.Add(Me.btnLimpiarContenido)
         Me.Controls.Add(Me.btnReestablecePresentadorANegro)
-        Me.Controls.Add(Me.pnlCanciones)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.btnAbreTV)
         Me.Controls.Add(Me.btnAbreWOL)
@@ -1825,12 +1834,12 @@ Partial Class ControlPanel
         Me.Controls.Add(Me.btnMinimizar)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.lblTitle)
+        Me.Controls.Add(Me.lstContenidos)
+        Me.Controls.Add(Me.panConfigs)
         Me.Controls.Add(Me.panelControlAudio)
         Me.Controls.Add(Me.panelControlVideo)
         Me.Controls.Add(Me.panelControlPDF)
         Me.Controls.Add(Me.panelControlImagen)
-        Me.Controls.Add(Me.lstContenidos)
-        Me.Controls.Add(Me.panConfigs)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -1841,7 +1850,6 @@ Partial Class ControlPanel
         CType(Me.trackPDFZoom, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.trackVideoVolume, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.trackAudioPosition, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlCanciones.ResumeLayout(False)
         Me.pnlCanciones.PerformLayout()
         Me.pnlCitas.ResumeLayout(False)
@@ -1849,6 +1857,7 @@ Partial Class ControlPanel
         Me.panelControlPDF.ResumeLayout(False)
         Me.panelControlAudio.ResumeLayout(False)
         Me.panelControlAudio.PerformLayout()
+        CType(Me.trackAudioPosition, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelControlVideo.ResumeLayout(False)
         Me.panelControlVideo.PerformLayout()
         CType(Me.trackVideoPosicionActual, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1968,7 +1977,6 @@ Partial Class ControlPanel
     Friend WithEvents btnBuscaCarpetaGrabaciones As Button
     Friend WithEvents lblUbicacionGrabaciones As Label
     Friend WithEvents txtCarpetaGrabaciones As TextBox
-    Friend WithEvents trackAudioPosition As TrackBar
     Friend WithEvents lblAudioPosition As Label
     Friend WithEvents timAudioPosicionActual As Timer
     Friend WithEvents trackVideoPosicionActual As TrackBar
@@ -1988,4 +1996,6 @@ Partial Class ControlPanel
     Friend WithEvents btnReacomodar As Button
     Friend WithEvents DownloadingUpdateProgressBar As ToolStripProgressBar
     Friend WithEvents lblInstalarNuevaVersion As ToolStripStatusLabel
+    Friend WithEvents chkMostrarCancioneroPDF As CheckBox
+    Friend WithEvents trackAudioPosition As TrackBar
 End Class

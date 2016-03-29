@@ -955,6 +955,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to The specified song isn&apos;t in the indicated folder..
+        '''</summary>
+        Friend ReadOnly Property msgb_no_hay_cancion_EN() As String
+            Get
+                Return ResourceManager.GetString("msgb_no_hay_cancion_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to La canción especificada no se encuentra en la carpeta indicada..
+        '''</summary>
+        Friend ReadOnly Property msgb_no_hay_cancion_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("msgb_no_hay_cancion_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to There aren&apos;t a valid file inside the especified path: .
         '''</summary>
         Friend ReadOnly Property msgb_no_hay_canciones_en_carpeta_EN() As String
@@ -1271,7 +1289,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Presentation is showing the default background image in second display..
+        '''  Looks up a localized string similar to Presentation is showing a black screen in the second display..
         '''</summary>
         Friend ReadOnly Property status_default_en_presentacion_EN() As String
             Get
@@ -1280,7 +1298,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Presentación muestra la imagen por defecto en la pantalla auxiliar..
+        '''  Looks up a localized string similar to Presentación se muestra con fondo negro en la pantalla auxiliar..
         '''</summary>
         Friend ReadOnly Property status_default_en_presentacion_ES_AR() As String
             Get
@@ -1289,7 +1307,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Presentation is showing the default background image in first display. (Use Alt+tab combination to change the active window).
+        '''  Looks up a localized string similar to Presentation is showing a black screen in the first display. (Use Alt+Tab combination to change the active window).
         '''</summary>
         Friend ReadOnly Property status_default_en_presentacion_principal_EN() As String
             Get
@@ -1298,7 +1316,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Presentación muestra la imagen por defecto en la pantalla principal (Utilice las teclas Alt+Tab para cambiar de ventana.).
+        '''  Looks up a localized string similar to Presentación se muestra con fondo negro en la pantalla principal (Utilice las teclas Alt+Tab para cambiar de ventana.).
         '''</summary>
         Friend ReadOnly Property status_default_en_presentacion_principal_ES_AR() As String
             Get
@@ -2063,7 +2081,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 1.2.1.
+        '''  Looks up a localized string similar to 1.3.1.
         '''</summary>
         Friend ReadOnly Property str_version_EN() As String
             Get
@@ -2072,7 +2090,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 1.2.1.
+        '''  Looks up a localized string similar to 1.3.1.
         '''</summary>
         Friend ReadOnly Property str_version_ES_AR() As String
             Get
@@ -2527,6 +2545,24 @@ Namespace My.Resources
         Friend ReadOnly Property text_chkMelodias_ES_AR() As String
             Get
                 Return ResourceManager.GetString("text_chkMelodias_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Show PDF with lyrics while new songs are playing.
+        '''</summary>
+        Friend ReadOnly Property text_chkMostrarCancioneroPDF_EN() As String
+            Get
+                Return ResourceManager.GetString("text_chkMostrarCancioneroPDF_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Mostrar cancionero PDF con canciones nuevas.
+        '''</summary>
+        Friend ReadOnly Property text_chkMostrarCancioneroPDF_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("text_chkMostrarCancioneroPDF_ES_AR", resourceCulture)
             End Get
         End Property
         
@@ -3377,7 +3413,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Search path to songs of &quot;Song to Jehovah&quot; files. Setting this content &quot;Songs&quot; will work properly..
+        '''  Looks up a localized string similar to Search path to songs of &quot;Sing to Jehovah&quot; files. Setting this content &quot;Songs&quot; will work properly..
         '''</summary>
         Friend ReadOnly Property ttip_btnBuscaCarpetaCanciones_EN() As String
             Get
@@ -3386,7 +3422,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Busca la carpeta donde se han guardado los archivos de audio de la publicación &quot;Canten alabanzas a Jehová&quot;. De la correcta configuración de este parámetro depende como funcionará el botón &quot;Canción&quot;..
+        '''  Looks up a localized string similar to Busca la carpeta donde se han guardado los archivos de audio de la publicación &quot;Cantemos a Jehová&quot;. De la correcta configuración de este parámetro depende como funcionará el botón &quot;Canción&quot;..
         '''</summary>
         Friend ReadOnly Property ttip_btnBuscaCarpetaCanciones_ES_AR() As String
             Get
