@@ -160,6 +160,9 @@
                 Presentacion.PictureBox1.BackColor = Color.White
             End If
         Else
+            If chkMostrarCancioneroPDF.Checked Then
+                PresentadorDisponibleContinuar()
+            End If
             If PresentadorDisponible() Then
                 Presentacion.AxWindowsMediaPlayer1.Visible = False
                 Presentacion.AxWindowsMediaPlayer1.settings.volume = 100
@@ -251,6 +254,14 @@
                 panelControlAudio.Top = panelControlsTop
                 panelControlAudio.Left = panelControlsLeft
                 timAudioPosicionActual.Enabled = True
+
+                If chkMostrarCancioneroPDF.Checked Then
+                    Presentacion.WebBrowser1.Top = 0
+                    Presentacion.WebBrowser1.Left = 0
+                    Presentacion.WebBrowser1.Height = Presentacion.Height
+                    Presentacion.WebBrowser1.Width = Presentacion.Width
+                    Presentacion.WebBrowser1.Visible = True
+                End If
 
                 'Case 6 'Musica // Con video de Fondo
                 'TODO crear otro reproductor para la opcion Música + Video de fondo. Rara.
@@ -368,6 +379,7 @@
         pnlCanciones.Left = panelLeft
         pnlCanciones.Top = panelsTop
         pnlCanciones.Visible = True
+        numCanciones.Select(0, numCanciones.Value.ToString.Length)
         numCanciones.Focus()
     End Sub
     Private Sub btnAbreJWorg_Click(sender As Object, e As EventArgs) Handles btnAbreJWorg.Click
@@ -443,21 +455,47 @@
             chkAgregaAutomaticamente.Checked = False
         End If
     End Sub
+    Function lyricsToHTML(title, lyrics)
+        Dim lyricsHTML As String = ""
+        lyricsHTML += "<html>"
+        lyricsHTML += "<h3>" + title + "</h3>"
+        For Each line In lyrics.split(vbCr)
+            lyricsHTML += line + "<br>"
+        Next
+
+        lyricsHTML += "</html>"
+        Return lyricsHTML
+    End Function
     ''' <summary>
     ''' Activa los controles de música, envía el archivo a reproducir y detiene la grabación
     ''' </summary>
     Private Sub suenaMusica()
         Dim cancion As String = buscaArchivoCancion(numCanciones.Value)
         If My.Computer.FileSystem.FileExists(cancion) Then
-            AxWindowsMediaPlayer1.URL = cancion
+            Dim cancionMP3 = TagLib.File.Create(cancion)
+            ''todo: revisar comportamiento cuando no hay letra. Sacar la letra de los melódicos de las versiones no melódicas. Estilizar las letras en el documento.
             ActivarContenido(5)
+            If chkMostrarCancioneroPDF.Checked And Not IsNothing(cancionMP3.Tag.Lyrics) Then
+                If PresentadorDisponibleContinuar() Then
+                    Presentacion.WebBrowser1.ScriptErrorsSuppressed = True
+                    Presentacion.WebBrowser1.Refresh()
+                    Presentacion.WebBrowser1.DocumentText = lyricsToHTML(cancionMP3.Tag.Title, cancionMP3.Tag.Lyrics)
+                End If
+            End If
+
             If chkGrabacionInteligente.Checked And grabacionEnProgreso Then
                 grabacionInteligentePausada = True
                 btnGrabarToogle.PerformClick()
             End If
+            AxWindowsMediaPlayer1.URL = cancion
             AxWindowsMediaPlayer1.Ctlcontrols.play()
-            trackAudioPosition.Maximum = Integer.Parse(AxWindowsMediaPlayer1.currentMedia.duration) + 1
+            Try
+                trackAudioPosition.Maximum = Integer.Parse(AxWindowsMediaPlayer1.currentMedia.duration + 1)
+            Catch ex As Exception
+                trackAudioPosition.Maximum = trackAudioPosition.Maximum
+            End Try
             btnAudioPlayPausa.BackgroundImage = My.Resources.Pausa
+
         Else
             MsgBox(devuelveResourceString("msgb", "no_hay_cancion"), MsgBoxStyle.Information, devuelveResourceString("msgb_title", "atencion"))
         End If
@@ -568,6 +606,7 @@
         pnlCitas.Top = panelsTop
         pnlCitas.Visible = True
         ComboBox1.SelectAll()
+        ComboBox1.Select(0, ComboBox1.Text.Length)
         ComboBox1.Focus()
     End Sub
     ''' <summary>
@@ -742,7 +781,10 @@
     End Sub
     Private Sub numCanciones_KeyDown(sender As Object, e As KeyEventArgs) Handles numCanciones.KeyDown
         If e.KeyCode = 13 Then
+
             btnAgregarCancionLista.PerformClick()
+            e.Handled = True
+            e.SuppressKeyPress = True
         End If
     End Sub
     Private Sub TrackBar1_Scroll(sender As Object, e As EventArgs) Handles trackPDFZoom.ValueChanged
@@ -1106,8 +1148,6 @@
         DownloadingUpdateProgressBar.Visible = False
     End Sub
     Private Sub ControlPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Revisa la integridad de todas las cadenas de texto utilizadas en el sistema
-        'intentarDev()
         ajustarAPantalla()
         'Verifica si los archivos .jwp se abren con esta aplicación. En esta ubicación.
         Dim keyExistente = False
@@ -1287,7 +1327,8 @@
         ComboBox1.MouseEnter,
         btnAgregaCitaLista.MouseEnter,
         chkMelodias.MouseEnter,
-        btnReacomodar.MouseEnter
+        btnReacomodar.MouseEnter,
+        btnPreview.MouseEnter
         Dim texto As String = My.Resources.ResourceManager.GetObject("ttip_" + sender.Name + "_" + LanguageID)
         If Not texto = "" Then
             ToolTipDestination.Text = texto
@@ -1354,7 +1395,8 @@
         ComboBox1.MouseLeave,
         btnAgregaCitaLista.MouseLeave,
         chkMelodias.MouseLeave,
-        btnReacomodar.MouseLeave
+        btnReacomodar.MouseLeave,
+        btnPreview.MouseLeave
         ToolTipDestination.Text = ""
     End Sub
     Private Sub restableceValoresPorDefecto()
@@ -1722,158 +1764,6 @@
     Private Sub btnCancelarCita_Click(sender As Object, e As EventArgs) Handles btnCancelarCita.Click
         pnlCitas.Visible = False
     End Sub
-    Private Sub intentarDev()
-        devuelveResourceString("status", "default_en_presentacion")
-        devuelveResourceString("msgb", "no_segundo_monitor")
-        devuelveResourceString("status", "presentacion_cancelado")
-        devuelveResourceString("status", "default_en_presentacion_principal")
-        devuelveResourceString("status", "presentacion_cerrado")
-        devuelveResourceString("status", "presentacion_cerrado_de_antes")
-        devuelveResourceString("str", "por_defecto")
-        devuelveResourceString("msgb", "finalizar_grabacion")
-        devuelveResourceString("msgb", "guardar_cambios")
-        devuelveResourceString("str", "lblStatus")
-        devuelveResourceString("status", "presentacion_imagen_por_defecto")
-        devuelveResourceString("msgb", "presentacion_no_disponible_encender")
-        devuelveResourceString("text", btnAbreJWorg.Name)
-        devuelveResourceString("msgb", "presentacion_no_disponible_encender")
-        devuelveResourceString("status", "presentacion_sitio")
-        devuelveResourceString("text", btnAbreWOL.Name)
-        devuelveResourceString("text", btnAbreTV.Name)
-        devuelveResourceString("str", "cancion")
-        devuelveResourceString("str", "patron_idioma_jw")
-        devuelveResourceString("str", "patron_idioma_jw")
-        devuelveResourceString("msgb", "obtener_clave_error")
-        devuelveResourceString("str", "cancion")
-        devuelveResourceString("text", btnAgregaCita.Name)
-        devuelveResourceString("text", btnAbreJWorg.Name)
-        devuelveResourceString("text", btnAbreWOL.Name)
-        devuelveResourceString("text", btnAbreTV.Name)
-        devuelveResourceString("str", "audio")
-        devuelveResourceString("str", "video")
-        devuelveResourceString("str", "imagen")
-        devuelveResourceString("str", "pdf")
-        devuelveResourceString("msgb", "error_contenidos_a_presentacion")
-        devuelveResourceString("status", "pdf_en_presentacion")
-        devuelveResourceString("text", btnAgregaCita.Name)
-        devuelveResourceString("msgb", "no_versiculo")
-        devuelveResourceString("status", "cita_en_presentacion")
-        devuelveResourceString("str", "versiculo_no_encontrado")
-        devuelveResourceString("status", "versiculo_no_encontrado")
-        devuelveResourceString("str", "imagen")
-        devuelveResourceString("status", "imagen_en_presentacion")
-        devuelveResourceString("str", "video")
-        devuelveResourceString("str", "audio")
-        devuelveResourceString("status", "video_en_presentacion")
-        devuelveResourceString("str", "pdf")
-        devuelveResourceString("status", "negro_en_presentacion")
-        devuelveResourceString("msgb", "eliminar_contenido")
-        devuelveResourceString("str", "audio")
-        devuelveResourceString("str", "cancion")
-        devuelveResourceString("msgb", "eliminar_contenidos_validados_principio")
-        devuelveResourceString("msgb", "contenidos_validados_principio")
-        devuelveResourceString("msgb", "eliminar_contenido_validado")
-        devuelveResourceString("msgb", "contenido_validado_principio")
-        devuelveResourceString("msgb", "contenido_encontrado")
-        devuelveResourceString("msgb", "quitar_contenido")
-        devuelveResourceString("str", "archivo_presentacion")
-        devuelveResourceString("str", "archivo_default_titulo")
-        devuelveResourceString("msgb", "archivo_presentacion_exito")
-        devuelveResourceString("msgb", "archivo_presentacion_error_integridad")
-        devuelveResourceString("msgb", "archivo_presentacion_error_existencia")
-        devuelveResourceString("msgb", "archivo_presentacion_vacio")
-        devuelveResourceString("str", "archivo_presentacion")
-        devuelveResourceString("msgb", "archivo_presentacion_abrir_importar")
-        devuelveResourceString("str", "audio")
-        devuelveResourceString("str", "video")
-        devuelveResourceString("text", btnAgregaCita.Name)
-        devuelveResourceString("str", "pdf")
-        devuelveResourceString("str", "imagen")
-        devuelveResourceString("text", btnAbreWOL.Name)
-        devuelveResourceString("msgb", "ejecutar_como_admin_principio")
-        devuelveResourceString("str", "por_defecto")
-        devuelveResourceString("msgb", "configuracion_cancelar")
-        devuelveResourceString("msgb", "url_vacia")
-        devuelveResourceString("str", "cita_por_defecto")
-        devuelveResourceString("str", "archivos_imagen")
-        devuelveResourceString("str", "patron_idioma_jw")
-        devuelveResourceString("str", "patron_idioma_jw")
-        devuelveResourceString("str", "patron_idioma_jw")
-        devuelveResourceString("str", "patron_idioma_jw")
-        devuelveResourceString("str", "patron_idioma_jw")
-        devuelveResourceString("msgb", "no_hay_canciones_en_carpeta")
-        devuelveResourceString("msgb", "configuracion_guardar")
-        devuelveResourceString("str", "por_defecto")
-        devuelveResourceString("msgb", "configuracion_restablecer")
-        devuelveResourceString("str", lblGrabarStatus.Name + "_grabando")
-        devuelveResourceString("str", lblGrabarStatus.Name + "_Inteligente")
-        devuelveResourceString("str", lblGrabarStatus.Name + "_pausada")
-        devuelveResourceString("str", lblGrabarStatus.Name + "_Inteligente")
-        devuelveResourceString("msgb", "grabacion_compartir_no")
-        devuelveResourceString("str", "archivo_grabar_mp3")
-        devuelveResourceString("msgb", "grabacion_compartir_exito")
-        devuelveResourceString("msgb", "grabacion_compartir_error")
-        devuelveResourceString("msgb", "grabacion_compartir_error_desconocido")
-        devuelveResourceString("str", lblGrabarStatus.Name + "_detenida")
-        devuelveResourceString("str", "archivo_grabar_titulo_por_defecto")
-        devuelveResourceString("str", "archivo_grabar_mp3")
-        devuelveResourceString("str", lblGrabarStatus.Name + "_detenida_guardado")
-        devuelveResourceString("str", lblGrabarStatus.Name + "_detenida_error")
-        devuelveResourceString("msgb", "grabacion_cerrar_agregar")
-        devuelveResourceString("str", lblGrabarStatus.Name + "_pausada_no_guardada")
-        devuelveResourceString("str", lblGrabarStatus.Name + "_detenida_no_guardada")
-        devuelveResourceString("msgb_title", "atencion")
-        devuelveResourceString("str", "archivo_default_titulo")
-        devuelveResourceString("msgb_title", "atencion")
-        devuelveResourceString("msgb_title", "atencion")
-        devuelveResourceString("status", "presentacion_sitio_final")
-        devuelveResourceString("msgb", "obtener_clave_error_fin")
-        devuelveResourceString("msgb_title", "atencion")
-        devuelveResourceString("msgb_title", "atencion")
-        devuelveResourceString("str", "archivos_imagen")
-        devuelveResourceString("str", "archivos_video")
-        devuelveResourceString("str", "archivos_audio")
-        devuelveResourceString("str", "archivos_pdf")
-        devuelveResourceString("msgb_title", "confirmacion")
-        devuelveResourceString("str", "video")
-        devuelveResourceString("msgb", "eliminar_contenidos_validados_final")
-        devuelveResourceString("msgb", "contenidos_validados_medio")
-        devuelveResourceString("msgb_title", "atencion")
-        devuelveResourceString("msgb", "contenido_validado_final")
-        devuelveResourceString("msgb_title", "atencion")
-        devuelveResourceString("msgb_title", "confirmacion")
-        devuelveResourceString("msgb_title", "atencion")
-        devuelveResourceString("msgb_title", "error")
-        devuelveResourceString("msgb_title", "error")
-        devuelveResourceString("msgb_title", "atencion")
-        devuelveResourceString("msgb_title", "confirmacion")
-        devuelveResourceString("str", "cancion")
-        devuelveResourceString("text", btnAbreJWorg.Name)
-        devuelveResourceString("msgb", "ejecutar_como_admin_medio")
-        devuelveResourceString("msgb_title", "confirmacion")
-        devuelveResourceString("msgb_title", "atencion")
-        devuelveResourceString("str", "patron_idioma_jw")
-        devuelveResourceString("msgb_title", "atencion")
-        devuelveResourceString("msgb_title", "confirmacion")
-        devuelveResourceString("msgb_title", "confirmacion")
-        devuelveResourceString("msgb_title", "atencion")
-        devuelveResourceString("msgb_title", "atencion")
-        devuelveResourceString("msgb_title", "error")
-        devuelveResourceString("msgb_title", "error")
-        devuelveResourceString("msgb_title", "confirmacion")
-        devuelveResourceString("msgb_title", "confirmacion")
-        devuelveResourceString("msgb_title", "error")
-        devuelveResourceString("str", "imagen")
-        devuelveResourceString("msgb_title", "atencion")
-        devuelveResourceString("msgb", "contenido_validado_final")
-        devuelveResourceString("msgb_title", "atencion")
-        devuelveResourceString("text", btnAbreTV.Name)
-        devuelveResourceString("msgb", "ejecutar_como_admin_final")
-        devuelveResourceString("str", "pdf")
-        devuelveResourceString("msgb_title", "atencion")
-        devuelveResourceString("msgb_title", "atencion")
-
-    End Sub
 
     Private Sub Ajustar(sender As Object, e As EventArgs) Handles lblTitle.DoubleClick, btnReacomodar.Click
         ajustarAPantalla()
@@ -1910,6 +1800,16 @@
     End Sub
     Private Sub ControlPanel_MouseWheel(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseWheel
         ajustarAPantalla()
+    End Sub
+
+    Private Sub btnPreview_Click(sender As Object, e As EventArgs) Handles btnPreview.Click
+        ejecutarContenido()
+    End Sub
+
+    Private Sub ComboBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles ComboBox1.KeyDown
+        If e.KeyCode = 13 Then
+            btnAgregaCitaLista.PerformClick()
+        End If
     End Sub
 
 End Class

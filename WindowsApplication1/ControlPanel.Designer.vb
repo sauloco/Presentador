@@ -148,6 +148,7 @@ Partial Class ControlPanel
         Me.ToolTipDestination = New System.Windows.Forms.ToolStripStatusLabel()
         Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
         Me.btnReacomodar = New System.Windows.Forms.Button()
+        Me.btnPreview = New System.Windows.Forms.Button()
         CType(Me.numCanciones, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.trackPDFZoom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -172,12 +173,12 @@ Partial Class ControlPanel
         Me.lblStatus.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.lblStatus.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblStatus.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.lblStatus.Location = New System.Drawing.Point(526, 67)
+        Me.lblStatus.Location = New System.Drawing.Point(526, 57)
+        Me.lblStatus.MaximumSize = New System.Drawing.Size(825, 30)
         Me.lblStatus.Name = "lblStatus"
         Me.lblStatus.Size = New System.Drawing.Size(345, 13)
         Me.lblStatus.TabIndex = 4
         Me.lblStatus.Text = "Presentación nunca ha sido abierta durante esta ejecución."
-        Me.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lstContenidos
         '
@@ -575,7 +576,7 @@ Partial Class ControlPanel
         Me.btnCancelarConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelarConfig.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelarConfig.ForeColor = System.Drawing.Color.White
-        Me.btnCancelarConfig.Location = New System.Drawing.Point(308, 386)
+        Me.btnCancelarConfig.Location = New System.Drawing.Point(308, 369)
         Me.btnCancelarConfig.Name = "btnCancelarConfig"
         Me.btnCancelarConfig.Size = New System.Drawing.Size(110, 23)
         Me.btnCancelarConfig.TabIndex = 46
@@ -589,7 +590,7 @@ Partial Class ControlPanel
         Me.btnGuardarConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardarConfig.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardarConfig.ForeColor = System.Drawing.Color.White
-        Me.btnGuardarConfig.Location = New System.Drawing.Point(193, 386)
+        Me.btnGuardarConfig.Location = New System.Drawing.Point(193, 369)
         Me.btnGuardarConfig.Name = "btnGuardarConfig"
         Me.btnGuardarConfig.Size = New System.Drawing.Size(110, 23)
         Me.btnGuardarConfig.TabIndex = 93
@@ -616,7 +617,7 @@ Partial Class ControlPanel
         Me.btnReestablecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReestablecer.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReestablecer.ForeColor = System.Drawing.Color.White
-        Me.btnReestablecer.Location = New System.Drawing.Point(19, 386)
+        Me.btnReestablecer.Location = New System.Drawing.Point(19, 369)
         Me.btnReestablecer.Name = "btnReestablecer"
         Me.btnReestablecer.Size = New System.Drawing.Size(110, 23)
         Me.btnReestablecer.TabIndex = 96
@@ -1181,10 +1182,10 @@ Partial Class ControlPanel
         '
         Me.lblAudioPosition.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblAudioPosition.AutoSize = True
-        Me.lblAudioPosition.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lblAudioPosition.BackColor = System.Drawing.Color.Coral
         Me.lblAudioPosition.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAudioPosition.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.lblAudioPosition.Location = New System.Drawing.Point(568, 50)
+        Me.lblAudioPosition.Location = New System.Drawing.Point(568, 36)
         Me.lblAudioPosition.Name = "lblAudioPosition"
         Me.lblAudioPosition.Size = New System.Drawing.Size(86, 13)
         Me.lblAudioPosition.TabIndex = 36
@@ -1195,10 +1196,10 @@ Partial Class ControlPanel
         '
         Me.lblVideoPosition.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblVideoPosition.AutoSize = True
-        Me.lblVideoPosition.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lblVideoPosition.BackColor = System.Drawing.Color.Teal
         Me.lblVideoPosition.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblVideoPosition.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.lblVideoPosition.Location = New System.Drawing.Point(574, 49)
+        Me.lblVideoPosition.Location = New System.Drawing.Point(571, 37)
         Me.lblVideoPosition.Name = "lblVideoPosition"
         Me.lblVideoPosition.Size = New System.Drawing.Size(86, 13)
         Me.lblVideoPosition.TabIndex = 37
@@ -1368,8 +1369,8 @@ Partial Class ControlPanel
         Me.panelControlAudio.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.panelControlAudio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.panelControlAudio.Controls.Add(Me.trackAudioPosition)
         Me.panelControlAudio.Controls.Add(Me.lblAudioPosition)
+        Me.panelControlAudio.Controls.Add(Me.trackAudioPosition)
         Me.panelControlAudio.Controls.Add(Me.btnAudioMute)
         Me.panelControlAudio.Controls.Add(Me.TrackBar1)
         Me.panelControlAudio.Controls.Add(Me.btnAudioPlayPausa)
@@ -1500,7 +1501,7 @@ Partial Class ControlPanel
         '
         Me.chkMostrarCancioneroPDF.AutoSize = True
         Me.chkMostrarCancioneroPDF.ForeColor = System.Drawing.Color.White
-        Me.chkMostrarCancioneroPDF.Location = New System.Drawing.Point(149, 339)
+        Me.chkMostrarCancioneroPDF.Location = New System.Drawing.Point(55, 319)
         Me.chkMostrarCancioneroPDF.Name = "chkMostrarCancioneroPDF"
         Me.chkMostrarCancioneroPDF.Size = New System.Drawing.Size(81, 17)
         Me.chkMostrarCancioneroPDF.TabIndex = 103
@@ -1523,7 +1524,7 @@ Partial Class ControlPanel
         '
         Me.cmbIdioma.FormattingEnabled = True
         Me.cmbIdioma.Items.AddRange(New Object() {"ES_AR", "EN"})
-        Me.cmbIdioma.Location = New System.Drawing.Point(149, 359)
+        Me.cmbIdioma.Location = New System.Drawing.Point(149, 342)
         Me.cmbIdioma.Name = "cmbIdioma"
         Me.cmbIdioma.Size = New System.Drawing.Size(269, 21)
         Me.cmbIdioma.TabIndex = 101
@@ -1533,7 +1534,7 @@ Partial Class ControlPanel
         Me.lblIdioma.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.lblIdioma.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIdioma.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.lblIdioma.Location = New System.Drawing.Point(5, 362)
+        Me.lblIdioma.Location = New System.Drawing.Point(5, 345)
         Me.lblIdioma.Name = "lblIdioma"
         Me.lblIdioma.Size = New System.Drawing.Size(139, 13)
         Me.lblIdioma.TabIndex = 100
@@ -1649,7 +1650,7 @@ Partial Class ControlPanel
         Me.lblTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lblTitle.Location = New System.Drawing.Point(0, 0)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(2020, 25)
+        Me.lblTitle.Size = New System.Drawing.Size(1360, 25)
         Me.lblTitle.TabIndex = 0
         Me.lblTitle.Text = "            Presentador 1.1.0 | Panel de Control"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1789,6 +1790,20 @@ Partial Class ControlPanel
         Me.btnReacomodar.TabStop = False
         Me.btnReacomodar.UseVisualStyleBackColor = False
         '
+        'btnPreview
+        '
+        Me.btnPreview.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnPreview.BackgroundImage = Global.Presentador.My.Resources.Resources.VistaPrevia_Blanco
+        Me.btnPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnPreview.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnPreview.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnPreview.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPreview.Location = New System.Drawing.Point(1024, 162)
+        Me.btnPreview.Name = "btnPreview"
+        Me.btnPreview.Size = New System.Drawing.Size(50, 50)
+        Me.btnPreview.TabIndex = 76
+        Me.btnPreview.UseVisualStyleBackColor = False
+        '
         'ControlPanel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1796,9 +1811,8 @@ Partial Class ControlPanel
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1360, 768)
-        Me.Controls.Add(Me.pnlCanciones)
+        Me.Controls.Add(Me.btnPreview)
         Me.Controls.Add(Me.btnReacomodar)
-        Me.Controls.Add(Me.pnlCitas)
         Me.Controls.Add(Me.StatusBar)
         Me.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Controls.Add(Me.btnBug)
@@ -1840,6 +1854,8 @@ Partial Class ControlPanel
         Me.Controls.Add(Me.panelControlVideo)
         Me.Controls.Add(Me.panelControlPDF)
         Me.Controls.Add(Me.panelControlImagen)
+        Me.Controls.Add(Me.pnlCanciones)
+        Me.Controls.Add(Me.pnlCitas)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -1998,4 +2014,5 @@ Partial Class ControlPanel
     Friend WithEvents lblInstalarNuevaVersion As ToolStripStatusLabel
     Friend WithEvents chkMostrarCancioneroPDF As CheckBox
     Friend WithEvents trackAudioPosition As TrackBar
+    Friend WithEvents btnPreview As Button
 End Class

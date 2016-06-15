@@ -2081,7 +2081,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 1.3.1.
+        '''  Looks up a localized string similar to 1.3.2.
         '''</summary>
         Friend ReadOnly Property str_version_EN() As String
             Get
@@ -2090,7 +2090,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 1.3.1.
+        '''  Looks up a localized string similar to 1.3.2.
         '''</summary>
         Friend ReadOnly Property str_version_ES_AR() As String
             Get
@@ -2549,7 +2549,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Show PDF with lyrics while new songs are playing.
+        '''  Looks up a localized string similar to Show lyrics when the aditional screen is available.
         '''</summary>
         Friend ReadOnly Property text_chkMostrarCancioneroPDF_EN() As String
             Get
@@ -2558,7 +2558,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Mostrar cancionero PDF con canciones nuevas.
+        '''  Looks up a localized string similar to Mostrar letra de canción si la pantalla adicional está disponible.
         '''</summary>
         Friend ReadOnly Property text_chkMostrarCancioneroPDF_ES_AR() As String
             Get
@@ -2909,7 +2909,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Nothing recordered yet.
+        '''  Looks up a localized string similar to Nothing recorded yet.
         '''</summary>
         Friend ReadOnly Property text_lblGrabarStatus_EN() As String
             Get
@@ -3877,6 +3877,24 @@ Namespace My.Resources
         Friend ReadOnly Property ttip_btnPDFZoomOut_ES_AR() As String
             Get
                 Return ResourceManager.GetString("ttip_btnPDFZoomOut_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Present content.
+        '''</summary>
+        Friend ReadOnly Property ttip_btnPreview_EN() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnPreview_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Presentar contenido.
+        '''</summary>
+        Friend ReadOnly Property ttip_btnPreview_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnPreview_ES_AR", resourceCulture)
             End Get
         End Property
         

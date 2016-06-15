@@ -710,7 +710,7 @@
     <value>Configurations Panel</value>
   </data>
   <data name="text_lblGrabarStatus_EN" xml:space="preserve">
-    <value>Nothing recordered yet</value>
+    <value>Nothing recorded yet</value>
   </data>
   <data name="text_lblStatus_EN" xml:space="preserve">
     <value>Presentation never has been opened during the current execution.</value>
@@ -1433,10 +1433,10 @@
     <value>Panel de Control</value>
   </data>
   <data name="str_version_EN" xml:space="preserve">
-    <value>1.3.1</value>
+    <value>1.3.2</value>
   </data>
   <data name="str_version_ES_AR" xml:space="preserve">
-    <value>1.3.1</value>
+    <value>1.3.2</value>
   </data>
   <data name="text_chkMelodias_EN" xml:space="preserve">
     <value>Prefer melodic version</value>
@@ -1481,15 +1481,21 @@
     <value>No se encontró el archivo de instalación.</value>
   </data>
   <data name="text_chkMostrarCancioneroPDF_EN" xml:space="preserve">
-    <value>Show PDF with lyrics while new songs are playing</value>
+    <value>Show lyrics when the aditional screen is available</value>
   </data>
   <data name="text_chkMostrarCancioneroPDF_ES_AR" xml:space="preserve">
-    <value>Mostrar cancionero PDF con canciones nuevas</value>
+    <value>Mostrar letra de canción si la pantalla adicional está disponible</value>
   </data>
   <data name="msgb_no_hay_cancion_EN" xml:space="preserve">
     <value>The specified song isn't in the indicated folder.</value>
   </data>
   <data name="msgb_no_hay_cancion_ES_AR" xml:space="preserve">
     <value>La canción especificada no se encuentra en la carpeta indicada.</value>
+  </data>
+  <data name="ttip_btnPreview_EN" xml:space="preserve">
+    <value>Present content</value>
+  </data>
+  <data name="ttip_btnPreview_ES_AR" xml:space="preserve">
+    <value>Presentar contenido</value>
   </data>
 </root>
