@@ -107,6 +107,11 @@ Partial Class ControlPanel
         Me.Label4 = New System.Windows.Forms.Label()
         Me.pnlCanciones = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.pnlSitio = New System.Windows.Forms.Panel()
+        Me.txtCustomURL = New System.Windows.Forms.TextBox()
+        Me.btnCancelaSitio = New System.Windows.Forms.Button()
+        Me.btnAgregaSitioLista = New System.Windows.Forms.Button()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.pnlCitas = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.panelControlPDF = New System.Windows.Forms.Panel()
@@ -117,7 +122,12 @@ Partial Class ControlPanel
         Me.lblNombreArchivo = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.panConfigs = New System.Windows.Forms.Panel()
-        Me.chkMostrarCancioneroPDF = New System.Windows.Forms.CheckBox()
+        Me.btnAbreNuevasCanciones = New System.Windows.Forms.Button()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.txtURLNuevasCanciones = New System.Windows.Forms.TextBox()
+        Me.btnAbreCanciones = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtURLCanciones = New System.Windows.Forms.TextBox()
         Me.chkMelodias = New System.Windows.Forms.CheckBox()
         Me.cmbIdioma = New System.Windows.Forms.ComboBox()
         Me.lblIdioma = New System.Windows.Forms.Label()
@@ -146,14 +156,21 @@ Partial Class ControlPanel
         Me.DownloadingUpdateProgressBar = New System.Windows.Forms.ToolStripProgressBar()
         Me.lblInstalarNuevaVersion = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTipDestination = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
         Me.btnReacomodar = New System.Windows.Forms.Button()
         Me.btnPreview = New System.Windows.Forms.Button()
+        Me.timAmbiente = New System.Windows.Forms.Timer(Me.components)
+        Me.MenuContextual = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.itemPresentar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnAbreSitioWeb = New System.Windows.Forms.Button()
+        Me.btnAbreCancioneroNuevo = New System.Windows.Forms.Button()
+        Me.btnAbreCancionero = New System.Windows.Forms.Button()
+        Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
         CType(Me.numCanciones, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.trackPDFZoom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.trackVideoVolume, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlCanciones.SuspendLayout()
+        Me.pnlSitio.SuspendLayout()
         Me.pnlCitas.SuspendLayout()
         Me.panelControlPDF.SuspendLayout()
         Me.panelControlAudio.SuspendLayout()
@@ -164,6 +181,7 @@ Partial Class ControlPanel
         Me.panelControlImagen.SuspendLayout()
         Me.PanelDeGrabacion.SuspendLayout()
         Me.StatusBar.SuspendLayout()
+        Me.MenuContextual.SuspendLayout()
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -267,7 +285,7 @@ Partial Class ControlPanel
         Me.chkAgregaAutomaticamente.AutoSize = True
         Me.chkAgregaAutomaticamente.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkAgregaAutomaticamente.ForeColor = System.Drawing.Color.White
-        Me.chkAgregaAutomaticamente.Location = New System.Drawing.Point(18, 264)
+        Me.chkAgregaAutomaticamente.Location = New System.Drawing.Point(18, 332)
         Me.chkAgregaAutomaticamente.Name = "chkAgregaAutomaticamente"
         Me.chkAgregaAutomaticamente.Size = New System.Drawing.Size(472, 22)
         Me.chkAgregaAutomaticamente.TabIndex = 16
@@ -367,7 +385,7 @@ Partial Class ControlPanel
         '
         'Label1
         '
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label1.Location = New System.Drawing.Point(5, 36)
@@ -379,7 +397,7 @@ Partial Class ControlPanel
         '
         'Label8
         '
-        Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label8.Location = New System.Drawing.Point(5, 62)
@@ -391,7 +409,7 @@ Partial Class ControlPanel
         '
         'Label9
         '
-        Me.Label9.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label9.Location = New System.Drawing.Point(5, 88)
@@ -403,7 +421,7 @@ Partial Class ControlPanel
         '
         'Label10
         '
-        Me.Label10.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label10.Location = New System.Drawing.Point(5, 114)
@@ -415,7 +433,7 @@ Partial Class ControlPanel
         '
         'Label11
         '
-        Me.Label11.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label11.Location = New System.Drawing.Point(5, 140)
@@ -427,7 +445,7 @@ Partial Class ControlPanel
         '
         'Label12
         '
-        Me.Label12.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label12.Location = New System.Drawing.Point(5, 166)
@@ -439,7 +457,7 @@ Partial Class ControlPanel
         '
         'Label13
         '
-        Me.Label13.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label13.Location = New System.Drawing.Point(5, 192)
@@ -451,10 +469,10 @@ Partial Class ControlPanel
         '
         'Label14
         '
-        Me.Label14.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label14.Location = New System.Drawing.Point(5, 218)
+        Me.Label14.Location = New System.Drawing.Point(4, 270)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(139, 13)
         Me.Label14.TabIndex = 85
@@ -463,10 +481,10 @@ Partial Class ControlPanel
         '
         'Label15
         '
-        Me.Label15.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label15.Location = New System.Drawing.Point(5, 270)
+        Me.Label15.Location = New System.Drawing.Point(4, 322)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(139, 13)
         Me.Label15.TabIndex = 86
@@ -475,10 +493,10 @@ Partial Class ControlPanel
         '
         'Label16
         '
-        Me.Label16.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label16.BackColor = System.Drawing.Color.Transparent
         Me.Label16.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label16.Location = New System.Drawing.Point(5, 296)
+        Me.Label16.Location = New System.Drawing.Point(5, 353)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(139, 13)
         Me.Label16.TabIndex = 87
@@ -548,7 +566,7 @@ Partial Class ControlPanel
         Me.btnBuscaImagenFondo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscaImagenFondo.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscaImagenFondo.ForeColor = System.Drawing.Color.White
-        Me.btnBuscaImagenFondo.Location = New System.Drawing.Point(384, 215)
+        Me.btnBuscaImagenFondo.Location = New System.Drawing.Point(383, 267)
         Me.btnBuscaImagenFondo.Name = "btnBuscaImagenFondo"
         Me.btnBuscaImagenFondo.Size = New System.Drawing.Size(34, 23)
         Me.btnBuscaImagenFondo.TabIndex = 91
@@ -562,7 +580,7 @@ Partial Class ControlPanel
         Me.btnBuscaCarpetaCanciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscaCarpetaCanciones.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscaCarpetaCanciones.ForeColor = System.Drawing.Color.White
-        Me.btnBuscaCarpetaCanciones.Location = New System.Drawing.Point(384, 267)
+        Me.btnBuscaCarpetaCanciones.Location = New System.Drawing.Point(383, 319)
         Me.btnBuscaCarpetaCanciones.Name = "btnBuscaCarpetaCanciones"
         Me.btnBuscaCarpetaCanciones.Size = New System.Drawing.Size(34, 23)
         Me.btnBuscaCarpetaCanciones.TabIndex = 92
@@ -576,7 +594,7 @@ Partial Class ControlPanel
         Me.btnCancelarConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelarConfig.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelarConfig.ForeColor = System.Drawing.Color.White
-        Me.btnCancelarConfig.Location = New System.Drawing.Point(308, 369)
+        Me.btnCancelarConfig.Location = New System.Drawing.Point(308, 426)
         Me.btnCancelarConfig.Name = "btnCancelarConfig"
         Me.btnCancelarConfig.Size = New System.Drawing.Size(110, 23)
         Me.btnCancelarConfig.TabIndex = 46
@@ -590,7 +608,7 @@ Partial Class ControlPanel
         Me.btnGuardarConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardarConfig.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardarConfig.ForeColor = System.Drawing.Color.White
-        Me.btnGuardarConfig.Location = New System.Drawing.Point(193, 369)
+        Me.btnGuardarConfig.Location = New System.Drawing.Point(193, 426)
         Me.btnGuardarConfig.Name = "btnGuardarConfig"
         Me.btnGuardarConfig.Size = New System.Drawing.Size(110, 23)
         Me.btnGuardarConfig.TabIndex = 93
@@ -600,10 +618,10 @@ Partial Class ControlPanel
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label17.BackColor = System.Drawing.Color.Transparent
         Me.Label17.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label17.Location = New System.Drawing.Point(249, 296)
+        Me.Label17.Location = New System.Drawing.Point(249, 353)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(127, 13)
         Me.Label17.TabIndex = 94
@@ -617,7 +635,7 @@ Partial Class ControlPanel
         Me.btnReestablecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReestablecer.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReestablecer.ForeColor = System.Drawing.Color.White
-        Me.btnReestablecer.Location = New System.Drawing.Point(19, 369)
+        Me.btnReestablecer.Location = New System.Drawing.Point(19, 426)
         Me.btnReestablecer.Name = "btnReestablecer"
         Me.btnReestablecer.Size = New System.Drawing.Size(110, 23)
         Me.btnReestablecer.TabIndex = 96
@@ -800,7 +818,8 @@ Partial Class ControlPanel
         Me.btnAgregaPDF.Name = "btnAgregaPDF"
         Me.btnAgregaPDF.Size = New System.Drawing.Size(155, 63)
         Me.btnAgregaPDF.TabIndex = 9
-        Me.btnAgregaPDF.Text = "Archivos PDF"
+        Me.btnAgregaPDF.Text = "PDF"
+        Me.btnAgregaPDF.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAgregaPDF.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnAgregaPDF.UseVisualStyleBackColor = False
         '
@@ -1159,7 +1178,7 @@ Partial Class ControlPanel
         Me.btnBuscaCarpetaGrabaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscaCarpetaGrabaciones.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscaCarpetaGrabaciones.ForeColor = System.Drawing.Color.White
-        Me.btnBuscaCarpetaGrabaciones.Location = New System.Drawing.Point(384, 241)
+        Me.btnBuscaCarpetaGrabaciones.Location = New System.Drawing.Point(383, 293)
         Me.btnBuscaCarpetaGrabaciones.Name = "btnBuscaCarpetaGrabaciones"
         Me.btnBuscaCarpetaGrabaciones.Size = New System.Drawing.Size(34, 23)
         Me.btnBuscaCarpetaGrabaciones.TabIndex = 99
@@ -1168,10 +1187,10 @@ Partial Class ControlPanel
         '
         'lblUbicacionGrabaciones
         '
-        Me.lblUbicacionGrabaciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lblUbicacionGrabaciones.BackColor = System.Drawing.Color.Transparent
         Me.lblUbicacionGrabaciones.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUbicacionGrabaciones.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.lblUbicacionGrabaciones.Location = New System.Drawing.Point(5, 244)
+        Me.lblUbicacionGrabaciones.Location = New System.Drawing.Point(4, 296)
         Me.lblUbicacionGrabaciones.Name = "lblUbicacionGrabaciones"
         Me.lblUbicacionGrabaciones.Size = New System.Drawing.Size(139, 13)
         Me.lblUbicacionGrabaciones.TabIndex = 98
@@ -1185,7 +1204,7 @@ Partial Class ControlPanel
         Me.lblAudioPosition.BackColor = System.Drawing.Color.Coral
         Me.lblAudioPosition.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAudioPosition.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.lblAudioPosition.Location = New System.Drawing.Point(568, 36)
+        Me.lblAudioPosition.Location = New System.Drawing.Point(557, 36)
         Me.lblAudioPosition.Name = "lblAudioPosition"
         Me.lblAudioPosition.Size = New System.Drawing.Size(86, 13)
         Me.lblAudioPosition.TabIndex = 36
@@ -1199,7 +1218,7 @@ Partial Class ControlPanel
         Me.lblVideoPosition.BackColor = System.Drawing.Color.Teal
         Me.lblVideoPosition.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblVideoPosition.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.lblVideoPosition.Location = New System.Drawing.Point(571, 37)
+        Me.lblVideoPosition.Location = New System.Drawing.Point(562, 37)
         Me.lblVideoPosition.Name = "lblVideoPosition"
         Me.lblVideoPosition.Size = New System.Drawing.Size(86, 13)
         Me.lblVideoPosition.TabIndex = 37
@@ -1307,9 +1326,9 @@ Partial Class ControlPanel
         Me.pnlCanciones.Controls.Add(Me.btnAgregarCancionLista)
         Me.pnlCanciones.Controls.Add(Me.numCanciones)
         Me.pnlCanciones.Controls.Add(Me.Label5)
-        Me.pnlCanciones.Location = New System.Drawing.Point(12, 292)
+        Me.pnlCanciones.Location = New System.Drawing.Point(12, 404)
         Me.pnlCanciones.Name = "pnlCanciones"
-        Me.pnlCanciones.Size = New System.Drawing.Size(478, 49)
+        Me.pnlCanciones.Size = New System.Drawing.Size(478, 46)
         Me.pnlCanciones.TabIndex = 43
         Me.pnlCanciones.Visible = False
         '
@@ -1324,13 +1343,72 @@ Partial Class ControlPanel
         Me.Label5.TabIndex = 45
         Me.Label5.Text = "Ingrese el número de la canción:"
         '
+        'pnlSitio
+        '
+        Me.pnlSitio.Controls.Add(Me.txtCustomURL)
+        Me.pnlSitio.Controls.Add(Me.btnCancelaSitio)
+        Me.pnlSitio.Controls.Add(Me.btnAgregaSitioLista)
+        Me.pnlSitio.Controls.Add(Me.Label20)
+        Me.pnlSitio.Location = New System.Drawing.Point(12, 456)
+        Me.pnlSitio.Name = "pnlSitio"
+        Me.pnlSitio.Size = New System.Drawing.Size(478, 42)
+        Me.pnlSitio.TabIndex = 49
+        Me.pnlSitio.Visible = False
+        '
+        'txtCustomURL
+        '
+        Me.txtCustomURL.Location = New System.Drawing.Point(60, 11)
+        Me.txtCustomURL.Name = "txtCustomURL"
+        Me.txtCustomURL.Size = New System.Drawing.Size(294, 20)
+        Me.txtCustomURL.TabIndex = 47
+        '
+        'btnCancelaSitio
+        '
+        Me.btnCancelaSitio.BackColor = System.Drawing.Color.CadetBlue
+        Me.btnCancelaSitio.BackgroundImage = Global.Presentador.My.Resources.Resources.Cerrar
+        Me.btnCancelaSitio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnCancelaSitio.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue
+        Me.btnCancelaSitio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelaSitio.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelaSitio.ForeColor = System.Drawing.Color.Black
+        Me.btnCancelaSitio.Location = New System.Drawing.Point(445, 9)
+        Me.btnCancelaSitio.Name = "btnCancelaSitio"
+        Me.btnCancelaSitio.Size = New System.Drawing.Size(30, 23)
+        Me.btnCancelaSitio.TabIndex = 46
+        Me.btnCancelaSitio.UseVisualStyleBackColor = False
+        '
+        'btnAgregaSitioLista
+        '
+        Me.btnAgregaSitioLista.BackColor = System.Drawing.Color.CadetBlue
+        Me.btnAgregaSitioLista.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue
+        Me.btnAgregaSitioLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAgregaSitioLista.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregaSitioLista.ForeColor = System.Drawing.Color.White
+        Me.btnAgregaSitioLista.Location = New System.Drawing.Point(360, 9)
+        Me.btnAgregaSitioLista.Name = "btnAgregaSitioLista"
+        Me.btnAgregaSitioLista.Size = New System.Drawing.Size(79, 23)
+        Me.btnAgregaSitioLista.TabIndex = 20
+        Me.btnAgregaSitioLista.Text = "Agregar"
+        Me.btnAgregaSitioLista.UseVisualStyleBackColor = False
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.Color.White
+        Me.Label20.Location = New System.Drawing.Point(3, 12)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(50, 20)
+        Me.Label20.TabIndex = 45
+        Me.Label20.Text = "Sitio:"
+        '
         'pnlCitas
         '
         Me.pnlCitas.Controls.Add(Me.btnCancelarCita)
         Me.pnlCitas.Controls.Add(Me.ComboBox1)
         Me.pnlCitas.Controls.Add(Me.btnAgregaCitaLista)
         Me.pnlCitas.Controls.Add(Me.Label6)
-        Me.pnlCitas.Location = New System.Drawing.Point(12, 299)
+        Me.pnlCitas.Location = New System.Drawing.Point(12, 358)
         Me.pnlCitas.Name = "pnlCitas"
         Me.pnlCitas.Size = New System.Drawing.Size(478, 42)
         Me.pnlCitas.TabIndex = 48
@@ -1451,8 +1529,14 @@ Partial Class ControlPanel
         Me.panConfigs.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.panConfigs.AutoScroll = True
-        Me.panConfigs.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.panConfigs.Controls.Add(Me.chkMostrarCancioneroPDF)
+        Me.panConfigs.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.panConfigs.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.panConfigs.Controls.Add(Me.btnAbreNuevasCanciones)
+        Me.panConfigs.Controls.Add(Me.Label19)
+        Me.panConfigs.Controls.Add(Me.txtURLNuevasCanciones)
+        Me.panConfigs.Controls.Add(Me.btnAbreCanciones)
+        Me.panConfigs.Controls.Add(Me.Label3)
+        Me.panConfigs.Controls.Add(Me.txtURLCanciones)
         Me.panConfigs.Controls.Add(Me.chkMelodias)
         Me.panConfigs.Controls.Add(Me.cmbIdioma)
         Me.panConfigs.Controls.Add(Me.lblIdioma)
@@ -1491,29 +1575,83 @@ Partial Class ControlPanel
         Me.panConfigs.Controls.Add(Me.txtFormatoVideos)
         Me.panConfigs.Controls.Add(Me.txtFormatoImagenes)
         Me.panConfigs.Controls.Add(Me.lblConfiguracion)
-        Me.panConfigs.Location = New System.Drawing.Point(12, 356)
+        Me.panConfigs.Location = New System.Drawing.Point(880, 28)
         Me.panConfigs.Name = "panConfigs"
-        Me.panConfigs.Size = New System.Drawing.Size(480, 353)
+        Me.panConfigs.Size = New System.Drawing.Size(437, 484)
         Me.panConfigs.TabIndex = 70
         Me.panConfigs.Visible = False
         '
-        'chkMostrarCancioneroPDF
+        'btnAbreNuevasCanciones
         '
-        Me.chkMostrarCancioneroPDF.AutoSize = True
-        Me.chkMostrarCancioneroPDF.ForeColor = System.Drawing.Color.White
-        Me.chkMostrarCancioneroPDF.Location = New System.Drawing.Point(55, 319)
-        Me.chkMostrarCancioneroPDF.Name = "chkMostrarCancioneroPDF"
-        Me.chkMostrarCancioneroPDF.Size = New System.Drawing.Size(81, 17)
-        Me.chkMostrarCancioneroPDF.TabIndex = 103
-        Me.chkMostrarCancioneroPDF.Text = "CheckBox1"
-        Me.chkMostrarCancioneroPDF.UseVisualStyleBackColor = True
-        Me.chkMostrarCancioneroPDF.Visible = False
+        Me.btnAbreNuevasCanciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnAbreNuevasCanciones.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnAbreNuevasCanciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAbreNuevasCanciones.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAbreNuevasCanciones.ForeColor = System.Drawing.Color.White
+        Me.btnAbreNuevasCanciones.Location = New System.Drawing.Point(383, 241)
+        Me.btnAbreNuevasCanciones.Name = "btnAbreNuevasCanciones"
+        Me.btnAbreNuevasCanciones.Size = New System.Drawing.Size(34, 23)
+        Me.btnAbreNuevasCanciones.TabIndex = 109
+        Me.btnAbreNuevasCanciones.Text = "Ir"
+        Me.btnAbreNuevasCanciones.UseVisualStyleBackColor = False
+        '
+        'Label19
+        '
+        Me.Label19.BackColor = System.Drawing.Color.Transparent
+        Me.Label19.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label19.Location = New System.Drawing.Point(3, 244)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(139, 13)
+        Me.Label19.TabIndex = 107
+        Me.Label19.Text = "Canciones nuevas:"
+        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtURLNuevasCanciones
+        '
+        Me.txtURLNuevasCanciones.Location = New System.Drawing.Point(150, 241)
+        Me.txtURLNuevasCanciones.Name = "txtURLNuevasCanciones"
+        Me.txtURLNuevasCanciones.Size = New System.Drawing.Size(227, 20)
+        Me.txtURLNuevasCanciones.TabIndex = 108
+        '
+        'btnAbreCanciones
+        '
+        Me.btnAbreCanciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnAbreCanciones.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnAbreCanciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAbreCanciones.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAbreCanciones.ForeColor = System.Drawing.Color.White
+        Me.btnAbreCanciones.Location = New System.Drawing.Point(383, 215)
+        Me.btnAbreCanciones.Name = "btnAbreCanciones"
+        Me.btnAbreCanciones.Size = New System.Drawing.Size(34, 23)
+        Me.btnAbreCanciones.TabIndex = 106
+        Me.btnAbreCanciones.Text = "Ir"
+        Me.btnAbreCanciones.UseVisualStyleBackColor = False
+        '
+        'Label3
+        '
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label3.Location = New System.Drawing.Point(3, 218)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(139, 13)
+        Me.Label3.TabIndex = 104
+        Me.Label3.Text = "Lista de canciones:"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtURLCanciones
+        '
+        Me.txtURLCanciones.Location = New System.Drawing.Point(150, 215)
+        Me.txtURLCanciones.Name = "txtURLCanciones"
+        Me.txtURLCanciones.Size = New System.Drawing.Size(227, 20)
+        Me.txtURLCanciones.TabIndex = 105
         '
         'chkMelodias
         '
         Me.chkMelodias.AutoSize = True
         Me.chkMelodias.ForeColor = System.Drawing.Color.White
-        Me.chkMelodias.Location = New System.Drawing.Point(149, 319)
+        Me.chkMelodias.Location = New System.Drawing.Point(149, 376)
         Me.chkMelodias.Name = "chkMelodias"
         Me.chkMelodias.Size = New System.Drawing.Size(81, 17)
         Me.chkMelodias.TabIndex = 102
@@ -1524,17 +1662,17 @@ Partial Class ControlPanel
         '
         Me.cmbIdioma.FormattingEnabled = True
         Me.cmbIdioma.Items.AddRange(New Object() {"ES_AR", "EN"})
-        Me.cmbIdioma.Location = New System.Drawing.Point(149, 342)
+        Me.cmbIdioma.Location = New System.Drawing.Point(149, 399)
         Me.cmbIdioma.Name = "cmbIdioma"
         Me.cmbIdioma.Size = New System.Drawing.Size(269, 21)
         Me.cmbIdioma.TabIndex = 101
         '
         'lblIdioma
         '
-        Me.lblIdioma.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lblIdioma.BackColor = System.Drawing.Color.Transparent
         Me.lblIdioma.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIdioma.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.lblIdioma.Location = New System.Drawing.Point(5, 345)
+        Me.lblIdioma.Location = New System.Drawing.Point(5, 402)
         Me.lblIdioma.Name = "lblIdioma"
         Me.lblIdioma.Size = New System.Drawing.Size(139, 13)
         Me.lblIdioma.TabIndex = 100
@@ -1543,7 +1681,7 @@ Partial Class ControlPanel
         '
         'txtCarpetaGrabaciones
         '
-        Me.txtCarpetaGrabaciones.Location = New System.Drawing.Point(151, 241)
+        Me.txtCarpetaGrabaciones.Location = New System.Drawing.Point(150, 293)
         Me.txtCarpetaGrabaciones.Name = "txtCarpetaGrabaciones"
         Me.txtCarpetaGrabaciones.ReadOnly = True
         Me.txtCarpetaGrabaciones.Size = New System.Drawing.Size(227, 20)
@@ -1551,21 +1689,21 @@ Partial Class ControlPanel
         '
         'txtPatronDespuesCanciones
         '
-        Me.txtPatronDespuesCanciones.Location = New System.Drawing.Point(382, 293)
+        Me.txtPatronDespuesCanciones.Location = New System.Drawing.Point(382, 350)
         Me.txtPatronDespuesCanciones.Name = "txtPatronDespuesCanciones"
         Me.txtPatronDespuesCanciones.Size = New System.Drawing.Size(36, 20)
         Me.txtPatronDespuesCanciones.TabIndex = 95
         '
         'txtPatronAntesCanciones
         '
-        Me.txtPatronAntesCanciones.Location = New System.Drawing.Point(150, 293)
+        Me.txtPatronAntesCanciones.Location = New System.Drawing.Point(150, 350)
         Me.txtPatronAntesCanciones.Name = "txtPatronAntesCanciones"
         Me.txtPatronAntesCanciones.Size = New System.Drawing.Size(93, 20)
         Me.txtPatronAntesCanciones.TabIndex = 81
         '
         'txtCarpetaCanciones
         '
-        Me.txtCarpetaCanciones.Location = New System.Drawing.Point(151, 267)
+        Me.txtCarpetaCanciones.Location = New System.Drawing.Point(150, 319)
         Me.txtCarpetaCanciones.Name = "txtCarpetaCanciones"
         Me.txtCarpetaCanciones.ReadOnly = True
         Me.txtCarpetaCanciones.Size = New System.Drawing.Size(227, 20)
@@ -1573,7 +1711,7 @@ Partial Class ControlPanel
         '
         'txtBackgroudImage
         '
-        Me.txtBackgroudImage.Location = New System.Drawing.Point(151, 215)
+        Me.txtBackgroudImage.Location = New System.Drawing.Point(150, 267)
         Me.txtBackgroudImage.Name = "txtBackgroudImage"
         Me.txtBackgroudImage.ReadOnly = True
         Me.txtBackgroudImage.Size = New System.Drawing.Size(227, 20)
@@ -1633,7 +1771,7 @@ Partial Class ControlPanel
         Me.lblConfiguracion.AutoSize = True
         Me.lblConfiguracion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblConfiguracion.ForeColor = System.Drawing.Color.White
-        Me.lblConfiguracion.Location = New System.Drawing.Point(3, 9)
+        Me.lblConfiguracion.Location = New System.Drawing.Point(118, 4)
         Me.lblConfiguracion.Name = "lblConfiguracion"
         Me.lblConfiguracion.Size = New System.Drawing.Size(195, 20)
         Me.lblConfiguracion.TabIndex = 71
@@ -1764,16 +1902,6 @@ Partial Class ControlPanel
         Me.ToolTipDestination.Name = "ToolTipDestination"
         Me.ToolTipDestination.Size = New System.Drawing.Size(0, 17)
         '
-        'AxWindowsMediaPlayer1
-        '
-        Me.AxWindowsMediaPlayer1.Enabled = True
-        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(1235, 698)
-        Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
-        Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(75, 23)
-        Me.AxWindowsMediaPlayer1.TabIndex = 68
-        Me.AxWindowsMediaPlayer1.Visible = False
-        '
         'btnReacomodar
         '
         Me.btnReacomodar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1804,6 +1932,88 @@ Partial Class ControlPanel
         Me.btnPreview.TabIndex = 76
         Me.btnPreview.UseVisualStyleBackColor = False
         '
+        'timAmbiente
+        '
+        Me.timAmbiente.Interval = 1000
+        '
+        'MenuContextual
+        '
+        Me.MenuContextual.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.itemPresentar})
+        Me.MenuContextual.Name = "ContextMenuStrip1"
+        Me.MenuContextual.Size = New System.Drawing.Size(124, 26)
+        '
+        'itemPresentar
+        '
+        Me.itemPresentar.Image = Global.Presentador.My.Resources.Resources.VistaPrevia_Blanco
+        Me.itemPresentar.Name = "itemPresentar"
+        Me.itemPresentar.Size = New System.Drawing.Size(123, 22)
+        Me.itemPresentar.Text = "Presentar"
+        Me.itemPresentar.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal
+        '
+        'btnAbreSitioWeb
+        '
+        Me.btnAbreSitioWeb.BackColor = System.Drawing.Color.CadetBlue
+        Me.btnAbreSitioWeb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnAbreSitioWeb.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnAbreSitioWeb.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue
+        Me.btnAbreSitioWeb.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAbreSitioWeb.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAbreSitioWeb.ForeColor = System.Drawing.Color.White
+        Me.btnAbreSitioWeb.Image = Global.Presentador.My.Resources.Resources.AgregarSitioWeb
+        Me.btnAbreSitioWeb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAbreSitioWeb.Location = New System.Drawing.Point(338, 264)
+        Me.btnAbreSitioWeb.Name = "btnAbreSitioWeb"
+        Me.btnAbreSitioWeb.Size = New System.Drawing.Size(155, 63)
+        Me.btnAbreSitioWeb.TabIndex = 79
+        Me.btnAbreSitioWeb.Text = "Sitio Web *"
+        Me.btnAbreSitioWeb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnAbreSitioWeb.UseVisualStyleBackColor = False
+        '
+        'btnAbreCancioneroNuevo
+        '
+        Me.btnAbreCancioneroNuevo.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnAbreCancioneroNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnAbreCancioneroNuevo.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnAbreCancioneroNuevo.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue
+        Me.btnAbreCancioneroNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAbreCancioneroNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAbreCancioneroNuevo.ForeColor = System.Drawing.Color.White
+        Me.btnAbreCancioneroNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAbreCancioneroNuevo.Location = New System.Drawing.Point(177, 264)
+        Me.btnAbreCancioneroNuevo.Name = "btnAbreCancioneroNuevo"
+        Me.btnAbreCancioneroNuevo.Size = New System.Drawing.Size(155, 63)
+        Me.btnAbreCancioneroNuevo.TabIndex = 78
+        Me.btnAbreCancioneroNuevo.Text = "Canciones nuevas *"
+        Me.btnAbreCancioneroNuevo.UseVisualStyleBackColor = False
+        '
+        'btnAbreCancionero
+        '
+        Me.btnAbreCancionero.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnAbreCancionero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnAbreCancionero.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnAbreCancionero.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue
+        Me.btnAbreCancionero.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAbreCancionero.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAbreCancionero.ForeColor = System.Drawing.Color.White
+        Me.btnAbreCancionero.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAbreCancionero.Location = New System.Drawing.Point(16, 264)
+        Me.btnAbreCancionero.Name = "btnAbreCancionero"
+        Me.btnAbreCancionero.Size = New System.Drawing.Size(155, 63)
+        Me.btnAbreCancionero.TabIndex = 77
+        Me.btnAbreCancionero.Text = "Cantemos a Jehová *"
+        Me.btnAbreCancionero.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnAbreCancionero.UseVisualStyleBackColor = False
+        '
+        'AxWindowsMediaPlayer1
+        '
+        Me.AxWindowsMediaPlayer1.Enabled = True
+        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(1285, 719)
+        Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
+        Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(75, 23)
+        Me.AxWindowsMediaPlayer1.TabIndex = 68
+        Me.AxWindowsMediaPlayer1.Visible = False
+        '
         'ControlPanel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1811,6 +2021,11 @@ Partial Class ControlPanel
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1360, 768)
+        Me.Controls.Add(Me.pnlSitio)
+        Me.Controls.Add(Me.panConfigs)
+        Me.Controls.Add(Me.btnAbreSitioWeb)
+        Me.Controls.Add(Me.btnAbreCancioneroNuevo)
+        Me.Controls.Add(Me.btnAbreCancionero)
         Me.Controls.Add(Me.btnPreview)
         Me.Controls.Add(Me.btnReacomodar)
         Me.Controls.Add(Me.StatusBar)
@@ -1847,15 +2062,14 @@ Partial Class ControlPanel
         Me.Controls.Add(Me.lblStatus)
         Me.Controls.Add(Me.btnMinimizar)
         Me.Controls.Add(Me.btnCerrar)
-        Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.lstContenidos)
-        Me.Controls.Add(Me.panConfigs)
+        Me.Controls.Add(Me.pnlCitas)
         Me.Controls.Add(Me.panelControlAudio)
         Me.Controls.Add(Me.panelControlVideo)
         Me.Controls.Add(Me.panelControlPDF)
         Me.Controls.Add(Me.panelControlImagen)
         Me.Controls.Add(Me.pnlCanciones)
-        Me.Controls.Add(Me.pnlCitas)
+        Me.Controls.Add(Me.lblTitle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -1868,6 +2082,8 @@ Partial Class ControlPanel
         CType(Me.trackVideoVolume, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlCanciones.ResumeLayout(False)
         Me.pnlCanciones.PerformLayout()
+        Me.pnlSitio.ResumeLayout(False)
+        Me.pnlSitio.PerformLayout()
         Me.pnlCitas.ResumeLayout(False)
         Me.pnlCitas.PerformLayout()
         Me.panelControlPDF.ResumeLayout(False)
@@ -1884,6 +2100,7 @@ Partial Class ControlPanel
         Me.PanelDeGrabacion.PerformLayout()
         Me.StatusBar.ResumeLayout(False)
         Me.StatusBar.PerformLayout()
+        Me.MenuContextual.ResumeLayout(False)
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -1947,7 +2164,6 @@ Partial Class ControlPanel
     Friend WithEvents btnLimpiaItem As Button
     Friend WithEvents lblNombreArchivo As Label
     Friend WithEvents btnCerrarArchivo As Button
-    Friend WithEvents AxWindowsMediaPlayer1 As AxWMPLib.AxWindowsMediaPlayer
     Friend WithEvents Label7 As Label
     Friend WithEvents panConfigs As Panel
     Friend WithEvents lblConfiguracion As Label
@@ -2012,7 +2228,24 @@ Partial Class ControlPanel
     Friend WithEvents btnReacomodar As Button
     Friend WithEvents DownloadingUpdateProgressBar As ToolStripProgressBar
     Friend WithEvents lblInstalarNuevaVersion As ToolStripStatusLabel
-    Friend WithEvents chkMostrarCancioneroPDF As CheckBox
     Friend WithEvents trackAudioPosition As TrackBar
     Friend WithEvents btnPreview As Button
+    Friend WithEvents timAmbiente As Timer
+    Friend WithEvents MenuContextual As ContextMenuStrip
+    Friend WithEvents itemPresentar As ToolStripMenuItem
+    Friend WithEvents btnAbreSitioWeb As Button
+    Friend WithEvents btnAbreCancioneroNuevo As Button
+    Friend WithEvents btnAbreCancionero As Button
+    Friend WithEvents btnAbreNuevasCanciones As Button
+    Friend WithEvents Label19 As Label
+    Friend WithEvents txtURLNuevasCanciones As TextBox
+    Friend WithEvents btnAbreCanciones As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtURLCanciones As TextBox
+    Friend WithEvents pnlSitio As Panel
+    Friend WithEvents btnCancelaSitio As Button
+    Friend WithEvents btnAgregaSitioLista As Button
+    Friend WithEvents Label20 As Label
+    Friend WithEvents txtCustomURL As TextBox
+    Friend WithEvents AxWindowsMediaPlayer1 As AxWMPLib.AxWindowsMediaPlayer
 End Class

@@ -1,7 +1,5 @@
 ﻿Public Class Presentacion
     Public WebBrowserBiblia As Boolean = False
-    Public MostrarCursor As Boolean = True
-    Dim justOnce = True
     Private Sub WebBrowser1_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles WebBrowser1.DocumentCompleted
         Dim VersiculoEncontrado As Boolean = False
 
@@ -22,7 +20,7 @@
                                               body{Color: #333;background-color:#f7f7f5;}
                                               p{font-Size:  2em;}
                                             </style>"
-                    Dim ToBrowser As String = "<html><head>" + style + "</head><body><div Class= results >" + CurElement.InnerHtml + "</div></body></html>"
+                    Dim ToBrowser As String = "<html><head>" + style + "</head><body><div Class= 'results' >" + CurElement.InnerHtml + "</div></body></html>"
                     WebBrowser1.DocumentText = ToBrowser
                     VersiculoEncontrado = True
                 End If
@@ -32,31 +30,56 @@
             End If
             WebBrowserBiblia = False
         End If
-        'TODO revisar comportamiento
-        'If justOnce Then
-        'WebBrowser1.DocumentText = WebBrowser1.DocumentText
-        'justOnce = False
-        'End If
     End Sub
-
     Private Sub Presentacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Me.Location = Screen.AllScreens(0).Bounds.Location + New Point(0, 0) Then
+            Me.TopMost = False
+            btnCerrar.Visible = True
+            CheckScreens.Enabled = True
+            btnCerrar.Left = Screen.AllScreens(0).WorkingArea.Width - btnCerrar.Width
+        End If
 
     End Sub
+    Private Sub Presentacion_PermiteCerrar() Handles Me.Move, Me.ResizeEnd
+        Try
+            If Me.Location = Screen.AllScreens(0).Bounds.Location + New Point(0, 0) Then
+                btnCerrar.Left = Screen.AllScreens(0).WorkingArea.Width - btnCerrar.Width
+                Me.TopMost = False
+                btnCerrar.Visible = True
+                CheckScreens.Enabled = True
+            Else
+                btnCerrar.Visible = False
+                Me.TopMost = True
+                CheckScreens.Enabled = False
+            End If
+        Catch ex As Exception
 
-    'Private Sub Form1_MouseEnter(sender As Object, e As EventArgs) Handles MyBase.MouseEnter, PictureBox1.MouseEnter ', AxAcroPDF1.MouseEnter ' ', AxWindowsMediaPlayer1.MouseEnter , WebBrowser1.MouseEnter 
-    '    If Not MostrarCursor Then
-    '        Cursor.Hide()
-    '    Else
-    '        Cursor.Show()
-    '    End If
+        End Try
+    End Sub
 
-    'End Sub
 
-    'Private Sub Form1_MouseLeave(sender As Object, e As EventArgs) Handles MyBase.MouseLeave, PictureBox1.MouseLeave ', AxAcroPDF1.MouseLeave ', AxWindowsMediaPlayer1.MouseLeave ', WebBrowser1.MouseLeave 
-    '    If Not MostrarCursor Then
-    '        Cursor.Show()
-    '    Else
-    '        Cursor.Hide()
-    '    End If
-    'End Sub
+    Private Sub btnCerrarArchivo_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        ControlPanel.tooglePresentacion(Me)
+    End Sub
+
+    Private Sub CheckScreens_Tick(sender As Object, e As EventArgs) Handles CheckScreens.Tick
+        CheckScreens.Enabled = False
+        If Location = Screen.AllScreens(0).Bounds.Location + New Point(0, 0) Then
+
+            Try
+                Dim tempScreen As Screen = Screen.AllScreens(1)
+                WindowState = FormWindowState.Normal
+                TopMost = True
+                StartPosition = FormStartPosition.Manual
+                Location = tempScreen.Bounds.Location + New Point(0, 0)
+                FormBorderStyle = FormBorderStyle.None
+                WindowState = FormWindowState.Maximized
+                Update()
+                UpdateBounds()
+                tempScreen = Nothing
+            Catch ex As Exception
+            End Try
+        End If
+        CheckScreens.Enabled = True
+    End Sub
 End Class

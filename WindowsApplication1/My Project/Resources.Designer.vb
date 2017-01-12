@@ -103,6 +103,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property AgregarSitioWeb() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AgregarSitioWeb", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property AgregarVersiculo() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("AgregarVersiculo", resourceCulture)
@@ -314,6 +324,16 @@ Namespace My.Resources
         Friend ReadOnly Property Guardar() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Guardar", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property ic_slideshow_white_24dp_2x() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ic_slideshow_white_24dp_2x", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -1027,6 +1047,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to No valid address to show..
+        '''</summary>
+        Friend ReadOnly Property msgb_noURL_EN() As String
+            Get
+                Return ResourceManager.GetString("msgb_noURL_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to No se ingresó ninguna dirección para mostrar..
+        '''</summary>
+        Friend ReadOnly Property msgb_noURL_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("msgb_noURL_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to An error occurs getting the key {.
         '''</summary>
         Friend ReadOnly Property msgb_obtener_clave_error_EN() As String
@@ -1271,6 +1309,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Presentation is showing content previously got from WOL. Result from search of &apos;.
+        '''</summary>
+        Friend ReadOnly Property status_cita_en_presentacion_de_cache_EN() As String
+            Get
+                Return ResourceManager.GetString("status_cita_en_presentacion_de_cache_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Presentación muestra contenido previamente obtenido desde la WOL. Resultado de la búsqueda de &apos;.
+        '''</summary>
+        Friend ReadOnly Property status_cita_en_presentacion_de_cache_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("status_cita_en_presentacion_de_cache_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Presentation is showing content got from WOL. Result from search of &apos;.
         '''</summary>
         Friend ReadOnly Property status_cita_en_presentacion_EN() As String
@@ -1325,6 +1381,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Presentation can&apos;t show site: .
+        '''</summary>
+        Friend ReadOnly Property status_error_presentacion_sitio_EN() As String
+            Get
+                Return ResourceManager.GetString("status_error_presentacion_sitio_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Presentación no puede mostrar el sitio: .
+        '''</summary>
+        Friend ReadOnly Property status_error_presentacion_sitio_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("status_error_presentacion_sitio_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Presentation is showing the image: .
         '''</summary>
         Friend ReadOnly Property status_imagen_en_presentacion_EN() As String
@@ -1375,6 +1449,24 @@ Namespace My.Resources
         Friend ReadOnly Property status_pdf_en_presentacion_ES_AR() As String
             Get
                 Return ResourceManager.GetString("status_pdf_en_presentacion_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Presentation is showing the PPT file:.
+        '''</summary>
+        Friend ReadOnly Property status_ppt_en_presentacion_EN() As String
+            Get
+                Return ResourceManager.GetString("status_ppt_en_presentacion_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Presentacion está mostrando el archivo PPT: .
+        '''</summary>
+        Friend ReadOnly Property status_ppt_en_presentacion_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("status_ppt_en_presentacion_ES_AR", resourceCulture)
             End Get
         End Property
         
@@ -1703,6 +1795,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Power Point presentation files.
+        '''</summary>
+        Friend ReadOnly Property str_archivos_ppt_EN() As String
+            Get
+                Return ResourceManager.GetString("str_archivos_ppt_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Archivos de Power Point.
+        '''</summary>
+        Friend ReadOnly Property str_archivos_ppt_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("str_archivos_ppt_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Video files.
         '''</summary>
         Friend ReadOnly Property str_archivos_video_EN() As String
@@ -1739,6 +1849,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Start.
+        '''</summary>
+        Friend ReadOnly Property str_btnAmbientModeOn_EN() As String
+            Get
+                Return ResourceManager.GetString("str_btnAmbientModeOn_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Iniciar.
+        '''</summary>
+        Friend ReadOnly Property str_btnAmbientModeOn_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("str_btnAmbientModeOn_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Song.
         '''</summary>
         Friend ReadOnly Property str_cancion_EN() As String
@@ -1757,7 +1885,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Mattew%2024:14.
+        '''  Looks up a localized string similar to Matthew%2024:14.
         '''</summary>
         Friend ReadOnly Property str_cita_por_defecto_EN() As String
             Get
@@ -1793,6 +1921,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Are you sure to stop the current track playing?.
+        '''</summary>
+        Friend ReadOnly Property str_cortar_reproduccion_EN() As String
+            Get
+                Return ResourceManager.GetString("str_cortar_reproduccion_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to ¿Está seguro que desea cortar la reproducción en curso?.
+        '''</summary>
+        Friend ReadOnly Property str_cortar_reproduccion_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("str_cortar_reproduccion_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Image.
         '''</summary>
         Friend ReadOnly Property str_imagen_EN() As String
@@ -1807,6 +1953,24 @@ Namespace My.Resources
         Friend ReadOnly Property str_imagen_ES_AR() As String
             Get
                 Return ResourceManager.GetString("str_imagen_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Ambient mode. Minutes:.
+        '''</summary>
+        Friend ReadOnly Property str_lblAmbiente_EN() As String
+            Get
+                Return ResourceManager.GetString("str_lblAmbiente_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Música ambiente. Cantidad de minutos:.
+        '''</summary>
+        Friend ReadOnly Property str_lblAmbiente_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("str_lblAmbiente_ES_AR", resourceCulture)
             End Get
         End Property
         
@@ -2027,6 +2191,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to PPT.
+        '''</summary>
+        Friend ReadOnly Property str_ppt_EN() As String
+            Get
+                Return ResourceManager.GetString("str_ppt_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to PPT.
+        '''</summary>
+        Friend ReadOnly Property str_ppt_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("str_ppt_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Presentador.
         '''</summary>
         Friend ReadOnly Property str_programa_nombre_EN() As String
@@ -2081,7 +2263,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 1.3.2.
+        '''  Looks up a localized string similar to 1.4.0.
         '''</summary>
         Friend ReadOnly Property str_version_EN() As String
             Get
@@ -2090,7 +2272,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 1.3.2.
+        '''  Looks up a localized string similar to 1.4.0.
         '''</summary>
         Friend ReadOnly Property str_version_ES_AR() As String
             Get
@@ -2135,6 +2317,60 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Sing to Jehovah.
+        '''</summary>
+        Friend ReadOnly Property text_btnAbreCancionero_EN() As String
+            Get
+                Return ResourceManager.GetString("text_btnAbreCancionero_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Cantemos a Jehová *.
+        '''</summary>
+        Friend ReadOnly Property text_btnAbreCancionero_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("text_btnAbreCancionero_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to New songs *.
+        '''</summary>
+        Friend ReadOnly Property text_btnAbreCancioneroNuevo_EN() As String
+            Get
+                Return ResourceManager.GetString("text_btnAbreCancioneroNuevo_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Canciones nuevas *.
+        '''</summary>
+        Friend ReadOnly Property text_btnAbreCancioneroNuevo_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("text_btnAbreCancioneroNuevo_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Go.
+        '''</summary>
+        Friend ReadOnly Property text_btnAbreCanciones_EN() As String
+            Get
+                Return ResourceManager.GetString("text_btnAbreCanciones_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Ir.
+        '''</summary>
+        Friend ReadOnly Property text_btnAbreCanciones_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("text_btnAbreCanciones_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Official Site.
         '''</summary>
         Friend ReadOnly Property text_btnAbreJWorg_EN() As String
@@ -2155,6 +2391,24 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized string similar to Go.
         '''</summary>
+        Friend ReadOnly Property text_btnAbreNuevasCanciones_EN() As String
+            Get
+                Return ResourceManager.GetString("text_btnAbreNuevasCanciones_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Ir.
+        '''</summary>
+        Friend ReadOnly Property text_btnAbreNuevasCanciones_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("text_btnAbreNuevasCanciones_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Go.
+        '''</summary>
         Friend ReadOnly Property text_btnAbreSitioOficialTest_EN() As String
             Get
                 Return ResourceManager.GetString("text_btnAbreSitioOficialTest_EN", resourceCulture)
@@ -2167,6 +2421,24 @@ Namespace My.Resources
         Friend ReadOnly Property text_btnAbreSitioOficialTest_ES_AR() As String
             Get
                 Return ResourceManager.GetString("text_btnAbreSitioOficialTest_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Website *.
+        '''</summary>
+        Friend ReadOnly Property text_btnAbreSitioWeb_EN() As String
+            Get
+                Return ResourceManager.GetString("text_btnAbreSitioWeb_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Sitio web *.
+        '''</summary>
+        Friend ReadOnly Property text_btnAbreSitioWeb_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("text_btnAbreSitioWeb_ES_AR", resourceCulture)
             End Get
         End Property
         
@@ -2351,6 +2623,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to PPT.
+        '''</summary>
+        Friend ReadOnly Property text_btnAgregaPPT_EN() As String
+            Get
+                Return ResourceManager.GetString("text_btnAgregaPPT_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to PPT.
+        '''</summary>
+        Friend ReadOnly Property text_btnAgregaPPT_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("text_btnAgregaPPT_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Add.
         '''</summary>
         Friend ReadOnly Property text_btnAgregarCancionLista_EN() As String
@@ -2365,6 +2655,24 @@ Namespace My.Resources
         Friend ReadOnly Property text_btnAgregarCancionLista_ES_AR() As String
             Get
                 Return ResourceManager.GetString("text_btnAgregarCancionLista_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Add.
+        '''</summary>
+        Friend ReadOnly Property text_btnAgregaSitioLista_EN() As String
+            Get
+                Return ResourceManager.GetString("text_btnAgregaSitioLista_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Agregar.
+        '''</summary>
+        Friend ReadOnly Property text_btnAgregaSitioLista_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("text_btnAgregaSitioLista_ES_AR", resourceCulture)
             End Get
         End Property
         
@@ -2747,6 +3055,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to New songs:.
+        '''</summary>
+        Friend ReadOnly Property text_Label19_EN() As String
+            Get
+                Return ResourceManager.GetString("text_Label19_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Canciones nuevas:.
+        '''</summary>
+        Friend ReadOnly Property text_Label19_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("text_Label19_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Add to list of content to present.
         '''</summary>
         Friend ReadOnly Property text_Label2_EN() As String
@@ -2761,6 +3087,42 @@ Namespace My.Resources
         Friend ReadOnly Property text_Label2_ES_AR() As String
             Get
                 Return ResourceManager.GetString("text_Label2_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to URL:.
+        '''</summary>
+        Friend ReadOnly Property text_Label20_EN() As String
+            Get
+                Return ResourceManager.GetString("text_Label20_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Sitio:.
+        '''</summary>
+        Friend ReadOnly Property text_Label20_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("text_Label20_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Songs&apos; list:.
+        '''</summary>
+        Friend ReadOnly Property text_Label3_EN() As String
+            Get
+                Return ResourceManager.GetString("text_Label3_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Lista de canciones:.
+        '''</summary>
+        Friend ReadOnly Property text_Label3_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("text_Label3_ES_AR", resourceCulture)
             End Get
         End Property
         
@@ -3071,6 +3433,60 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Add to list the official songs website list from the WOL..
+        '''</summary>
+        Friend ReadOnly Property ttip_btnAbreCancionero_EN() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnAbreCancionero_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Agrega a la lista la página del cancionero oficial obtenido de la Biblioteca en Línea.
+        '''</summary>
+        Friend ReadOnly Property ttip_btnAbreCancionero_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnAbreCancionero_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Add to list the official new songs&apos; list from the WOL..
+        '''</summary>
+        Friend ReadOnly Property ttip_btnAbreCancioneroNuevo_EN() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnAbreCancioneroNuevo_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Agrega a la lista la página de las nuevas canciones oficiales obtenidas de la Biblioteca en Línea..
+        '''</summary>
+        Friend ReadOnly Property ttip_btnAbreCancioneroNuevo_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnAbreCancioneroNuevo_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Test the URL in default browser.
+        '''</summary>
+        Friend ReadOnly Property ttip_btnAbreCanciones_EN() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnAbreCanciones_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Probar la URL en el navegador por defecto.
+        '''</summary>
+        Friend ReadOnly Property ttip_btnAbreCanciones_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnAbreCanciones_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Add to the list a link to official site. Require active Internet connection..
         '''</summary>
         Friend ReadOnly Property ttip_btnAbreJWorg_EN() As String
@@ -3091,6 +3507,24 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized string similar to Test the URL in default browser.
         '''</summary>
+        Friend ReadOnly Property ttip_btnAbreNuevasCanciones_EN() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnAbreNuevasCanciones_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Probar la URL en el navegador por defecto.
+        '''</summary>
+        Friend ReadOnly Property ttip_btnAbreNuevasCanciones_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnAbreNuevasCanciones_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Test the URL in default browser.
+        '''</summary>
         Friend ReadOnly Property ttip_btnAbreSitioOficialTest_EN() As String
             Get
                 Return ResourceManager.GetString("ttip_btnAbreSitioOficialTest_EN", resourceCulture)
@@ -3103,6 +3537,24 @@ Namespace My.Resources
         Friend ReadOnly Property ttip_btnAbreSitioOficialTest_ES_AR() As String
             Get
                 Return ResourceManager.GetString("ttip_btnAbreSitioOficialTest_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Allow to input a website address to add to list..
+        '''</summary>
+        Friend ReadOnly Property ttip_btnAbreSitioWeb_EN() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnAbreSitioWeb_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Permite ingresar la dirección de un sitio web para agregar a la lista..
+        '''</summary>
+        Friend ReadOnly Property ttip_btnAbreSitioWeb_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnAbreSitioWeb_ES_AR", resourceCulture)
             End Get
         End Property
         
@@ -3233,7 +3685,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Allows select a bible quote and returns the result from the WOL. Require active Internet connection..
+        '''  Looks up a localized string similar to Allows select a bible quote and returns the result from the WOL. Require active Internet connection when the user is creating the list, the content of each quote is cached to be used offline later..
         '''</summary>
         Friend ReadOnly Property ttip_btnAgregaCita_EN() As String
             Get
@@ -3242,7 +3694,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to  Permite ingresar una cita bíblica y devuleve el resultado obtenido en la WOL. Requiere conexión activa a Internet..
+        '''  Looks up a localized string similar to  Permite ingresar una cita bíblica y devuleve el resultado obtenido en la WOL. Requiere conexión activa a Internet cuando se arma la lista, el contenido del versículo se guarda para poder usarlo sin conexión luego..
         '''</summary>
         Friend ReadOnly Property ttip_btnAgregaCita_ES_AR() As String
             Get
@@ -3305,6 +3757,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Open the file selector allowing choose only Power Point presentation files. After that will add the selected files to the list..
+        '''</summary>
+        Friend ReadOnly Property ttip_btnAgregaPPT_EN() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnAgregaPPT_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Abre la ventana de selección de archivos permitiendo la elección de presentaciones de Power Point. Luego de ubicar los archivos los agregará a la lista..
+        '''</summary>
+        Friend ReadOnly Property ttip_btnAgregaPPT_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnAgregaPPT_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Add song to the list.
         '''</summary>
         Friend ReadOnly Property ttip_btnAgregarCancionLista_EN() As String
@@ -3323,6 +3793,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Add website to list..
+        '''</summary>
+        Friend ReadOnly Property ttip_btnAgregaSitioLista_EN() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnAgregaSitioLista_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Agrega el sitio a la lista..
+        '''</summary>
+        Friend ReadOnly Property ttip_btnAgregaSitioLista_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnAgregaSitioLista_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Open the file selector allowing choose only image files. After that will add the selected files to the list..
         '''</summary>
         Friend ReadOnly Property ttip_btnAgregaVideo_EN() As String
@@ -3337,6 +3825,24 @@ Namespace My.Resources
         Friend ReadOnly Property ttip_btnAgregaVideo_ES_AR() As String
             Get
                 Return ResourceManager.GetString("ttip_btnAgregaVideo_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Add music to list up to indicated minutes..
+        '''</summary>
+        Friend ReadOnly Property ttip_btnAmbientModeOn_EN() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnAmbientModeOn_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Agrega contenido musical a la lista respetando los minutos asignados..
+        '''</summary>
+        Friend ReadOnly Property ttip_btnAmbientModeOn_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnAmbientModeOn_ES_AR", resourceCulture)
             End Get
         End Property
         
@@ -3499,6 +4005,24 @@ Namespace My.Resources
         Friend ReadOnly Property ttip_btnCancelarConfig_ES_AR() As String
             Get
                 Return ResourceManager.GetString("ttip_btnCancelarConfig_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Cancel website input.
+        '''</summary>
+        Friend ReadOnly Property ttip_btnCancelaSitio_EN() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnCancelaSitio_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Cancela el ingreso del sitio.
+        '''</summary>
+        Friend ReadOnly Property ttip_btnCancelaSitio_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("ttip_btnCancelaSitio_ES_AR", resourceCulture)
             End Get
         End Property
         
@@ -4165,6 +4689,60 @@ Namespace My.Resources
         Friend ReadOnly Property ttip_trackPDFZoom_ES_AR() As String
             Get
                 Return ResourceManager.GetString("ttip_trackPDFZoom_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Website address.
+        '''</summary>
+        Friend ReadOnly Property ttip_txtCustomURL_EN() As String
+            Get
+                Return ResourceManager.GetString("ttip_txtCustomURL_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Ingrese la dirección del sitio aquí.
+        '''</summary>
+        Friend ReadOnly Property ttip_txtCustomURL_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("ttip_txtCustomURL_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to URL of website with songs&apos; list from WOL.
+        '''</summary>
+        Friend ReadOnly Property ttip_txtURLCanciones_EN() As String
+            Get
+                Return ResourceManager.GetString("ttip_txtURLCanciones_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to URL del sitio con la lista de canciones de la Biblioteca en Línea.
+        '''</summary>
+        Friend ReadOnly Property ttip_txtURLCanciones_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("ttip_txtURLCanciones_ES_AR", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to URL of website with new songs&apos; list from WOL.
+        '''</summary>
+        Friend ReadOnly Property ttip_txtURLNuevasCanciones_EN() As String
+            Get
+                Return ResourceManager.GetString("ttip_txtURLNuevasCanciones_EN", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to URL del sitio con la lista de canciones nuevas de la Biblioteca en Línea.
+        '''</summary>
+        Friend ReadOnly Property ttip_txtURLNuevasCanciones_ES_AR() As String
+            Get
+                Return ResourceManager.GetString("ttip_txtURLNuevasCanciones_ES_AR", resourceCulture)
             End Get
         End Property
         

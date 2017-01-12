@@ -1,6 +1,7 @@
 ﻿Public Class ControlPanel
     'Valor fijo
     Dim df_CarpetaRecursos = Microsoft.VisualBasic.FileIO.SpecialDirectories.MyDocuments + "\Presentaciones Recursos"
+    Dim df_CarpetaCache As String = df_CarpetaRecursos + "\Cache"
     ' POR DEFECTO
     Dim df_videoFilters As String = "*.mp4;*.webm;*.3gp".ToUpper
     Dim df_imageFilters As String = "*.bmp;*.jpg;*.png;*.gif;*.jpeg".ToUpper
@@ -9,6 +10,8 @@
     Dim df_sitioOficial As String = "http://jw.org/es/"
     Dim df_sitioWOL As String = "http://wol.jw.org/es/"
     Dim df_sitioBroadcasting As String = "http://tv.jw.org/#es"
+    Dim df_sitioCanciones As String = "http://wol.jw.org/es/wol/publication/r4/lp-s/sn/S/2009"
+    Dim df_sitioCancionesNuevas As String = "http://wol.jw.org/es/wol/publication/r4/lp-s/snnw/S/2016"
     Dim df_fileImageBackgroundDefault As String = "Por defecto"
     Dim df_CarpetaCanciones As String = df_CarpetaRecursos + "\Canciones\"
     Dim df_CarpetaGrabaciones As String = df_CarpetaRecursos + "\Grabaciones\"
@@ -24,6 +27,8 @@
     Dim sitioOficial As String = df_sitioOficial
     Dim sitioWOL As String = df_sitioWOL
     Dim sitioBroadcasting As String = df_sitioBroadcasting
+    Dim sitioCanciones As String = df_sitioCanciones
+    Dim sitioCancionesNuevas As String = df_sitioCancionesNuevas
     Dim fileImageBackgroundDefault As String = df_fileImageBackgroundDefault
     Dim CarpetaCanciones As String = df_CarpetaCanciones
     Dim CarpetaGrabaciones As String = df_CarpetaGrabaciones
@@ -34,7 +39,7 @@
     ' Variables de entorno
     Private WithEvents webClient As System.Net.WebClient
     Dim Presentacion As Presentacion
-    Dim panelsTop As Integer = 299
+    Dim panelsTop As Integer = 351
     Dim panelLeft As Integer = 12
     Dim panelControlsTop As Integer = 92
     Dim panelControlsLeft As Integer = 694
@@ -47,14 +52,14 @@
     Dim PointerOverAudioTrack As Boolean = False
     Dim PointerOverVideoTrack As Boolean = False
     Dim versionEnDescarga As String = ""
-    Private Sub btnIniciaPresentador_Click(sender As Object, e As EventArgs) Handles btnIniciaPresentador.Click
-        tooglePresentacion()
+    Public Sub btnIniciaPresentador_Click(sender As Object, e As EventArgs) Handles btnIniciaPresentador.Click
+        tooglePresentacion(Nothing)
     End Sub
     ''' <summary>
     ''' Inicia o cierra el Presentador, según sea el caso, verificando si hay un segundo monitor, de lo contrario se mostrará en el monitor principal, previa confirmación.
     ''' </summary>
     ''' <returns>Devuelve true/false en caso de que se haya completado la tarea o no.</returns>
-    Function tooglePresentacion()
+    Public Function tooglePresentacion(senderForm As Form)
         Dim monitorPrincipal As Boolean = False
         If Not PresentadorDisponible() Then
             Dim screen As Screen
@@ -92,6 +97,9 @@
             Return True
         Else
             Try
+                If senderForm IsNot Nothing Then
+                    Presentacion = senderForm
+                End If
                 ActivarContenido(-1)
                 Presentacion.Close()
                 Presentacion.Dispose()
@@ -113,7 +121,7 @@
     ''' Verifica que la ventana de Presentación esté encendida.
     ''' </summary>
     ''' <returns>True si está encendida, False si no.</returns>
-    Function PresentadorDisponible()
+    Public Function PresentadorDisponible()
         Dim frmCollection = Application.OpenForms()
         For Each form As Form In frmCollection
             If form.Name = "Presentacion" Then
@@ -160,9 +168,7 @@
                 Presentacion.PictureBox1.BackColor = Color.White
             End If
         Else
-            If chkMostrarCancioneroPDF.Checked Then
-                PresentadorDisponibleContinuar()
-            End If
+
             If PresentadorDisponible() Then
                 Presentacion.AxWindowsMediaPlayer1.Visible = False
                 Presentacion.AxWindowsMediaPlayer1.settings.volume = 100
@@ -255,13 +261,7 @@
                 panelControlAudio.Left = panelControlsLeft
                 timAudioPosicionActual.Enabled = True
 
-                If chkMostrarCancioneroPDF.Checked Then
-                    Presentacion.WebBrowser1.Top = 0
-                    Presentacion.WebBrowser1.Left = 0
-                    Presentacion.WebBrowser1.Height = Presentacion.Height
-                    Presentacion.WebBrowser1.Width = Presentacion.Width
-                    Presentacion.WebBrowser1.Visible = True
-                End If
+
 
                 'Case 6 'Musica // Con video de Fondo
                 'TODO crear otro reproductor para la opcion Música + Video de fondo. Rara.
@@ -332,6 +332,8 @@
         txtSitioOficial.Text = sitioOficial
         txtURLWOL.Text = sitioWOL
         txtURLBroadcasting.Text = sitioBroadcasting
+        txtURLCanciones.Text = sitioCanciones
+        txtURLNuevasCanciones.Text = sitioCancionesNuevas
         txtBackgroudImage.Text = fileImageBackgroundDefault
         txtCarpetaCanciones.Text = CarpetaCanciones
         txtCarpetaGrabaciones.Text = CarpetaGrabaciones
@@ -343,6 +345,7 @@
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnConfiguracion.Click
         refrescaConfiguraciones()
         panConfigs.Visible = True
+        panConfigs.BringToFront()
     End Sub
     ''' <summary>
     ''' En el label de status establece el texto que se mostrará.
@@ -361,10 +364,10 @@
     ''' Cuando el presentador se encuentra apagado y se intenta reproducir un contenido solicita la información y luego la confirmación para encenderlo.
     ''' </summary>
     ''' <returns>El resultado de tooglePresentador o true si ya estaba encendido</returns>
-    Function PresentadorDisponibleContinuar()
+    Public Function PresentadorDisponibleContinuar()
         If Not PresentadorDisponible() Then
             If MsgBox(devuelveResourceString("msgb", "presentacion_no_disponible_encender"), MsgBoxStyle.YesNo, devuelveResourceString("msgb_title", "atencion")) = MsgBoxResult.Yes Then
-                Return tooglePresentacion()
+                Return tooglePresentacion(Nothing)
             Else
                 Return False
             End If
@@ -397,16 +400,24 @@
     Private Sub abreWeb(sitio As String)
         If Not PresentadorDisponible() Then
             If MsgBox(devuelveResourceString("msgb", "presentacion_no_disponible_encender"), MsgBoxStyle.YesNo, devuelveResourceString("msgb_title", "atencion")) = MsgBoxResult.Yes Then
-                If Not tooglePresentacion() Then
+                If Not tooglePresentacion(Nothing) Then
                     Return
                 End If
             Else
                 Return
             End If
         End If
-        Presentacion.WebBrowser1.Navigate(New Uri(sitio))
-        ActivarContenido(1)
-        MostrarStatus(devuelveResourceString("status", "presentacion_sitio") + sitio + devuelveResourceString("status", "presentacion_sitio_final"))
+        If Not sitio.StartsWith("http://") Or sitio.StartsWith("https://") Then
+            sitio = "http://" + sitio
+        End If
+        Try
+            Presentacion.WebBrowser1.Navigate(New Uri(sitio))
+            ActivarContenido(1)
+            MostrarStatus(devuelveResourceString("status", "presentacion_sitio") + sitio + devuelveResourceString("status", "presentacion_sitio_final"))
+        Catch ex As Exception
+            MostrarStatus(devuelveResourceString("status", "error_presentacion_sitio") + sitio + ". Error: " + ex.Message)
+        End Try
+
     End Sub
     Private Sub btnAbreWOL_Click(sender As Object, e As EventArgs) Handles btnAbreWOL.Click
         esconderPaneles()
@@ -455,34 +466,14 @@
             chkAgregaAutomaticamente.Checked = False
         End If
     End Sub
-    Function lyricsToHTML(title, lyrics)
-        Dim lyricsHTML As String = ""
-        lyricsHTML += "<html>"
-        lyricsHTML += "<h3>" + title + "</h3>"
-        For Each line In lyrics.split(vbCr)
-            lyricsHTML += line + "<br>"
-        Next
 
-        lyricsHTML += "</html>"
-        Return lyricsHTML
-    End Function
     ''' <summary>
     ''' Activa los controles de música, envía el archivo a reproducir y detiene la grabación
     ''' </summary>
     Private Sub suenaMusica()
         Dim cancion As String = buscaArchivoCancion(numCanciones.Value)
         If My.Computer.FileSystem.FileExists(cancion) Then
-            Dim cancionMP3 = TagLib.File.Create(cancion)
-            ''todo: revisar comportamiento cuando no hay letra. Sacar la letra de los melódicos de las versiones no melódicas. Estilizar las letras en el documento.
             ActivarContenido(5)
-            If chkMostrarCancioneroPDF.Checked And Not IsNothing(cancionMP3.Tag.Lyrics) Then
-                If PresentadorDisponibleContinuar() Then
-                    Presentacion.WebBrowser1.ScriptErrorsSuppressed = True
-                    Presentacion.WebBrowser1.Refresh()
-                    Presentacion.WebBrowser1.DocumentText = lyricsToHTML(cancionMP3.Tag.Title, cancionMP3.Tag.Lyrics)
-                End If
-            End If
-
             If chkGrabacionInteligente.Checked And grabacionEnProgreso Then
                 grabacionInteligentePausada = True
                 btnGrabarToogle.PerformClick()
@@ -544,9 +535,12 @@
     ''' Verifica el tipo de contenido seleccionado y lanza la función que lo reproduce o muestra
     ''' </summary>
     Private Sub ejecutarContenido()
-
-
         If lstContenidos.SelectedItems.Count = 1 Then
+            If (AxWindowsMediaPlayer1.playState = WMPLib.WMPPlayState.wmppsPlaying) Then
+                If (MsgBox(devuelveResourceString("str", "cortar_reproduccion"), vbYesNo, devuelveResourceString("msgb_title", "confirmacion")) = MsgBoxResult.No) Then
+                    Return
+                End If
+            End If
             Dim item As ListViewItem = New ListViewItem()
             For Each item In lstContenidos.SelectedItems
                 If item.Text.Contains(devuelveResourceString("str", "cancion")) Then
@@ -565,6 +559,15 @@
                 End If
                 If item.Text.Contains(devuelveResourceString("text", btnAbreTV.Name)) Then
                     abreWeb(sitioBroadcasting)
+                End If
+                If item.Text.Contains(devuelveResourceString("text", btnAbreCancionero.Name)) Then
+                    abreWeb(sitioCanciones)
+                End If
+                If item.Text.Contains(devuelveResourceString("text", btnAbreCancioneroNuevo.Name)) Then
+                    abreWeb(sitioCancionesNuevas)
+                End If
+                If item.Text.Contains(devuelveResourceString("text", btnAbreSitioWeb.Name)) Then
+                    abreWeb(item.SubItems(1).Text.Trim())
                 End If
                 If item.Text.Contains(devuelveResourceString("str", "audio")) Then
                     suenaOtraMusica(item.SubItems(1).Text.Trim())
@@ -631,6 +634,7 @@
     Private Sub agregarCita(sender As Object)
         If Not ComboBox1.Text.Equals("") Then
             agregaContenidoALista(devuelveResourceString("text", btnAgregaCita.Name), ComboBox1.Text, sender)
+            cachearCita(ComboBox1.Text)
             If chkAgregaAutomaticamente.Checked Then
                 muestraCita()
                 chkAgregaAutomaticamente.Checked = False
@@ -640,32 +644,73 @@
         End If
     End Sub
     ''' <summary>
+    ''' Verifica que df_CarpetaCache exista, sino, la crea
+    ''' </summary>
+    Private Sub verificarCarpetaCache()
+        If Not My.Computer.FileSystem.DirectoryExists(df_CarpetaCache) Then
+            My.Computer.FileSystem.CreateDirectory(df_CarpetaCache)
+        End If
+    End Sub
+
+    Private Function StringSeguroArchivo(valor As String) As String
+        For Each typo In IO.Path.GetInvalidFileNameChars
+            valor = valor.Replace(typo, "_")
+        Next
+        Return valor
+    End Function
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="cita"></param>
+    Private Sub cachearCita(cita)
+        verificarCarpetaCache()
+        Dim cita_archivo = StringSeguroArchivo(cita)
+        Dim resultado = obtenerTextoDeCita(cita, False)
+        If resultado.StartsWith("Error: ") Then
+            Return
+        End If
+        My.Computer.FileSystem.WriteAllText(df_CarpetaCache + "\" + cita_archivo + "_" + LanguageID + ".jwpcache", resultado, False)
+    End Sub
+    Function obtenerTextoDeCita(cita As String, status As Boolean) As String
+        Dim presuntoArchivo = df_CarpetaCache + "\" + StringSeguroArchivo(cita) + "_" + LanguageID + ".jwpcache"
+        If My.Computer.FileSystem.FileExists(presuntoArchivo) Then
+            If status Then
+                MostrarStatus(devuelveResourceString("status", "cita_en_presentacion_de_cache") + ComboBox1.Text + "' (" + presuntoArchivo + ")")
+            End If
+            Return My.Computer.FileSystem.ReadAllText(presuntoArchivo)
+        End If
+        Try
+            Dim webClient As System.Net.WebClient = New System.Net.WebClient()
+            webClient.Encoding = System.Text.Encoding.UTF8
+            Dim result = webClient.DownloadString(urlToWOLSearch + cita)
+            webClient = Nothing
+            If status Then
+                MostrarStatus(devuelveResourceString("status", "cita_en_presentacion") + ComboBox1.Text + "' (" + urlToWOLSearch + cita + ")")
+            End If
+            Return result
+        Catch ex As Exception
+            If status Then
+                MostrarStatus(devuelveResourceString("status", "versiculo_no_encontrado") + ex.Message)
+            End If
+            Return "Error: " + ex.Message
+        End Try
+    End Function
+    ''' <summary>
     ''' Habilita Presentación para mostrar citas bíblicas, solicita la cita desde la ubicación que esté configurada y la muestra o coloca el cartel de error.
     ''' </summary>
     Private Sub muestraCita()
         If Not PresentadorDisponibleContinuar() Then
             Return
         End If
-
-        Dim urlBase As String = urlToWOLSearch
-        Dim cita As String = ComboBox1.Text
-        Dim webClient As System.Net.WebClient = New System.Net.WebClient()
-        webClient.Encoding = System.Text.Encoding.UTF8
-        Dim sourceString As String = ""
-        Try
-            sourceString = webClient.DownloadString(urlBase + cita)
-            MostrarStatus(devuelveResourceString("status", "cita_en_presentacion") + ComboBox1.Text + "' (" + urlBase + cita + ")")
-        Catch ex As Exception
-            sourceString = devuelveResourceString("str", "versiculo_no_encontrado")
-            MostrarStatus(devuelveResourceString("status", "versiculo_no_encontrado") + ex.Message)
-        End Try
+        Dim cita = ComboBox1.Text
+        Dim sourceString = obtenerTextoDeCita(cita, True)
         Presentacion.WebBrowser1.ScriptErrorsSuppressed = True
         Presentacion.WebBrowser1.DocumentText = sourceString
         Presentacion.WebBrowserBiblia = True
         ActivarContenido(1)
 
         cita = Nothing
-        webClient = Nothing
+
         sourceString = Nothing
     End Sub
     Private Sub btnAgregaImagen_Click(sender As Object, e As EventArgs) Handles btnAgregaImagen.Click
@@ -1211,6 +1256,10 @@
                     Case 14
                         Melodias = (line = "True")
                         chkMelodias.Checked = Melodias
+                    Case 15
+                        sitioCanciones = line
+                    Case 16
+                        sitioCancionesNuevas = line
                 End Select
                 count += 1
             Next
@@ -1328,7 +1377,17 @@
         btnAgregaCitaLista.MouseEnter,
         chkMelodias.MouseEnter,
         btnReacomodar.MouseEnter,
-        btnPreview.MouseEnter
+        btnPreview.MouseEnter,
+        btnAbreCancionero.MouseEnter,
+        btnAbreCancioneroNuevo.MouseEnter,
+        btnAbreSitioWeb.MouseEnter,
+        btnAgregaSitioLista.MouseEnter,
+        txtCustomURL.MouseEnter,
+        btnCancelaSitio.MouseEnter,
+        txtURLCanciones.MouseEnter,
+        txtURLNuevasCanciones.MouseEnter,
+        btnAbreCanciones.MouseEnter,
+        btnAbreNuevasCanciones.MouseEnter
         Dim texto As String = My.Resources.ResourceManager.GetObject("ttip_" + sender.Name + "_" + LanguageID)
         If Not texto = "" Then
             ToolTipDestination.Text = texto
@@ -1396,7 +1455,17 @@
         btnAgregaCitaLista.MouseLeave,
         chkMelodias.MouseLeave,
         btnReacomodar.MouseLeave,
-        btnPreview.MouseLeave
+        btnPreview.MouseLeave,
+        btnAbreCancionero.MouseLeave,
+        btnAbreCancioneroNuevo.MouseLeave,
+        btnAbreSitioWeb.MouseLeave,
+        btnAgregaSitioLista.MouseLeave,
+        txtCustomURL.MouseLeave,
+        btnCancelaSitio.MouseLeave,
+        txtURLCanciones.MouseLeave,
+        txtURLNuevasCanciones.MouseLeave,
+        btnAbreCanciones.MouseLeave,
+        btnAbreNuevasCanciones.MouseLeave
         ToolTipDestination.Text = ""
     End Sub
     Private Sub restableceValoresPorDefecto()
@@ -1408,6 +1477,8 @@
         sitioOficial = df_sitioOficial
         sitioWOL = df_sitioWOL
         sitioBroadcasting = df_sitioBroadcasting
+        sitioCanciones = df_sitioCanciones
+        df_sitioCancionesNuevas = df_sitioCancionesNuevas
         fileImageBackgroundDefault = df_fileImageBackgroundDefault
         CarpetaCanciones = df_CarpetaCanciones
         CarpetaGrabaciones = df_CarpetaGrabaciones
@@ -1423,7 +1494,8 @@
         Dim result As String = videoFilters + vbCr + imageFilters + vbCr + audioFilters + vbCr + urlToWOLSearch _
                                 + vbCr + sitioOficial + vbCr + sitioWOL + vbCr + sitioBroadcasting + vbCr +
                                 fileImageBackgroundDefault + vbCr + CarpetaCanciones + vbCr + NombreArchivoCancionesAntes +
-                                vbCr + NombreArchivoCancionesDespues + vbCr + CarpetaGrabaciones + vbCr + LanguageID + vbCr + Melodias.ToString
+                                vbCr + NombreArchivoCancionesDespues + vbCr + CarpetaGrabaciones + vbCr + LanguageID + vbCr + Melodias.ToString +
+                                vbCr + sitioCanciones + vbCr + sitioCancionesNuevas
         If Not My.Computer.FileSystem.DirectoryExists(df_CarpetaRecursos) Then
             My.Computer.FileSystem.CreateDirectory(df_CarpetaRecursos)
         End If
@@ -1470,7 +1542,7 @@
     End Sub
     Private Sub openURL(url As String)
         If Not url = "" Then
-            If Not (url.StartsWith("http:   //") Or url.StartsWith("https://")) Then
+            If Not (url.StartsWith("http://") Or url.StartsWith("https://")) Then
                 url = "http://" + url
             End If
             Process.Start("cmd", "/c start " + url)
@@ -1534,6 +1606,8 @@
             sitioOficial = txtSitioOficial.Text
             sitioWOL = txtURLWOL.Text
             sitioBroadcasting = txtURLBroadcasting.Text
+            sitioCanciones = txtURLCanciones.Text
+            sitioCancionesNuevas = txtURLNuevasCanciones.Text
             CarpetaCanciones = txtCarpetaCanciones.Text
             NombreArchivoCancionesAntes = txtPatronAntesCanciones.Text
             NombreArchivoCancionesDespues = txtPatronDespuesCanciones.Text
@@ -1776,6 +1850,8 @@
         btnReacomodar.Left = btnCerrar.Left - btnReacomodar.Width
         btnMinimizar.Left = btnReacomodar.Left - btnMinimizar.Width
         btnConfiguracion.Left = btnMinimizar.Left - btnConfiguracion.Width
+        panConfigs.Top = 28
+        panConfigs.Left = btnConfiguracion.Left + btnConfiguracion.Width - panConfigs.Width
         btnBug.Left = btnConfiguracion.Left - btnBug.Width
         'StatusBar.Width = Me.Width
         'StatusBar.Left = 0
@@ -1802,7 +1878,7 @@
         ajustarAPantalla()
     End Sub
 
-    Private Sub btnPreview_Click(sender As Object, e As EventArgs) Handles btnPreview.Click
+    Private Sub btnPreview_Click(sender As Object, e As EventArgs) Handles btnPreview.Click, itemPresentar.Click
         ejecutarContenido()
     End Sub
 
@@ -1812,4 +1888,72 @@
         End If
     End Sub
 
+    Private Sub btnAgregaPPT_Click(sender As Object, e As EventArgs)
+        esconderPaneles()
+        Dim files As String() = buscarArchivos(sender, devuelveResourceString("str", "ppt"), devuelveResourceString("str", "archivos_ppt") + " |" + "*.ppt;*.pptx;*.ppsx".ToUpper)
+        If chkAgregaAutomaticamente.Checked And files.Length > 0 Then
+            muestraPPT(files(0))
+            chkAgregaAutomaticamente.Checked = False
+        End If
+    End Sub
+    Private Sub muestraPPT(archivo As String)
+        If PresentadorDisponibleContinuar() Then
+            ActivarContenido(0)
+            MostrarStatus(devuelveResourceString("status", "ppt_en_presentacion") + archivo)
+        End If
+    End Sub
+
+    Private Sub btnAbreCancionero_Click(sender As Object, e As EventArgs) Handles btnAbreCancionero.Click
+        esconderPaneles()
+        agregaContenidoALista(devuelveResourceString("text", btnAbreCancionero.Name), sitioCanciones, sender)
+        If chkAgregaAutomaticamente.Checked Then
+            abreWeb(sitioCanciones)
+            chkAgregaAutomaticamente.Checked = False
+        End If
+    End Sub
+
+    Private Sub btnAbreCanciones_Click(sender As Object, e As EventArgs) Handles btnAbreCanciones.Click
+        openURL(txtURLCanciones.Text)
+    End Sub
+
+    Private Sub btnAbreNuevasCanciones_Click(sender As Object, e As EventArgs) Handles btnAbreNuevasCanciones.Click
+        openURL(txtURLNuevasCanciones.Text)
+    End Sub
+
+    Private Sub btnAbreCancioneroNuevo_Click(sender As Object, e As EventArgs) Handles btnAbreCancioneroNuevo.Click
+        esconderPaneles()
+        agregaContenidoALista(devuelveResourceString("text", btnAbreCancioneroNuevo.Name), sitioCancionesNuevas, sender)
+        If chkAgregaAutomaticamente.Checked Then
+            abreWeb(sitioCancionesNuevas)
+            chkAgregaAutomaticamente.Checked = False
+        End If
+    End Sub
+
+    Private Sub btnAgregaSitioLista_Click(sender As Object, e As EventArgs) Handles btnAgregaSitioLista.Click
+        If Not txtCustomURL.Text.Equals("") Then
+            esconderPaneles()
+            agregaContenidoALista(devuelveResourceString("text", btnAbreSitioWeb.Name), txtCustomURL.Text, sender)
+            If chkAgregaAutomaticamente.Checked Then
+                abreWeb(txtCustomURL.Text)
+                chkAgregaAutomaticamente.Checked = False
+            End If
+        Else
+            MsgBox(devuelveResourceString("msgb", "noURL"), MsgBoxStyle.OkOnly, devuelveResourceString("msgb_title", "atencion"))
+        End If
+
+    End Sub
+
+    Private Sub btnCancelaSitio_Click(sender As Object, e As EventArgs) Handles btnCancelaSitio.Click
+        esconderPaneles()
+    End Sub
+
+    Private Sub btnAbreSitioWeb_Click(sender As Object, e As EventArgs) Handles btnAbreSitioWeb.Click
+        esconderPaneles()
+        pnlSitio.Left = panelLeft
+        pnlSitio.Top = panelsTop
+        pnlSitio.Visible = True
+        txtCustomURL.SelectAll()
+        txtCustomURL.Select(0, txtCustomURL.Text.Length)
+        txtCustomURL.Focus()
+    End Sub
 End Class

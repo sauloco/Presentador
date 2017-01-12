@@ -117,930 +117,651 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ttip_btnReestablecePresentadorANegro_EN" xml:space="preserve">
+    <value>Clear Presentation. Show a black screen</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Abrir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Abrir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Luz" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Luz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AgregarVideo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AgregarVideo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Pausa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pausa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Ultimo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ultimo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ContenidoYaEnviado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ContenidoYaEnviado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Detener" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Detener.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Configuracion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Configuracion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="VistaPrevia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\VistaPrevia1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Programa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Programa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Orador" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Orador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ValidarTodo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ValidarTodo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CerrarPresentador" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CerrarPresentador_nuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoverPDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoverPDF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Compartir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Compartir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FullscreenExit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FullscreenExit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ReestablecerPresentador" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ReestablecerPresentador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LimpiarLista" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LimpiarLista.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="VistaPrevia_Icon_purple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\VistaPrevia.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FlechaAbajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FlechaAbajo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IniciarPresentador" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IniciarPresentador_nuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AgregarImagenes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AgregarImagenes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Problema" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Problema.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ZoomOut" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ZoomOut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Silencio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Silencio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ZoomIn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ZoomIn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FlechaArriba" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FlechaArriba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AgregarCancion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AgregarCancion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AgregarMusica" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AgregarMusica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cerrar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cerrar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ListaArchivos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ListaArchivos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BackgroundLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Background-Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Volumen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Volumen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Primero" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Primero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AgregarVersiculo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AgregarVersiculo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AjustarImagen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AjustarImagen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Fullscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fullscreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PDF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LuzPrendida" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LuzPrendida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CentrarImagen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CentrarImagen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Grabar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Grabar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Anterior" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Anterior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Notas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Notas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="VistaPrevia_Blanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\VistaPrevia_Blanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="text_btnAbreBroadcastingTest_ES_AR" xml:space="preserve">
-    <value>Ir</value>
-  </data>
-  <data name="text_btnAbreJWorg_ES_AR" xml:space="preserve">
-    <value>Sitio Oficial</value>
-  </data>
-  <data name="text_btnAbreSitioOficialTest_ES_AR" xml:space="preserve">
-    <value>Ir</value>
-  </data>
-  <data name="text_btnAbreTV_ES_AR" xml:space="preserve">
-    <value>Broadcasting</value>
-  </data>
-  <data name="text_btnAbreURLBuscador_ES_AR" xml:space="preserve">
-    <value>Ir</value>
-  </data>
-  <data name="text_btnAbreWOLTest_ES_AR" xml:space="preserve">
-    <value>Ir</value>
-  </data>
-  <data name="text_btnAbreWOL_ES_AR" xml:space="preserve">
-    <value>Biblioteca en Línea</value>
-  </data>
-  <data name="text_btnAgregaAudio_ES_AR" xml:space="preserve">
-    <value>Archivos de Audio </value>
-  </data>
-  <data name="text_btnAgregaCancion_ES_AR" xml:space="preserve">
-    <value>Canciones </value>
-  </data>
-  <data name="text_btnAgregaCitaLista_ES_AR" xml:space="preserve">
-    <value>Agregar</value>
-  </data>
-  <data name="text_btnAgregaCita_ES_AR" xml:space="preserve">
-    <value>Cita Bíblica</value>
-  </data>
-  <data name="text_btnAgregaImagen_ES_AR" xml:space="preserve">
-    <value>Imágenes </value>
-  </data>
-  <data name="text_btnAgregaPDF_ES_AR" xml:space="preserve">
-    <value>Archivos PDF </value>
-  </data>
-  <data name="text_btnAgregarCancionLista_ES_AR" xml:space="preserve">
-    <value>Agregar</value>
-  </data>
-  <data name="text_btnAgregaVideo_ES_AR" xml:space="preserve">
-    <value>Videos </value>
-  </data>
-  <data name="text_btnBuscaCarpetaCanciones_ES_AR" xml:space="preserve">
-    <value>...</value>
-  </data>
-  <data name="text_btnBuscaCarpetaGrabaciones_ES_AR" xml:space="preserve">
-    <value>...</value>
-  </data>
-  <data name="text_btnBuscaImagenFondo_ES_AR" xml:space="preserve">
-    <value>...</value>
-  </data>
-  <data name="text_btnCancelarConfig_ES_AR" xml:space="preserve">
-    <value>Cancelar</value>
-  </data>
-  <data name="text_btnGuardarConfig_ES_AR" xml:space="preserve">
-    <value>Guardar</value>
   </data>
   <data name="text_btnReestablecer_ES_AR" xml:space="preserve">
     <value>Restablecer</value>
   </data>
-  <data name="text_chkAgregaAutomaticamente_ES_AR" xml:space="preserve">
-    <value>Mostrar o reproducir el contenido en cuanto se agrega </value>
-  </data>
-  <data name="text_chkGrabacionInteligente_ES_AR" xml:space="preserve">
-    <value>Grabación inteligente</value>
-  </data>
-  <data name="text_Label10_ES_AR" xml:space="preserve">
-    <value>URL Buscador:</value>
-  </data>
-  <data name="text_Label11_ES_AR" xml:space="preserve">
-    <value>Sitio oficial:</value>
-  </data>
-  <data name="text_Label12_ES_AR" xml:space="preserve">
-    <value>Sitio WOL:</value>
-  </data>
-  <data name="text_Label13_ES_AR" xml:space="preserve">
-    <value>Broadcasting:</value>
-  </data>
-  <data name="text_Label14_ES_AR" xml:space="preserve">
-    <value>Fondo de pantalla:</value>
-  </data>
-  <data name="text_Label15_ES_AR" xml:space="preserve">
-    <value>Ubicación canciones:</value>
-  </data>
-  <data name="text_Label16_ES_AR" xml:space="preserve">
-    <value>Nombre canciones:</value>
-  </data>
-  <data name="text_Label17_ES_AR" xml:space="preserve">
-    <value>(Número de canción)</value>
-  </data>
-  <data name="text_Label18_ES_AR" xml:space="preserve">
-    <value>Controles de grabación </value>
-  </data>
-  <data name="text_Label1_ES_AR" xml:space="preserve">
-    <value>Imagenes:</value>
-  </data>
-  <data name="text_Label2_ES_AR" xml:space="preserve">
-    <value>Agregar a lista de contenido a presentar </value>
-  </data>
-  <data name="text_Label4_ES_AR" xml:space="preserve">
-    <value>Lista de contenido a presentar </value>
-  </data>
-  <data name="text_Label5_ES_AR" xml:space="preserve">
-    <value>Ingrese el número de la canción:</value>
-  </data>
-  <data name="text_Label6_ES_AR" xml:space="preserve">
-    <value>Cita:</value>
-  </data>
-  <data name="text_Label7_ES_AR" xml:space="preserve">
-    <value>Control de contenido en Presentación actualmente </value>
-  </data>
-  <data name="text_Label8_ES_AR" xml:space="preserve">
-    <value>Videos:</value>
-  </data>
-  <data name="text_Label9_ES_AR" xml:space="preserve">
-    <value>Audio:</value>
-  </data>
-  <data name="text_lblAudioPosition_ES_AR" xml:space="preserve">
-    <value>00:00 / 00:00</value>
-  </data>
-  <data name="text_lblConfiguracion_ES_AR" xml:space="preserve">
-    <value>Panel de Configuración</value>
-  </data>
-  <data name="text_lblGrabarStatus_ES_AR" xml:space="preserve">
-    <value>No se ha grabado nada aún</value>
-  </data>
-  <data name="text_lblStatus_ES_AR" xml:space="preserve">
-    <value>Presentación nunca ha sido abierta durante esta ejecución. </value>
-  </data>
-  <data name="text_lblTitle_ES_AR" xml:space="preserve">
-    <value>              Presentador 1.0.0 |  Panel de Control </value>
-  </data>
-  <data name="text_lblUbicacionGrabaciones_ES_AR" xml:space="preserve">
-    <value>Ubicación grabaciones:</value>
-  </data>
-  <data name="text_lblVideoPosition_ES_AR" xml:space="preserve">
-    <value>00:00 / 00:00</value>
-  </data>
-  <data name="text_numCanciones_ES_AR" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ttip_btnAbreBroadcastingTest_ES_AR" xml:space="preserve">
-    <value>Probar la URL en el navegador por defecto. </value>
-  </data>
-  <data name="ttip_btnAbreJWorg_ES_AR" xml:space="preserve">
-    <value> Agrega a la lista un vínculo al sitio oficial. Requiere conexión activa a Internet.</value>
-  </data>
-  <data name="ttip_btnAbreSitioOficialTest_ES_AR" xml:space="preserve">
-    <value>Probar la URL en el navegador por defecto. </value>
-  </data>
-  <data name="ttip_btnAbreTV_ES_AR" xml:space="preserve">
-    <value> Agrega a la lista un vínculo al sitio de Broadcasting TV. Requiere conexión activa a Internet.</value>
-  </data>
-  <data name="ttip_btnAbreURLBuscador_ES_AR" xml:space="preserve">
-    <value>Probar la URL en el navegador por defecto. Note que se agregará el filtro de búsqueda "Mateo 24:14" para que no arroje error el sitio.</value>
-  </data>
-  <data name="ttip_btnAbreWOLTest_ES_AR" xml:space="preserve">
-    <value>Probar la URL en el navegador por defecto. </value>
-  </data>
-  <data name="ttip_btnAbreWOL_ES_AR" xml:space="preserve">
-    <value> Agrega a la lista un vínculo a la Biblioteca en Línea. Requiere conexión activa a Internet.</value>
-  </data>
-  <data name="ttip_btnAbrirContenidos_ES_AR" xml:space="preserve">
-    <value> Abre o importa una lista de contenidos</value>
-  </data>
-  <data name="ttip_btnAgregaAudio_ES_AR" xml:space="preserve">
-    <value> Abre la ventana de selección de archivos permitiendo la elección de audios de varios formatos. Luego de ubicar los archivos los agregará a la lista.</value>
-  </data>
-  <data name="ttip_btnAgregaCancion_ES_AR" xml:space="preserve">
-    <value> Permite agregar canciones del cancionero solo ingresando el número.</value>
-  </data>
-  <data name="ttip_btnAgregaCitaLista_ES_AR" xml:space="preserve">
-    <value>Agrega la cita a la lista</value>
-  </data>
-  <data name="ttip_btnAgregaCita_ES_AR" xml:space="preserve">
-    <value> Permite ingresar una cita bíblica y devuleve el resultado obtenido en la WOL. Requiere conexión activa a Internet.</value>
-  </data>
-  <data name="ttip_btnAgregaImagen_ES_AR" xml:space="preserve">
-    <value> Abre la ventana de selección de archivos permitiendo la elección de imágenes de varios formatos. Luego de ubicar los archivos los agregará a la lista.</value>
-  </data>
-  <data name="ttip_btnAgregaPDF_ES_AR" xml:space="preserve">
-    <value> Abre la ventana de selección de archivos permitiendo la elección de archivos PDF únicamente. Luego de ubicar los archivos los agregará a la lista.</value>
-  </data>
-  <data name="ttip_btnAgregarCancionLista_ES_AR" xml:space="preserve">
-    <value>Agrega la canción a la lista</value>
-  </data>
-  <data name="ttip_btnAgregaVideo_ES_AR" xml:space="preserve">
-    <value> Abre la ventana de selección de archivos permitiendo la elección de videos de varios formatos. Luego de ubicar los archivos los agregará a la lista.</value>
-  </data>
-  <data name="ttip_btnAudioMute_ES_AR" xml:space="preserve">
-    <value>Alejar</value>
-  </data>
-  <data name="ttip_btnAudioPlayPausa_ES_AR" xml:space="preserve">
-    <value>Ir a la primer página</value>
-  </data>
-  <data name="ttip_btnBajarItem_ES_AR" xml:space="preserve">
-    <value> Baja el item seleccionado en lista</value>
-  </data>
-  <data name="ttip_btnBug_ES_AR" xml:space="preserve">
-    <value>Reportar un problema / Contactarse con el desarrollador</value>
-  </data>
-  <data name="ttip_btnBuscaCarpetaCanciones_ES_AR" xml:space="preserve">
-    <value>Busca la carpeta donde se han guardado los archivos de audio de la publicación "Cantemos a Jehová". De la correcta configuración de este parámetro depende como funcionará el botón "Canción".</value>
-  </data>
-  <data name="ttip_btnBuscaCarpetaGrabaciones_ES_AR" xml:space="preserve">
-    <value>Establece la carpeta donde se guardarán los archivos de grabaciones de audio.</value>
-  </data>
-  <data name="ttip_btnBuscaImagenFondo_ES_AR" xml:space="preserve">
-    <value>Busca una imagen para establecer el fondo de pantalla de la presentación por defecto para Presentación.</value>
-  </data>
-  <data name="ttip_btnCancelarCita_ES_AR" xml:space="preserve">
-    <value>Cancelar</value>
-  </data>
-  <data name="ttip_btnCancelarConfig_ES_AR" xml:space="preserve">
-    <value>Cancela los cambios hechos.</value>
-  </data>
-  <data name="ttip_btnCancionCancelar_ES_AR" xml:space="preserve">
-    <value>Cancelar</value>
-  </data>
-  <data name="ttip_btnCerrarArchivo_ES_AR" xml:space="preserve">
-    <value> Finaliza la edición del archivo actual.</value>
-  </data>
-  <data name="ttip_btnCerrar_ES_AR" xml:space="preserve">
-    <value> Cerrar</value>
-  </data>
-  <data name="ttip_btnConfiguracion_ES_AR" xml:space="preserve">
-    <value> Abre el espacio de configuración</value>
-  </data>
-  <data name="ttip_btnGrabarCompartir_ES_AR" xml:space="preserve">
-    <value>Compartir la grabación de audio actual</value>
-  </data>
-  <data name="ttip_btnGrabarDetener_ES_AR" xml:space="preserve">
-    <value>Detener grabación y guardar el archivo</value>
-  </data>
-  <data name="ttip_btnGrabarToogle_ES_AR" xml:space="preserve">
-    <value>Grabar audio</value>
-  </data>
-  <data name="ttip_btnGuardarConfig_ES_AR" xml:space="preserve">
-    <value>Guarda las configuraciones actuales</value>
-  </data>
-  <data name="ttip_btnGuardarContenidos_ES_AR" xml:space="preserve">
-    <value> Guarda la lista de contenidos actual</value>
-  </data>
-  <data name="ttip_btnImagenLuz_ES_AR" xml:space="preserve">
-    <value>Cambia el color de fondo de la imagen para permitir el énfasis correcto en todas las situaciones.</value>
-  </data>
-  <data name="ttip_btnImagenPosicion_ES_AR" xml:space="preserve">
-    <value>Ajusta la imagen a la pantalla o la centra.</value>
-  </data>
-  <data name="ttip_btnIniciaPresentador_ES_AR" xml:space="preserve">
-    <value> Inicia o cierra Presentación.</value>
-  </data>
-  <data name="ttip_btnLimpiaItem_ES_AR" xml:space="preserve">
-    <value> Elimina el item seleccionado actualmente</value>
-  </data>
-  <data name="ttip_btnLimpiarContenido_ES_AR" xml:space="preserve">
-    <value> Elimina el contenido de la lista actual</value>
-  </data>
-  <data name="ttip_btnMinimizar_ES_AR" xml:space="preserve">
-    <value> Minimizar</value>
-  </data>
-  <data name="ttip_btnPDFAnterior_ES_AR" xml:space="preserve">
-    <value>Ir a la página anterior</value>
-  </data>
-  <data name="ttip_btnPDFPrimero_ES_AR" xml:space="preserve">
-    <value>Ir a la primer página</value>
-  </data>
-  <data name="ttip_btnPDFSiguiente_ES_AR" xml:space="preserve">
-    <value>Ir a la página siguiente</value>
-  </data>
-  <data name="ttip_btnPDFUltimo_ES_AR" xml:space="preserve">
-    <value>Ir a la última página</value>
-  </data>
-  <data name="ttip_btnPDFZoomIn_ES_AR" xml:space="preserve">
-    <value>Acercar</value>
-  </data>
-  <data name="ttip_btnPDFZoomOut_ES_AR" xml:space="preserve">
-    <value>Alejar</value>
-  </data>
-  <data name="ttip_btnReestablecePresentadorANegro_ES_AR" xml:space="preserve">
-    <value> Restablece Presentación a una pantalla negra</value>
-  </data>
-  <data name="ttip_btnReestablecePresentador_ES_AR" xml:space="preserve">
-    <value> Restablece Presentación a su imagen de fondo por defecto.</value>
-  </data>
-  <data name="ttip_btnReestablecer_ES_AR" xml:space="preserve">
-    <value>Restablece los cambios a sus valores por defecto.</value>
-  </data>
-  <data name="ttip_btnSubirItem_ES_AR" xml:space="preserve">
-    <value> Sube el item seleccionado en lista</value>
-  </data>
-  <data name="ttip_btnValidarContenido_ES_AR" xml:space="preserve">
-    <value> Valida la existencia de todos los archivos de la lista de contenidos actual</value>
-  </data>
-  <data name="ttip_chkAgregaAutomaticamente_ES_AR" xml:space="preserve">
-    <value> Si está activo en cuanto se agregue un contenido a la lista también comenzará a mostrarse o reproducirse interrupiendo el contenido que se esté presentando actualmente.</value>
-  </data>
-  <data name="ttip_chkGrabacionInteligente_ES_AR" xml:space="preserve">
-    <value>Cuando está activado no permite que la grabación continúe mientras el presentador esté reproduciendo audio que provenga de un archivo de música, canción o video.</value>
-  </data>
-  <data name="ttip_ComboBox1_ES_AR" xml:space="preserve">
-    <value>Ingrese la cita tal como la ingresaría en el buscador de la Biblioteca en Línea.</value>
-  </data>
-  <data name="ttip_lblStatus_ES_AR" xml:space="preserve">
-    <value> Muestra el estado del presentador.</value>
-  </data>
-  <data name="ttip_lstContenidos_ES_AR" xml:space="preserve">
-    <value> Muestra los contenidos que están disponibles para presentar</value>
-  </data>
-  <data name="ttip_numCanciones_ES_AR" xml:space="preserve">
-    <value>Ingrese el número de la canción. Requiere que esté configurada la ubicación de la carpeta de recursos musicales.</value>
-  </data>
-  <data name="ttip_TrackBar1_ES_AR" xml:space="preserve">
-    <value>Ajustar zoom</value>
-  </data>
-  <data name="ttip_trackPDFZoom_ES_AR" xml:space="preserve">
-    <value>Ajustar zoom</value>
-  </data>
-  <data name="text_btnAbreBroadcastingTest_EN" xml:space="preserve">
-    <value>Go</value>
-  </data>
-  <data name="text_btnAbreJWorg_EN" xml:space="preserve">
-    <value>Official Site</value>
-  </data>
-  <data name="text_btnAbreSitioOficialTest_EN" xml:space="preserve">
-    <value>Go</value>
-  </data>
-  <data name="text_btnAbreTV_EN" xml:space="preserve">
-    <value>Broadcasting</value>
-  </data>
-  <data name="text_btnAbreURLBuscador_EN" xml:space="preserve">
-    <value>Go</value>
-  </data>
-  <data name="text_btnAbreWOLTest_EN" xml:space="preserve">
-    <value>Go</value>
-  </data>
-  <data name="text_btnAbreWOL_EN" xml:space="preserve">
-    <value>Watchtower Online Library</value>
-  </data>
-  <data name="text_btnAgregaAudio_EN" xml:space="preserve">
-    <value>Audio Files</value>
-  </data>
-  <data name="text_btnAgregaCancion_EN" xml:space="preserve">
-    <value>Songs</value>
-  </data>
-  <data name="text_btnAgregaCitaLista_EN" xml:space="preserve">
-    <value>Add</value>
-  </data>
-  <data name="text_btnAgregaCita_EN" xml:space="preserve">
-    <value>Bible quote</value>
-  </data>
-  <data name="text_btnAgregaImagen_EN" xml:space="preserve">
-    <value>Images</value>
-  </data>
-  <data name="text_btnAgregaPDF_EN" xml:space="preserve">
-    <value>PDF Files</value>
-  </data>
-  <data name="text_btnAgregarCancionLista_EN" xml:space="preserve">
-    <value>Add</value>
-  </data>
-  <data name="text_btnAgregaVideo_EN" xml:space="preserve">
-    <value>Videos</value>
-  </data>
-  <data name="text_btnBuscaCarpetaCanciones_EN" xml:space="preserve">
-    <value>…</value>
-  </data>
-  <data name="text_btnBuscaCarpetaGrabaciones_EN" xml:space="preserve">
-    <value>…</value>
-  </data>
-  <data name="text_btnBuscaImagenFondo_EN" xml:space="preserve">
-    <value>…</value>
-  </data>
-  <data name="text_btnCancelarConfig_EN" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="text_btnGuardarConfig_EN" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="text_btnReestablecer_EN" xml:space="preserve">
-    <value>Reset</value>
-  </data>
-  <data name="text_chkAgregaAutomaticamente_EN" xml:space="preserve">
-    <value>Show or play the content when is added</value>
-  </data>
-  <data name="text_chkGrabacionInteligente_EN" xml:space="preserve">
-    <value>Smart Recording</value>
-  </data>
-  <data name="text_Label10_EN" xml:space="preserve">
-    <value>Search URL:</value>
-  </data>
-  <data name="text_Label11_EN" xml:space="preserve">
-    <value>Official Site:</value>
-  </data>
-  <data name="text_Label12_EN" xml:space="preserve">
-    <value>WOL Site:</value>
-  </data>
-  <data name="text_Label13_EN" xml:space="preserve">
-    <value>Broadcasting:</value>
-  </data>
-  <data name="text_Label14_EN" xml:space="preserve">
-    <value>Background image:</value>
-  </data>
-  <data name="text_Label15_EN" xml:space="preserve">
-    <value>Path to songs:</value>
-  </data>
-  <data name="text_Label16_EN" xml:space="preserve">
-    <value>Songs names:</value>
-  </data>
-  <data name="text_Label17_EN" xml:space="preserve">
-    <value>(Song number)</value>
-  </data>
-  <data name="text_Label18_EN" xml:space="preserve">
-    <value>Recording controls</value>
-  </data>
-  <data name="text_Label1_EN" xml:space="preserve">
-    <value>Images:</value>
-  </data>
-  <data name="text_Label2_EN" xml:space="preserve">
-    <value>Add to list of content to present</value>
-  </data>
-  <data name="text_Label4_EN" xml:space="preserve">
-    <value>List of content to present</value>
-  </data>
-  <data name="text_Label5_EN" xml:space="preserve">
-    <value>Write the song's number:</value>
-  </data>
-  <data name="text_Label6_EN" xml:space="preserve">
-    <value>Quote:</value>
-  </data>
-  <data name="text_Label7_EN" xml:space="preserve">
-    <value>Control of content currently in Presentation</value>
-  </data>
-  <data name="text_Label8_EN" xml:space="preserve">
-    <value>Video:</value>
-  </data>
-  <data name="text_Label9_EN" xml:space="preserve">
-    <value>Audio:</value>
-  </data>
-  <data name="text_lblAudioPosition_EN" xml:space="preserve">
-    <value>00:00 / 00:00</value>
-  </data>
-  <data name="text_lblConfiguracion_EN" xml:space="preserve">
-    <value>Configurations Panel</value>
-  </data>
-  <data name="text_lblGrabarStatus_EN" xml:space="preserve">
-    <value>Nothing recorded yet</value>
-  </data>
-  <data name="text_lblStatus_EN" xml:space="preserve">
-    <value>Presentation never has been opened during the current execution.</value>
-  </data>
-  <data name="text_lblTitle_EN" xml:space="preserve">
-    <value>              Presentador 1.0.0 | Control Panel</value>
-  </data>
-  <data name="text_lblUbicacionGrabaciones_EN" xml:space="preserve">
-    <value>Path to records:</value>
-  </data>
-  <data name="text_lblVideoPosition_EN" xml:space="preserve">
-    <value>00:00 / 00:00</value>
-  </data>
-  <data name="text_numCanciones_EN" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ttip_btnAbreBroadcastingTest_EN" xml:space="preserve">
-    <value>Test the URL in default browser</value>
-  </data>
-  <data name="ttip_btnAbreJWorg_EN" xml:space="preserve">
-    <value>Add to the list a link to official site. Require active Internet connection.</value>
-  </data>
-  <data name="ttip_btnAbreSitioOficialTest_EN" xml:space="preserve">
-    <value>Test the URL in default browser</value>
-  </data>
-  <data name="ttip_btnAbreTV_EN" xml:space="preserve">
-    <value>Add to the list a link to Broadcasting site. Require active Internet connection.</value>
-  </data>
-  <data name="ttip_btnAbreURLBuscador_EN" xml:space="preserve">
-    <value>Test the URL in default browser</value>
-  </data>
-  <data name="ttip_btnAbreWOLTest_EN" xml:space="preserve">
-    <value>Test the URL in default browser</value>
-  </data>
-  <data name="ttip_btnAbreWOL_EN" xml:space="preserve">
-    <value>Add to the list a link to Watchtower Online Library site. Require active Internet connection.</value>
-  </data>
-  <data name="ttip_btnAbrirContenidos_EN" xml:space="preserve">
-    <value>Open or imports a content list</value>
-  </data>
-  <data name="ttip_btnAgregaAudio_EN" xml:space="preserve">
-    <value>Open the file selector allowing choose only audio files. After that will add the selected files to the list.</value>
-  </data>
-  <data name="ttip_btnAgregaCancion_EN" xml:space="preserve">
-    <value>Allows add songs from our songbook only writting their number</value>
-  </data>
-  <data name="ttip_btnAgregaCitaLista_EN" xml:space="preserve">
-    <value>Add quote to list</value>
-  </data>
-  <data name="ttip_btnAgregaCita_EN" xml:space="preserve">
-    <value>Allows select a bible quote and returns the result from the WOL. Require active Internet connection.</value>
-  </data>
-  <data name="ttip_btnAgregaImagen_EN" xml:space="preserve">
-    <value>Open the file selector allowing choose only video files. After that will add the selected files to the list.</value>
-  </data>
-  <data name="ttip_btnAgregaPDF_EN" xml:space="preserve">
-    <value>Open the file selector allowing choose only PDF files. After that will add the selected files to the list</value>
-  </data>
-  <data name="ttip_btnAgregarCancionLista_EN" xml:space="preserve">
-    <value>Add song to the list</value>
-  </data>
-  <data name="ttip_btnAgregaVideo_EN" xml:space="preserve">
-    <value>Open the file selector allowing choose only image files. After that will add the selected files to the list.</value>
-  </data>
-  <data name="ttip_btnAudioMute_EN" xml:space="preserve">
-    <value>Zoom out</value>
-  </data>
-  <data name="ttip_btnAudioPlayPausa_EN" xml:space="preserve">
-    <value>Go to first page</value>
-  </data>
-  <data name="ttip_btnBajarItem_EN" xml:space="preserve">
-    <value>Move down the selected item in the list</value>
-  </data>
-  <data name="ttip_btnBug_EN" xml:space="preserve">
-    <value>Report a bug / Contact with the developer</value>
-  </data>
-  <data name="ttip_btnBuscaCarpetaCanciones_EN" xml:space="preserve">
-    <value>Search path to songs of "Sing to Jehovah" files. Setting this content "Songs" will work properly.</value>
-  </data>
-  <data name="ttip_btnBuscaCarpetaGrabaciones_EN" xml:space="preserve">
-    <value>Set recording files path suggest destination</value>
-  </data>
-  <data name="ttip_btnBuscaImagenFondo_EN" xml:space="preserve">
-    <value>Search image to set as background image for Presentation</value>
-  </data>
-  <data name="ttip_btnCancelarCita_EN" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="ttip_btnCancelarConfig_EN" xml:space="preserve">
-    <value>Cancel changes made in configurations</value>
-  </data>
-  <data name="ttip_btnCancionCancelar_EN" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="ttip_btnCerrarArchivo_EN" xml:space="preserve">
-    <value>Finish the edit of current file</value>
-  </data>
-  <data name="ttip_btnCerrar_EN" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="ttip_btnConfiguracion_EN" xml:space="preserve">
-    <value>Open the Configuration Panel</value>
-  </data>
-  <data name="ttip_btnGrabarCompartir_EN" xml:space="preserve">
-    <value>Share the current record</value>
-  </data>
-  <data name="ttip_btnGrabarDetener_EN" xml:space="preserve">
-    <value>Stops the recording and save current file</value>
-  </data>
-  <data name="ttip_btnGrabarToogle_EN" xml:space="preserve">
-    <value>Record audio</value>
-  </data>
-  <data name="ttip_btnGuardarConfig_EN" xml:space="preserve">
-    <value>Save current configurations</value>
-  </data>
-  <data name="ttip_btnGuardarContenidos_EN" xml:space="preserve">
-    <value>Save the current list</value>
-  </data>
-  <data name="ttip_btnImagenLuz_EN" xml:space="preserve">
-    <value>Change background color of image</value>
-  </data>
-  <data name="ttip_btnImagenPosicion_EN" xml:space="preserve">
-    <value>Adjust image layout: in center or fill screen</value>
-  </data>
-  <data name="ttip_btnIniciaPresentador_EN" xml:space="preserve">
-    <value>Toggle Presentation state.</value>
-  </data>
-  <data name="ttip_btnLimpiaItem_EN" xml:space="preserve">
-    <value>Delete selected item</value>
-  </data>
-  <data name="ttip_btnLimpiarContenido_EN" xml:space="preserve">
-    <value>Clear the list's content</value>
-  </data>
-  <data name="ttip_btnMinimizar_EN" xml:space="preserve">
-    <value>Minimize</value>
-  </data>
-  <data name="ttip_btnPDFAnterior_EN" xml:space="preserve">
-    <value>Go to previous page</value>
-  </data>
-  <data name="ttip_btnPDFPrimero_EN" xml:space="preserve">
-    <value>Go to first page</value>
-  </data>
-  <data name="ttip_btnPDFSiguiente_EN" xml:space="preserve">
-    <value>Go to next page</value>
-  </data>
-  <data name="ttip_btnPDFUltimo_EN" xml:space="preserve">
-    <value>Go to last page</value>
-  </data>
-  <data name="ttip_btnPDFZoomIn_EN" xml:space="preserve">
-    <value>Zoom in</value>
-  </data>
-  <data name="ttip_btnPDFZoomOut_EN" xml:space="preserve">
-    <value>Zoom out</value>
-  </data>
-  <data name="ttip_btnReestablecePresentadorANegro_EN" xml:space="preserve">
-    <value>Clear Presentation. Show a black screen</value>
-  </data>
-  <data name="ttip_btnReestablecePresentador_EN" xml:space="preserve">
-    <value>Clear Presentation. Show the default background image.</value>
-  </data>
-  <data name="ttip_btnReestablecer_EN" xml:space="preserve">
-    <value>Reset to default values</value>
-  </data>
-  <data name="ttip_btnSubirItem_EN" xml:space="preserve">
-    <value>Move up the selected item in the list</value>
-  </data>
-  <data name="ttip_btnValidarContenido_EN" xml:space="preserve">
-    <value>Validate if every files from the list of contents exists</value>
-  </data>
-  <data name="ttip_chkAgregaAutomaticamente_EN" xml:space="preserve">
-    <value>If active when the choosen content is sent to the list automatically init the show or playing of that content. The content beeing showed or played will be interrupted.</value>
-  </data>
-  <data name="ttip_chkGrabacionInteligente_EN" xml:space="preserve">
-    <value>Prevent the recording process continue when the playing process of audio, song or video file is active. Resume the recording process automatically when playing process is paused or finished. Recommended.</value>
-  </data>
-  <data name="ttip_ComboBox1_EN" xml:space="preserve">
-    <value>Write the quote in same way as you write it in Watchtower Online Library's search field.</value>
-  </data>
-  <data name="ttip_lblStatus_EN" xml:space="preserve">
-    <value>Show Presentation status.</value>
-  </data>
-  <data name="ttip_lstContenidos_EN" xml:space="preserve">
-    <value>Show the contents available to present</value>
-  </data>
-  <data name="ttip_numCanciones_EN" xml:space="preserve">
-    <value>Write song's number. Require the correct configuraction of songs resources path.</value>
-  </data>
-  <data name="ttip_TrackBar1_EN" xml:space="preserve">
-    <value>Adjust zoom</value>
-  </data>
-  <data name="ttip_trackPDFZoom_EN" xml:space="preserve">
-    <value>Adjust Zoom</value>
-  </data>
-  <data name="msgb_archivo_presentacion_abrir_importar_EN" xml:space="preserve">
-    <value>Do you want to clean the list before to add the new content?</value>
-  </data>
-  <data name="msgb_archivo_presentacion_abrir_importar_ES_AR" xml:space="preserve">
-    <value>¿Desea que se limpie la lista actual antes de añadir los contenidos del archivo seleccionado?</value>
-  </data>
-  <data name="msgb_archivo_presentacion_error_existencia_EN" xml:space="preserve">
-    <value>An error occurs saving the file. Verify the permissions to save in the desired location. Try saving again the file in a different location.</value>
-  </data>
-  <data name="msgb_archivo_presentacion_error_existencia_ES_AR" xml:space="preserve">
-    <value>Ocurrió un error al guardar el archivo. Verifique si tiene los permisos necesarios para guardar en la ubicación seleccionada y guarde nuevamente de lo contrario elija otra ubicación.</value>
-  </data>
-  <data name="msgb_archivo_presentacion_error_integridad_EN" xml:space="preserve">
-    <value>An error occurs saving the file. The integrity validation fails. Try saving again the file in a different location.</value>
-  </data>
-  <data name="msgb_archivo_presentacion_error_integridad_ES_AR" xml:space="preserve">
-    <value>Ocurrió un error al guardar el archivo. La verificación de integridad del archivo generó un error desconocido. Intente grabar nuevamente sino elija otra ubicación.</value>
-  </data>
-  <data name="msgb_archivo_presentacion_exito_EN" xml:space="preserve">
-    <value>The file was saved succesfully.</value>
-  </data>
-  <data name="msgb_archivo_presentacion_exito_ES_AR" xml:space="preserve">
-    <value>El archivo se guardó exitosamente.</value>
-  </data>
-  <data name="msgb_archivo_presentacion_vacio_EN" xml:space="preserve">
-    <value>You can't save empty lists.</value>
-  </data>
-  <data name="msgb_archivo_presentacion_vacio_ES_AR" xml:space="preserve">
-    <value>No se pueden guardar listas vacías.</value>
-  </data>
-  <data name="msgb_configuracion_cancelar_EN" xml:space="preserve">
-    <value>Are you sure to cancel the changes made in configurations?</value>
-  </data>
-  <data name="msgb_configuracion_cancelar_ES_AR" xml:space="preserve">
-    <value>¿Está seguro que desea cancelar las configuraciones?</value>
-  </data>
-  <data name="msgb_configuracion_guardar_EN" xml:space="preserve">
-    <value>Are you sure to save the changes made in configurations?</value>
-  </data>
-  <data name="msgb_configuracion_guardar_ES_AR" xml:space="preserve">
-    <value>¿Está seguro que desea guardar las configuraciones ingresadas?</value>
-  </data>
-  <data name="msgb_configuracion_restablecer_EN" xml:space="preserve">
-    <value>Are you sure to reset to defaults the configurations?</value>
-  </data>
-  <data name="msgb_configuracion_restablecer_ES_AR" xml:space="preserve">
-    <value>¿Está seguro que desea restablecer los valores a su configuración por defecto?</value>
-  </data>
-  <data name="msgb_contenidos_validados_final_EN" xml:space="preserve">
-    <value>Do you want clean them from the list?</value>
-  </data>
-  <data name="msgb_contenidos_validados_final_ES_AR" xml:space="preserve">
-    <value>¿Desea eliminarlos de la lista?</value>
-  </data>
-  <data name="msgb_contenidos_validados_medio_EN" xml:space="preserve">
-    <value> missing files, detailed as following: </value>
-  </data>
-  <data name="msgb_contenidos_validados_medio_ES_AR" xml:space="preserve">
-    <value> archivos faltantes que se detallan a contiuación: </value>
-  </data>
-  <data name="msgb_contenidos_validados_principio_EN" xml:space="preserve">
-    <value>There are </value>
-  </data>
-  <data name="msgb_contenidos_validados_principio_ES_AR" xml:space="preserve">
-    <value>Hay </value>
-  </data>
-  <data name="msgb_contenido_encontrado_EN" xml:space="preserve">
-    <value>All files were found succesfully.</value>
-  </data>
-  <data name="msgb_contenido_encontrado_ES_AR" xml:space="preserve">
-    <value>Todos los archivos han sido encontrados correctamente.</value>
-  </data>
-  <data name="msgb_contenido_validado_final_EN" xml:space="preserve">
-    <value>. Do you want clean it?</value>
-  </data>
-  <data name="msgb_contenido_validado_final_ES_AR" xml:space="preserve">
-    <value> ¿Desea quitarlo de la lista?</value>
-  </data>
-  <data name="msgb_contenido_validado_principio_EN" xml:space="preserve">
-    <value>One missing file </value>
-  </data>
-  <data name="msgb_contenido_validado_principio_ES_AR" xml:space="preserve">
-    <value>Falta el archivo </value>
-  </data>
-  <data name="msgb_ejecutar_como_admin_final_EN" xml:space="preserve">
-    <value>Restart the application clicking over the icon with the second button of mouse and picking "Run as Administrator". After that this action will never be asked again.</value>
-  </data>
-  <data name="msgb_ejecutar_como_admin_final_ES_AR" xml:space="preserve">
-    <value>Reinicie la aplicación haciendo click con el botón derecho sobre el ícono y eligiendo la opción 'Ejecutar como Administrador' para poder realizar la acción. No se le volverá a pedir esta acción.</value>
-  </data>
-  <data name="msgb_ejecutar_como_admin_medio_EN" xml:space="preserve">
-    <value> because the program haven't the proper permissions.</value>
-  </data>
-  <data name="msgb_ejecutar_como_admin_medio_ES_AR" xml:space="preserve">
-    <value> porque no se aplicaron los permisos necesarios.</value>
-  </data>
-  <data name="msgb_ejecutar_como_admin_principio_EN" xml:space="preserve">
-    <value>The files with extension .jwp couldn't be associated with </value>
-  </data>
-  <data name="msgb_ejecutar_como_admin_principio_ES_AR" xml:space="preserve">
-    <value>No se pudo asociar los archivos con extensión .jwp con </value>
-  </data>
-  <data name="msgb_eliminar_contenidos_validados_final_EN" xml:space="preserve">
-    <value>. Detailed list: </value>
-  </data>
-  <data name="msgb_eliminar_contenidos_validados_final_ES_AR" xml:space="preserve">
-    <value> archivos faltantes que se detallan a contiuación: </value>
-  </data>
-  <data name="msgb_eliminar_contenidos_validados_principio_EN" xml:space="preserve">
-    <value>Missing files: </value>
-  </data>
-  <data name="msgb_eliminar_contenidos_validados_principio_ES_AR" xml:space="preserve">
-    <value>Se eliminaron de la lista los </value>
-  </data>
-  <data name="msgb_eliminar_contenido_EN" xml:space="preserve">
-    <value>Are you sure to clean the whole list of content?</value>
+  <data name="str_lblGrabarStatus_detenida_no_guardada_ES_AR" xml:space="preserve">
+    <value>Detenida la grabación. El archivo no se guardó por elección del usuario</value>
+  </data>
+  <data name="msgb_no_versiculo_ES_AR" xml:space="preserve">
+    <value>No se ingresó ningún versículo para buscar.</value>
   </data>
   <data name="msgb_eliminar_contenido_ES_AR" xml:space="preserve">
     <value>¿Esta seguro que desea eliminar todo el contenido de la lista?</value>
   </data>
-  <data name="msgb_eliminar_contenido_validado_EN" xml:space="preserve">
-    <value>One missing file, cleaned: </value>
+  <data name="str_archivos_audio_ES_AR" xml:space="preserve">
+    <value>Archivos de audio</value>
+  </data>
+  <data name="text_lblUbicacionGrabaciones_ES_AR" xml:space="preserve">
+    <value>Ubicación grabaciones:</value>
+  </data>
+  <data name="ttip_btnIniciaPresentador_EN" xml:space="preserve">
+    <value>Toggle Presentation state.</value>
+  </data>
+  <data name="ttip_TrackBar1_EN" xml:space="preserve">
+    <value>Adjust zoom</value>
+  </data>
+  <data name="ttip_btnAbreWOL_EN" xml:space="preserve">
+    <value>Add to the list a link to Watchtower Online Library site. Require active Internet connection.</value>
+  </data>
+  <data name="ttip_btnAbrirContenidos_ES_AR" xml:space="preserve">
+    <value> Abre o importa una lista de contenidos</value>
+  </data>
+  <data name="ttip_btnSubirItem_ES_AR" xml:space="preserve">
+    <value> Sube el item seleccionado en lista</value>
+  </data>
+  <data name="ttip_btnCerrar_EN" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="str_ppt_ES_AR" xml:space="preserve">
+    <value>PPT</value>
+  </data>
+  <data name="Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="msgb_eliminar_contenidos_validados_principio_ES_AR" xml:space="preserve">
+    <value>Se eliminaron de la lista los </value>
+  </data>
+  <data name="ttip_btnAmbientModeOn_ES_AR" xml:space="preserve">
+    <value>Agrega contenido musical a la lista respetando los minutos asignados.</value>
+  </data>
+  <data name="msgb_archivo_presentacion_exito_ES_AR" xml:space="preserve">
+    <value>El archivo se guardó exitosamente.</value>
+  </data>
+  <data name="ttip_btnPDFZoomOut_EN" xml:space="preserve">
+    <value>Zoom out</value>
+  </data>
+  <data name="text_chkGrabacionInteligente_ES_AR" xml:space="preserve">
+    <value>Grabación inteligente</value>
+  </data>
+  <data name="ttip_btnConfiguracion_ES_AR" xml:space="preserve">
+    <value> Abre el espacio de configuración</value>
+  </data>
+  <data name="ttip_btnAgregaCancion_EN" xml:space="preserve">
+    <value>Allows add songs from our songbook only writting their number</value>
+  </data>
+  <data name="ttip_btnAbreJWorg_ES_AR" xml:space="preserve">
+    <value> Agrega a la lista un vínculo al sitio oficial. Requiere conexión activa a Internet.</value>
+  </data>
+  <data name="ttip_lstContenidos_EN" xml:space="preserve">
+    <value>Show the contents available to present</value>
+  </data>
+  <data name="ttip_btnGrabarDetener_ES_AR" xml:space="preserve">
+    <value>Detener grabación y guardar el archivo</value>
+  </data>
+  <data name="text_btnAbreWOLTest_EN" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="ttip_btnPDFPrimero_EN" xml:space="preserve">
+    <value>Go to first page</value>
+  </data>
+  <data name="ttip_btnCancelarCita_ES_AR" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="msgb_no_hay_cancion_ES_AR" xml:space="preserve">
+    <value>La canción especificada no se encuentra en la carpeta indicada.</value>
   </data>
   <data name="msgb_eliminar_contenido_validado_ES_AR" xml:space="preserve">
     <value>Se eliminó de la lista el archivo faltante: </value>
   </data>
-  <data name="msgb_error_contenidos_a_presentacion_EN" xml:space="preserve">
-    <value>Impossibe send more than one content to Presentation.</value>
+  <data name="ttip_btnPDFUltimo_EN" xml:space="preserve">
+    <value>Go to last page</value>
   </data>
-  <data name="msgb_error_contenidos_a_presentacion_ES_AR" xml:space="preserve">
-    <value>Imposible enviar más de un contenido a Presentación.</value>
+  <data name="str_programa_nombre_ES_AR" xml:space="preserve">
+    <value>Presentador</value>
+  </data>
+  <data name="status_cita_en_presentacion_de_cache_ES_AR" xml:space="preserve">
+    <value>Presentación muestra contenido previamente obtenido desde la WOL. Resultado de la búsqueda de '</value>
+  </data>
+  <data name="text_btnAgregaCitaLista_ES_AR" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="msgb_title_confirmacion_ES_AR" xml:space="preserve">
+    <value>Confirmación</value>
+  </data>
+  <data name="str_archivos_imagen_ES_AR" xml:space="preserve">
+    <value>Archivos de imágenes</value>
+  </data>
+  <data name="str_lblGrabarStatus_pausada_no_guardada_EN" xml:space="preserve">
+    <value>Recording audio in pause. The file wasn't save by user choose.</value>
+  </data>
+  <data name="ttip_btnSubirItem_EN" xml:space="preserve">
+    <value>Move up the selected item in the list</value>
+  </data>
+  <data name="status_presentacion_cerrado_de_antes_ES_AR" xml:space="preserve">
+    <value>Presentación ya se encontraba cerrada, se actualizó el estado.</value>
+  </data>
+  <data name="text_Label3_ES_AR" xml:space="preserve">
+    <value>Lista de canciones:</value>
+  </data>
+  <data name="text_Label1_ES_AR" xml:space="preserve">
+    <value>Imagenes:</value>
+  </data>
+  <data name="msgb_url_vacia_EN" xml:space="preserve">
+    <value>The address is empty.</value>
+  </data>
+  <data name="msgb_contenido_validado_principio_ES_AR" xml:space="preserve">
+    <value>Falta el archivo </value>
+  </data>
+  <data name="text_Label19_EN" xml:space="preserve">
+    <value>New songs:</value>
+  </data>
+  <data name="msgb_title_atencion_EN" xml:space="preserve">
+    <value>Attention</value>
+  </data>
+  <data name="text_btnAbreCancioneroNuevo_EN" xml:space="preserve">
+    <value>New songs *</value>
+  </data>
+  <data name="status_cita_en_presentacion_ES_AR" xml:space="preserve">
+    <value>Presentación muestra contenido obtenido desde la WOL. Resultado de la búsqueda de '</value>
+  </data>
+  <data name="msgb_ejecutar_como_admin_final_EN" xml:space="preserve">
+    <value>Restart the application clicking over the icon with the second button of mouse and picking "Run as Administrator". After that this action will never be asked again.</value>
+  </data>
+  <data name="msgb_ejecutar_como_admin_principio_EN" xml:space="preserve">
+    <value>The files with extension .jwp couldn't be associated with </value>
+  </data>
+  <data name="ttip_btnPDFAnterior_ES_AR" xml:space="preserve">
+    <value>Ir a la página anterior</value>
+  </data>
+  <data name="str_imagen_ES_AR" xml:space="preserve">
+    <value>Imagen</value>
+  </data>
+  <data name="ttip_btnBug_ES_AR" xml:space="preserve">
+    <value>Reportar un problema / Contactarse con el desarrollador</value>
+  </data>
+  <data name="text_Label20_EN" xml:space="preserve">
+    <value>URL:</value>
+  </data>
+  <data name="ttip_lstContenidos_ES_AR" xml:space="preserve">
+    <value> Muestra los contenidos que están disponibles para presentar</value>
+  </data>
+  <data name="msgb_contenidos_validados_final_EN" xml:space="preserve">
+    <value>Do you want clean them from the list?</value>
+  </data>
+  <data name="ttip_btnAbrirContenidos_EN" xml:space="preserve">
+    <value>Open or imports a content list</value>
+  </data>
+  <data name="str_video_EN" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="ttip_btnGrabarCompartir_EN" xml:space="preserve">
+    <value>Share the current record</value>
+  </data>
+  <data name="text_btnAbreTV_EN" xml:space="preserve">
+    <value>Broadcasting</value>
+  </data>
+  <data name="status_error_presentacion_sitio_ES_AR" xml:space="preserve">
+    <value>Presentación no puede mostrar el sitio: </value>
+  </data>
+  <data name="ttip_btnAgregaVideo_ES_AR" xml:space="preserve">
+    <value> Abre la ventana de selección de archivos permitiendo la elección de videos de varios formatos. Luego de ubicar los archivos los agregará a la lista.</value>
+  </data>
+  <data name="ttip_ComboBox1_EN" xml:space="preserve">
+    <value>Write the quote in same way as you write it in Watchtower Online Library's search field.</value>
+  </data>
+  <data name="text_Label12_ES_AR" xml:space="preserve">
+    <value>Sitio WOL:</value>
+  </data>
+  <data name="ttip_chkMelodias_EN" xml:space="preserve">
+    <value>When searching for the song will choose first the melodic version, if it isn't available yet the piano version will be picked</value>
+  </data>
+  <data name="status_presentacion_cancelado_ES_AR" xml:space="preserve">
+    <value>El inicio de Presentación fue cancelado por el usuario.</value>
+  </data>
+  <data name="msgb_ejecutar_como_admin_principio_ES_AR" xml:space="preserve">
+    <value>No se pudo asociar los archivos con extensión .jwp con </value>
+  </data>
+  <data name="ttip_btnPDFZoomIn_EN" xml:space="preserve">
+    <value>Zoom in</value>
+  </data>
+  <data name="msgb_contenido_validado_final_EN" xml:space="preserve">
+    <value>. Do you want clean it?</value>
+  </data>
+  <data name="Compartir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Compartir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_Label9_EN" xml:space="preserve">
+    <value>Audio:</value>
+  </data>
+  <data name="text_Label11_EN" xml:space="preserve">
+    <value>Official Site:</value>
+  </data>
+  <data name="msgb_no_hay_cancion_EN" xml:space="preserve">
+    <value>The specified song isn't in the indicated folder.</value>
+  </data>
+  <data name="ttip_TrackBar1_ES_AR" xml:space="preserve">
+    <value>Ajustar zoom</value>
+  </data>
+  <data name="ttip_btnAgregarCancionLista_EN" xml:space="preserve">
+    <value>Add song to the list</value>
+  </data>
+  <data name="ttip_btnAudioMute_EN" xml:space="preserve">
+    <value>Zoom out</value>
+  </data>
+  <data name="msgb_guardar_cambios_EN" xml:space="preserve">
+    <value>Do you want save the changes made in </value>
+  </data>
+  <data name="str_imagen_EN" xml:space="preserve">
+    <value>Image</value>
   </data>
   <data name="msgb_finalizar_grabacion_EN" xml:space="preserve">
     <value>Finish the recording process before to close </value>
   </data>
-  <data name="msgb_finalizar_grabacion_ES_AR" xml:space="preserve">
-    <value>Finalice el proceso de grabación antes de cerrar </value>
+  <data name="text_Label5_ES_AR" xml:space="preserve">
+    <value>Ingrese el número de la canción:</value>
+  </data>
+  <data name="str_codigo_idioma_JW_EN" xml:space="preserve">
+    <value>EN</value>
+  </data>
+  <data name="str_archivo_grabar_mp3_EN" xml:space="preserve">
+    <value>MP3 file</value>
+  </data>
+  <data name="msgb_error_contenidos_a_presentacion_EN" xml:space="preserve">
+    <value>Impossibe send more than one content to Presentation.</value>
+  </data>
+  <data name="status_ppt_en_presentacion_EN" xml:space="preserve">
+    <value>Presentation is showing the PPT file:</value>
+  </data>
+  <data name="text_lblStatus_EN" xml:space="preserve">
+    <value>Presentation never has been opened during the current execution.</value>
+  </data>
+  <data name="text_btnAbreURLBuscador_ES_AR" xml:space="preserve">
+    <value>Ir</value>
+  </data>
+  <data name="str_lblGrabarStatus_pausada_ES_AR" xml:space="preserve">
+    <value>Pausada la grabación</value>
+  </data>
+  <data name="text_lblConfiguracion_ES_AR" xml:space="preserve">
+    <value>Panel de Configuración</value>
+  </data>
+  <data name="ttip_btnPDFPrimero_ES_AR" xml:space="preserve">
+    <value>Ir a la primer página</value>
+  </data>
+  <data name="str_actualizar_final_ES_AR" xml:space="preserve">
+    <value>¿Desea comenzar la descarga?</value>
+  </data>
+  <data name="ttip_btnAgregaImagen_ES_AR" xml:space="preserve">
+    <value> Abre la ventana de selección de archivos permitiendo la elección de imágenes de varios formatos. Luego de ubicar los archivos los agregará a la lista.</value>
+  </data>
+  <data name="AgregarVideo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AgregarVideo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="msgb_eliminar_contenido_EN" xml:space="preserve">
+    <value>Are you sure to clean the whole list of content?</value>
+  </data>
+  <data name="text_btnAbreWOLTest_ES_AR" xml:space="preserve">
+    <value>Ir</value>
+  </data>
+  <data name="str_patron_idioma_jw_EN" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="ZoomOut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ZoomOut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="str_lblStatus_ES_AR" xml:space="preserve">
+    <value>Estado: </value>
+  </data>
+  <data name="ttip_btnBuscaCarpetaGrabaciones_EN" xml:space="preserve">
+    <value>Set recording files path suggest destination</value>
+  </data>
+  <data name="text_btnAgregaPDF_ES_AR" xml:space="preserve">
+    <value>Archivos PDF </value>
+  </data>
+  <data name="text_btnAgregaImagen_EN" xml:space="preserve">
+    <value>Images</value>
+  </data>
+  <data name="text_btnAgregaCancion_EN" xml:space="preserve">
+    <value>Songs</value>
+  </data>
+  <data name="ttip_btnPDFZoomOut_ES_AR" xml:space="preserve">
+    <value>Alejar</value>
+  </data>
+  <data name="msgb_error_contenidos_a_presentacion_ES_AR" xml:space="preserve">
+    <value>Imposible enviar más de un contenido a Presentación.</value>
+  </data>
+  <data name="Grabar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Grabar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_Label14_EN" xml:space="preserve">
+    <value>Background image:</value>
+  </data>
+  <data name="ttip_lblStatus_ES_AR" xml:space="preserve">
+    <value> Muestra el estado del presentador.</value>
+  </data>
+  <data name="ttip_btnBajarItem_ES_AR" xml:space="preserve">
+    <value> Baja el item seleccionado en lista</value>
+  </data>
+  <data name="text_lblUbicacionGrabaciones_EN" xml:space="preserve">
+    <value>Path to records:</value>
+  </data>
+  <data name="text_Label20_ES_AR" xml:space="preserve">
+    <value>Sitio:</value>
+  </data>
+  <data name="msgb_grabacion_compartir_error_desconocido_EN" xml:space="preserve">
+    <value>Retry the action.</value>
+  </data>
+  <data name="ttip_btnBuscaCarpetaCanciones_ES_AR" xml:space="preserve">
+    <value>Busca la carpeta donde se han guardado los archivos de audio de la publicación "Cantemos a Jehová". De la correcta configuración de este parámetro depende como funcionará el botón "Canción".</value>
+  </data>
+  <data name="text_btnAgregaSitioLista_ES_AR" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="text_btnAgregaPPT_EN" xml:space="preserve">
+    <value>PPT</value>
+  </data>
+  <data name="ttip_btnAbreBroadcastingTest_ES_AR" xml:space="preserve">
+    <value>Probar la URL en el navegador por defecto. </value>
+  </data>
+  <data name="text_btnAbreSitioOficialTest_EN" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="ttip_btnAbreTV_ES_AR" xml:space="preserve">
+    <value> Agrega a la lista un vínculo al sitio de Broadcasting TV. Requiere conexión activa a Internet.</value>
+  </data>
+  <data name="msgb_eliminar_contenidos_validados_final_EN" xml:space="preserve">
+    <value>. Detailed list: </value>
+  </data>
+  <data name="msgb_obtener_clave_error_EN" xml:space="preserve">
+    <value>An error occurs getting the key {</value>
+  </data>
+  <data name="msgb_archivo_presentacion_exito_EN" xml:space="preserve">
+    <value>The file was saved succesfully.</value>
+  </data>
+  <data name="ttip_btnAbreWOL_ES_AR" xml:space="preserve">
+    <value> Agrega a la lista un vínculo a la Biblioteca en Línea. Requiere conexión activa a Internet.</value>
+  </data>
+  <data name="text_chkMostrarCancioneroPDF_EN" xml:space="preserve">
+    <value>Show lyrics when the aditional screen is available</value>
+  </data>
+  <data name="text_Label8_ES_AR" xml:space="preserve">
+    <value>Videos:</value>
+  </data>
+  <data name="msgb_grabacion_compartir_no_EN" xml:space="preserve">
+    <value>There aren't an open file to share.</value>
+  </data>
+  <data name="str_pdf_EN" xml:space="preserve">
+    <value>PDF</value>
+  </data>
+  <data name="str_archivos_ppt_EN" xml:space="preserve">
+    <value>Power Point presentation files</value>
+  </data>
+  <data name="status_pdf_en_presentacion_ES_AR" xml:space="preserve">
+    <value>Presentación está mostrando el PDF:  </value>
+  </data>
+  <data name="VistaPrevia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VistaPrevia1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="status_presentacion_cancelado_EN" xml:space="preserve">
+    <value>Presentation init was cancelled by user.</value>
+  </data>
+  <data name="msgb_ejecutar_como_admin_medio_ES_AR" xml:space="preserve">
+    <value> porque no se aplicaron los permisos necesarios.</value>
+  </data>
+  <data name="text_Label15_ES_AR" xml:space="preserve">
+    <value>Ubicación canciones:</value>
+  </data>
+  <data name="text_btnAgregaAudio_EN" xml:space="preserve">
+    <value>Audio Files</value>
+  </data>
+  <data name="ttip_btnReestablecePresentadorANegro_ES_AR" xml:space="preserve">
+    <value> Restablece Presentación a una pantalla negra</value>
+  </data>
+  <data name="ttip_btnGuardarConfig_EN" xml:space="preserve">
+    <value>Save current configurations</value>
+  </data>
+  <data name="str_por_defecto_EN" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="str_cancion_EN" xml:space="preserve">
+    <value>Song</value>
+  </data>
+  <data name="text_Label14_ES_AR" xml:space="preserve">
+    <value>Fondo de pantalla:</value>
+  </data>
+  <data name="text_Label17_ES_AR" xml:space="preserve">
+    <value>(Número de canción)</value>
+  </data>
+  <data name="str_lblGrabarStatus_Inteligente_EN" xml:space="preserve">
+    <value> (handled by SmartRecording)</value>
+  </data>
+  <data name="text_btnBuscaCarpetaCanciones_ES_AR" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="text_btnAbreJWorg_ES_AR" xml:space="preserve">
+    <value>Sitio Oficial</value>
+  </data>
+  <data name="ttip_btnAbreWOLTest_ES_AR" xml:space="preserve">
+    <value>Probar la URL en el navegador por defecto. </value>
+  </data>
+  <data name="msgb_configuracion_restablecer_EN" xml:space="preserve">
+    <value>Are you sure to reset to defaults the configurations?</value>
+  </data>
+  <data name="ttip_btnReestablecePresentador_ES_AR" xml:space="preserve">
+    <value> Restablece Presentación a su imagen de fondo por defecto.</value>
+  </data>
+  <data name="msgb_contenidos_validados_final_ES_AR" xml:space="preserve">
+    <value>¿Desea eliminarlos de la lista?</value>
+  </data>
+  <data name="str_lblAmbiente_ES_AR" xml:space="preserve">
+    <value>Música ambiente. Cantidad de minutos:</value>
+  </data>
+  <data name="text_lblGrabarStatus_EN" xml:space="preserve">
+    <value>Nothing recorded yet</value>
+  </data>
+  <data name="str_codigo_idioma_JW_ES_AR" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="ContenidoYaEnviado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ContenidoYaEnviado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ttip_btnCancelarCita_EN" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="str_lblGrabarStatus_pausada_EN" xml:space="preserve">
+    <value>Recording audio in pause</value>
+  </data>
+  <data name="text_Label8_EN" xml:space="preserve">
+    <value>Video:</value>
+  </data>
+  <data name="msgb_no_hay_canciones_en_carpeta_EN" xml:space="preserve">
+    <value>There aren't a valid file inside the especified path: </value>
+  </data>
+  <data name="text_btnAbreCanciones_EN" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="ttip_lblStatus_EN" xml:space="preserve">
+    <value>Show Presentation status.</value>
+  </data>
+  <data name="ttip_btnAudioPlayPausa_ES_AR" xml:space="preserve">
+    <value>Ir a la primer página</value>
+  </data>
+  <data name="text_btnAgregarCancionLista_ES_AR" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="str_cortar_reproduccion_ES_AR" xml:space="preserve">
+    <value>¿Está seguro que desea cortar la reproducción en curso?</value>
+  </data>
+  <data name="ttip_btnAbreTV_EN" xml:space="preserve">
+    <value>Add to the list a link to Broadcasting site. Require active Internet connection.</value>
+  </data>
+  <data name="msgb_ejecutar_como_admin_medio_EN" xml:space="preserve">
+    <value> because the program haven't the proper permissions.</value>
+  </data>
+  <data name="text_btnAbreSitioWeb_ES_AR" xml:space="preserve">
+    <value>Sitio web *</value>
+  </data>
+  <data name="msgb_presentacion_no_disponible_encender_EN" xml:space="preserve">
+    <value>Presentation window isn't available. Do you want to start it?</value>
+  </data>
+  <data name="status_video_en_presentacion_EN" xml:space="preserve">
+    <value>Presentation is showing the video file: </value>
+  </data>
+  <data name="str_lblAmbiente_EN" xml:space="preserve">
+    <value>Ambient mode. Minutes:</value>
+  </data>
+  <data name="text_btnAbreWOL_ES_AR" xml:space="preserve">
+    <value>Biblioteca en Línea</value>
+  </data>
+  <data name="text_numCanciones_EN" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ttip_btnAudioPlayPausa_EN" xml:space="preserve">
+    <value>Go to first page</value>
+  </data>
+  <data name="str_cita_por_defecto_ES_AR" xml:space="preserve">
+    <value>Mateo%2024:14</value>
+  </data>
+  <data name="ttip_btnGuardarContenidos_EN" xml:space="preserve">
+    <value>Save the current list</value>
+  </data>
+  <data name="text_btnAbreBroadcastingTest_ES_AR" xml:space="preserve">
+    <value>Ir</value>
+  </data>
+  <data name="msgb_contenido_validado_final_ES_AR" xml:space="preserve">
+    <value> ¿Desea quitarlo de la lista?</value>
+  </data>
+  <data name="text_Label10_EN" xml:space="preserve">
+    <value>Search URL:</value>
+  </data>
+  <data name="msgb_contenido_encontrado_EN" xml:space="preserve">
+    <value>All files were found succesfully.</value>
+  </data>
+  <data name="text_Label10_ES_AR" xml:space="preserve">
+    <value>URL Buscador:</value>
+  </data>
+  <data name="status_ppt_en_presentacion_ES_AR" xml:space="preserve">
+    <value>Presentacion está mostrando el archivo PPT: </value>
+  </data>
+  <data name="str_patron_idioma_jw_ES_AR" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="text_btnAbreCanciones_ES_AR" xml:space="preserve">
+    <value>Ir</value>
+  </data>
+  <data name="ttip_chkAgregaAutomaticamente_EN" xml:space="preserve">
+    <value>If active when the choosen content is sent to the list automatically init the show or playing of that content. The content beeing showed or played will be interrupted.</value>
+  </data>
+  <data name="Cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="msgb_grabacion_compartir_exito_EN" xml:space="preserve">
+    <value>File shared successfully.</value>
+  </data>
+  <data name="ttip_btnGrabarToogle_ES_AR" xml:space="preserve">
+    <value>Grabar audio</value>
+  </data>
+  <data name="msgb_contenido_validado_principio_EN" xml:space="preserve">
+    <value>One missing file </value>
+  </data>
+  <data name="text_Label17_EN" xml:space="preserve">
+    <value>(Song number)</value>
+  </data>
+  <data name="text_Label1_EN" xml:space="preserve">
+    <value>Images:</value>
+  </data>
+  <data name="df_libros_biblia_ES_AR" xml:space="preserve">
+    <value>Génesis|Éxodo|Levítico|Números|Deuteronomio|Josué|Jueces|Rut|1 Samuel|2 Samuel|1 Reyes|2 Reyes|1 Crónicas|2 Crónicas|Esdras|Nehemías|Ester|Job|Salmos|Proverbios|Eclesiastés|El Cantar de los Cantares|Isaías|Jeremías|Lamentaciones|Ezequiel|Daniel|Oseas|Joel|Amós|Abdías|Jonás|Miqueas|Nahúm|Habacuc|Sofonías|Ageo|Zacarías|MalaquíasGénesis|Éxodo|Levítico|Números|Deuteronomio|Josué|Jueces|Rut|1 Samuel|2 Samuel|1 Reyes|2 Reyes|1 Crónicas|2 Crónicas|Esdras|Nehemías|Ester|Job|Salmos|Proverbios|Eclesiastés|El Cantar de los Cantares|Isaías|Jeremías|Lamentaciones|Ezequiel|Daniel|Oseas|Joel|Amós|Abdías|Jonás|Miqueas|Nahúm|Habacuc|Sofonías|Ageo|Zacarías|Malaquías|Mateo|Marcos|Lucas|Juan|Hechos|Romanos|1 Corintios|2 Corintios|Gálatas|Efesios|Filipenses|Colosenses|1 Tesalonicenses|2 Tesalonicenses|1 Timoteo|2 Timoteo|Tito|Filemón|Hebreos|Santiago|1 Pedro|2 Pedro|1 Juan|2 Juan|3 Juan|Judas|Revelación|Mateo|Marcos|Lucas|Juan|Hechos|Romanos|1 Corintios|2 Corintios|Gálatas|Efesios|Filipenses|Colosenses|1 Tesalonicenses|2 Tesalonicenses|1 Timoteo|2 Timoteo|Tito|Filemón|Hebreos|Santiago|1 Pedro|2 Pedro|1 Juan|2 Juan|3 Juan|Judas|Revelación</value>
+  </data>
+  <data name="status_negro_en_presentacion_ES_AR" xml:space="preserve">
+    <value>Presentación ha sido restablecido correctamente. Muestra un fondo negro.</value>
+  </data>
+  <data name="text_Label5_EN" xml:space="preserve">
+    <value>Write the song's number:</value>
+  </data>
+  <data name="text_Label2_ES_AR" xml:space="preserve">
+    <value>Agregar a lista de contenido a presentar </value>
+  </data>
+  <data name="Orador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Orador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ttip_btnAgregaPPT_EN" xml:space="preserve">
+    <value>Open the file selector allowing choose only Power Point presentation files. After that will add the selected files to the list.</value>
+  </data>
+  <data name="ttip_trackPDFZoom_ES_AR" xml:space="preserve">
+    <value>Ajustar zoom</value>
+  </data>
+  <data name="str_ventana_panel_control_nombre_EN" xml:space="preserve">
+    <value>Control Panel</value>
+  </data>
+  <data name="msgb_grabacion_compartir_exito_ES_AR" xml:space="preserve">
+    <value>Archivo compartido exitosamente.</value>
+  </data>
+  <data name="msgb_instalacion_ya_lista_ES_AR" xml:space="preserve">
+    <value>El archivo para instalar la nueva versión ya ha sido descargado previamente. ¿Desea comenzar la instalación en este momento? Solo tomará pocos minutos.</value>
+  </data>
+  <data name="ttip_btnAgregaAudio_ES_AR" xml:space="preserve">
+    <value> Abre la ventana de selección de archivos permitiendo la elección de audios de varios formatos. Luego de ubicar los archivos los agregará a la lista.</value>
+  </data>
+  <data name="msgb_title_confirmacion_EN" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="msgb_guardar_cambios_ES_AR" xml:space="preserve">
+    <value>¿Desea guardar los cambios realizados en </value>
+  </data>
+  <data name="status_negro_en_presentacion_EN" xml:space="preserve">
+    <value>Presentation has been reset succesfully. Shows a black background.</value>
+  </data>
+  <data name="ttip_btnGrabarDetener_EN" xml:space="preserve">
+    <value>Stops the recording and save current file</value>
+  </data>
+  <data name="msgb_configuracion_cancelar_EN" xml:space="preserve">
+    <value>Are you sure to cancel the changes made in configurations?</value>
+  </data>
+  <data name="msgb_archivo_presentacion_abrir_importar_ES_AR" xml:space="preserve">
+    <value>¿Desea que se limpie la lista actual antes de añadir los contenidos del archivo seleccionado?</value>
+  </data>
+  <data name="df_libros_biblia_EN" xml:space="preserve">
+    <value>Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|1 Samuel|2 Samuel|1 Kings|2 Kings|1 Chronicles|2 Chronicles|Ezra|Nehemiah|Esther|Job|Psalms|Proverbs|Ecclesiastes|Song of Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|1 Corinthians|2 Corinthians|Galatians|Ephesians|Philippians|Colossians|1 Thessalonians|2 Thessalonians|1 Timothy|2 Timothy|Titus|Philemon|Hebrews|James|1 Peter|2 Peter|1 John|2 John|3 John|Jude|Revelation</value>
+  </data>
+  <data name="text_Label15_EN" xml:space="preserve">
+    <value>Path to songs:</value>
+  </data>
+  <data name="ttip_btnAgregaPDF_ES_AR" xml:space="preserve">
+    <value> Abre la ventana de selección de archivos permitiendo la elección de archivos PDF únicamente. Luego de ubicar los archivos los agregará a la lista.</value>
+  </data>
+  <data name="ttip_btnValidarContenido_EN" xml:space="preserve">
+    <value>Validate if every files from the list of contents exists</value>
+  </data>
+  <data name="Abrir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Abrir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ttip_btnAbreURLBuscador_EN" xml:space="preserve">
+    <value>Test the URL in default browser</value>
+  </data>
+  <data name="text_Label12_EN" xml:space="preserve">
+    <value>WOL Site:</value>
+  </data>
+  <data name="str_lblGrabarStatus_detenida_error_ES_AR" xml:space="preserve">
+    <value>Detenida la grabación. Ocurrió un error al guardar el archivo</value>
+  </data>
+  <data name="Notas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Notas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_lblAudioPosition_ES_AR" xml:space="preserve">
+    <value>00:00 / 00:00</value>
+  </data>
+  <data name="text_btnAgregaImagen_ES_AR" xml:space="preserve">
+    <value>Imágenes </value>
+  </data>
+  <data name="str_archivo_presentacion_ES_AR" xml:space="preserve">
+    <value>Archivos de presentaciones</value>
+  </data>
+  <data name="Anterior" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Anterior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_lblVideoPosition_ES_AR" xml:space="preserve">
+    <value>00:00 / 00:00</value>
+  </data>
+  <data name="text_btnAbreNuevasCanciones_EN" xml:space="preserve">
+    <value>Go</value>
   </data>
   <data name="msgb_grabacion_cerrar_agregar_EN" xml:space="preserve">
     <value>Do you want add more content to current recording? (If you press No the recording will be dissmised)</value>
@@ -1048,454 +769,925 @@
   <data name="msgb_grabacion_cerrar_agregar_ES_AR" xml:space="preserve">
     <value>¿Desea agregarle más contenido a la grabación actual? (Si presiona no se descartará definitivamente lo grabado hasta el momento.)</value>
   </data>
-  <data name="msgb_grabacion_compartir_error_desconocido_EN" xml:space="preserve">
-    <value>Retry the action.</value>
-  </data>
-  <data name="msgb_grabacion_compartir_error_desconocido_ES_AR" xml:space="preserve">
-    <value>Reintente la acción.</value>
-  </data>
-  <data name="msgb_grabacion_compartir_error_EN" xml:space="preserve">
-    <value>An error occurs while sharing the file. Retry the action.</value>
-  </data>
-  <data name="msgb_grabacion_compartir_error_ES_AR" xml:space="preserve">
-    <value>Ocurrió un error al compartir el archivo. Reintente compartir.</value>
-  </data>
-  <data name="msgb_grabacion_compartir_exito_EN" xml:space="preserve">
-    <value>File shared successfully.</value>
-  </data>
-  <data name="msgb_grabacion_compartir_exito_ES_AR" xml:space="preserve">
-    <value>Archivo compartido exitosamente.</value>
-  </data>
-  <data name="msgb_grabacion_compartir_no_EN" xml:space="preserve">
-    <value>There aren't an open file to share.</value>
-  </data>
-  <data name="msgb_grabacion_compartir_no_ES_AR" xml:space="preserve">
-    <value>No hay ningún archivo abierto para compartir.</value>
-  </data>
-  <data name="msgb_guardar_cambios_EN" xml:space="preserve">
-    <value>Do you want save the changes made in </value>
-  </data>
-  <data name="msgb_guardar_cambios_ES_AR" xml:space="preserve">
-    <value>¿Desea guardar los cambios realizados en </value>
-  </data>
-  <data name="msgb_no_hay_canciones_en_carpeta_EN" xml:space="preserve">
-    <value>There aren't a valid file inside the especified path: </value>
-  </data>
-  <data name="msgb_no_hay_canciones_en_carpeta_ES_AR" xml:space="preserve">
-    <value>No se encontró ningún archivo válido dentro de la carpeta especificada: </value>
-  </data>
-  <data name="msgb_no_segundo_monitor_EN" xml:space="preserve">
-    <value>There aren't a second display. Do you want show Presentation in the first display?</value>
-  </data>
-  <data name="msgb_no_segundo_monitor_ES_AR" xml:space="preserve">
-    <value>No se detectó ningún otro monitor conectado. ¿Desea mostrarlo en esta misma pantalla?</value>
-  </data>
-  <data name="msgb_no_versiculo_EN" xml:space="preserve">
-    <value>You didn't put a verse to search for.</value>
-  </data>
-  <data name="msgb_no_versiculo_ES_AR" xml:space="preserve">
-    <value>No se ingresó ningún versículo para buscar.</value>
-  </data>
-  <data name="msgb_obtener_clave_error_EN" xml:space="preserve">
-    <value>An error occurs getting the key {</value>
-  </data>
-  <data name="msgb_obtener_clave_error_ES_AR" xml:space="preserve">
-    <value>Ocurrió un error consiguiendo la clave {</value>
-  </data>
-  <data name="msgb_obtener_clave_error_fin_EN" xml:space="preserve">
-    <value>} from resources file. Contact developer for more information.</value>
-  </data>
-  <data name="msgb_obtener_clave_error_fin_ES_AR" xml:space="preserve">
-    <value>} del archivo de recursos. Contacte al desarrollador para más información.</value>
-  </data>
-  <data name="msgb_presentacion_no_disponible_encender_EN" xml:space="preserve">
-    <value>Presentation window isn't available. Do you want to start it?</value>
-  </data>
-  <data name="msgb_presentacion_no_disponible_encender_ES_AR" xml:space="preserve">
-    <value>La pantalla de presentación no está disponible. ¿Desea encenderla?</value>
-  </data>
-  <data name="msgb_quitar_contenido_EN" xml:space="preserve">
-    <value>Are you sure to delete from list the selected content?</value>
-  </data>
-  <data name="msgb_quitar_contenido_ES_AR" xml:space="preserve">
-    <value>¿Está seguro que desea quitar de la lista el contenido seleccionado?</value>
-  </data>
-  <data name="msgb_title_atencion_EN" xml:space="preserve">
-    <value>Attention</value>
-  </data>
-  <data name="msgb_title_atencion_ES_AR" xml:space="preserve">
-    <value>Atención</value>
-  </data>
-  <data name="msgb_title_confirmacion_EN" xml:space="preserve">
-    <value>Confirmation</value>
-  </data>
-  <data name="msgb_title_confirmacion_ES_AR" xml:space="preserve">
-    <value>Confirmación</value>
-  </data>
-  <data name="msgb_title_error_EN" xml:space="preserve">
-    <value>Error</value>
-  </data>
-  <data name="msgb_title_error_ES_AR" xml:space="preserve">
-    <value>Error</value>
-  </data>
-  <data name="msgb_url_vacia_EN" xml:space="preserve">
-    <value>The address is empty.</value>
-  </data>
-  <data name="msgb_url_vacia_ES_AR" xml:space="preserve">
-    <value>La dirección está vacía.</value>
-  </data>
-  <data name="status_cita_en_presentacion_EN" xml:space="preserve">
-    <value>Presentation is showing content got from WOL. Result from search of '</value>
-  </data>
-  <data name="status_cita_en_presentacion_ES_AR" xml:space="preserve">
-    <value>Presentación muestra contenido obtenido desde la WOL. Resultado de la búsqueda de '</value>
-  </data>
-  <data name="status_default_en_presentacion_EN" xml:space="preserve">
-    <value>Presentation is showing a black screen in the second display.</value>
-  </data>
-  <data name="status_default_en_presentacion_ES_AR" xml:space="preserve">
-    <value>Presentación se muestra con fondo negro en la pantalla auxiliar.</value>
-  </data>
-  <data name="status_default_en_presentacion_principal_EN" xml:space="preserve">
-    <value>Presentation is showing a black screen in the first display. (Use Alt+Tab combination to change the active window)</value>
-  </data>
-  <data name="status_default_en_presentacion_principal_ES_AR" xml:space="preserve">
-    <value>Presentación se muestra con fondo negro en la pantalla principal (Utilice las teclas Alt+Tab para cambiar de ventana.)</value>
-  </data>
-  <data name="status_imagen_en_presentacion_EN" xml:space="preserve">
-    <value>Presentation is showing the image: </value>
-  </data>
-  <data name="status_imagen_en_presentacion_ES_AR" xml:space="preserve">
-    <value>Presentación está mostrando la imagen: </value>
-  </data>
-  <data name="status_negro_en_presentacion_EN" xml:space="preserve">
-    <value>Presentation has been reset succesfully. Shows a black background.</value>
-  </data>
-  <data name="status_negro_en_presentacion_ES_AR" xml:space="preserve">
-    <value>Presentación ha sido restablecido correctamente. Muestra un fondo negro.</value>
-  </data>
-  <data name="status_pdf_en_presentacion_EN" xml:space="preserve">
-    <value>Presentation is showing the PDF file: </value>
-  </data>
-  <data name="status_pdf_en_presentacion_ES_AR" xml:space="preserve">
-    <value>Presentación está mostrando el PDF:  </value>
-  </data>
-  <data name="status_presentacion_cancelado_EN" xml:space="preserve">
-    <value>Presentation init was cancelled by user.</value>
-  </data>
-  <data name="status_presentacion_cancelado_ES_AR" xml:space="preserve">
-    <value>El inicio de Presentación fue cancelado por el usuario.</value>
-  </data>
-  <data name="status_presentacion_cerrado_de_antes_EN" xml:space="preserve">
-    <value>Presentation was already closed. Status is updated.</value>
-  </data>
-  <data name="status_presentacion_cerrado_de_antes_ES_AR" xml:space="preserve">
-    <value>Presentación ya se encontraba cerrada, se actualizó el estado.</value>
-  </data>
-  <data name="status_presentacion_cerrado_EN" xml:space="preserve">
-    <value>Presentation has been closed successfully.</value>
-  </data>
-  <data name="status_presentacion_cerrado_ES_AR" xml:space="preserve">
-    <value>Presentación ha sido cerrada correctamente.</value>
-  </data>
-  <data name="status_presentacion_imagen_por_defecto_EN" xml:space="preserve">
-    <value>Presentation has been reset succesfully. Shows the default image.</value>
-  </data>
-  <data name="status_presentacion_imagen_por_defecto_ES_AR" xml:space="preserve">
-    <value>Presentación ha sido restablecida correctamente. Muestra la imagen por defecto.</value>
-  </data>
-  <data name="status_presentacion_sitio_EN" xml:space="preserve">
-    <value>Presentation is showing the site: </value>
-  </data>
-  <data name="status_presentacion_sitio_ES_AR" xml:space="preserve">
-    <value>Presentación está mostrando el sitio: </value>
-  </data>
-  <data name="status_presentacion_sitio_final_EN" xml:space="preserve">
-    <value> (or the result of navigating from it)</value>
-  </data>
-  <data name="status_presentacion_sitio_final_ES_AR" xml:space="preserve">
-    <value> (o el resultado de su navegación desde el mismo)</value>
-  </data>
-  <data name="status_versiculo_no_encontrado_EN" xml:space="preserve">
-    <value>Presentation failed showing content from WOL, verify the verse. The error mesage is: </value>
-  </data>
-  <data name="status_versiculo_no_encontrado_ES_AR" xml:space="preserve">
-    <value>Presentación falló al mostrar el contenido de la WOL, verifique que el versículo que intenta buscar exista y que no esté mal escrito. El error es: </value>
-  </data>
-  <data name="status_video_en_presentacion_EN" xml:space="preserve">
-    <value>Presentation is showing the video file: </value>
-  </data>
-  <data name="status_video_en_presentacion_ES_AR" xml:space="preserve">
-    <value>Presentación está reproduciendo el archivo de video: </value>
-  </data>
-  <data name="str_archivos_audio_EN" xml:space="preserve">
-    <value>Audio files</value>
-  </data>
-  <data name="str_archivos_audio_ES_AR" xml:space="preserve">
-    <value>Archivos de audio</value>
-  </data>
-  <data name="str_archivos_imagen_EN" xml:space="preserve">
-    <value>Image files</value>
-  </data>
-  <data name="str_archivos_imagen_ES_AR" xml:space="preserve">
-    <value>Archivos de imágenes</value>
-  </data>
-  <data name="str_archivos_pdf_EN" xml:space="preserve">
-    <value>PDF files</value>
-  </data>
-  <data name="str_archivos_pdf_ES_AR" xml:space="preserve">
-    <value>Archivos PDF</value>
-  </data>
-  <data name="str_archivos_video_EN" xml:space="preserve">
-    <value>Video files</value>
-  </data>
-  <data name="str_archivos_video_ES_AR" xml:space="preserve">
-    <value>Archivos de video</value>
-  </data>
-  <data name="str_archivo_default_titulo_EN" xml:space="preserve">
-    <value>NewPresentation1</value>
-  </data>
-  <data name="str_archivo_default_titulo_ES_AR" xml:space="preserve">
-    <value>PresentacionNueva1</value>
-  </data>
-  <data name="str_archivo_grabar_mp3_EN" xml:space="preserve">
-    <value>MP3 file</value>
-  </data>
-  <data name="str_archivo_grabar_mp3_ES_AR" xml:space="preserve">
-    <value>Archivo MP3</value>
-  </data>
-  <data name="str_archivo_grabar_titulo_por_defecto_EN" xml:space="preserve">
-    <value>Recording_</value>
-  </data>
-  <data name="str_archivo_grabar_titulo_por_defecto_ES_AR" xml:space="preserve">
-    <value>Grabacion_</value>
-  </data>
-  <data name="str_archivo_presentacion_EN" xml:space="preserve">
-    <value>Presentation files</value>
-  </data>
-  <data name="str_archivo_presentacion_ES_AR" xml:space="preserve">
-    <value>Archivos de presentaciones</value>
-  </data>
-  <data name="str_audio_EN" xml:space="preserve">
-    <value>Audio</value>
-  </data>
-  <data name="str_audio_ES_AR" xml:space="preserve">
-    <value>Audio</value>
-  </data>
-  <data name="str_cancion_EN" xml:space="preserve">
-    <value>Song</value>
-  </data>
-  <data name="str_cancion_ES_AR" xml:space="preserve">
-    <value>Canción</value>
-  </data>
-  <data name="str_cita_por_defecto_EN" xml:space="preserve">
-    <value>Mattew%2024:14</value>
-  </data>
-  <data name="str_cita_por_defecto_ES_AR" xml:space="preserve">
-    <value>Mateo%2024:14</value>
-  </data>
-  <data name="str_codigo_idioma_JW_EN" xml:space="preserve">
-    <value>EN</value>
-  </data>
-  <data name="str_codigo_idioma_JW_ES_AR" xml:space="preserve">
-    <value>S</value>
-  </data>
-  <data name="str_imagen_EN" xml:space="preserve">
-    <value>Image</value>
-  </data>
-  <data name="str_imagen_ES_AR" xml:space="preserve">
-    <value>Imagen</value>
-  </data>
-  <data name="str_lblGrabarStatus_detenida_EN" xml:space="preserve">
-    <value>Recording audio stopped.</value>
-  </data>
-  <data name="str_lblGrabarStatus_detenida_error_EN" xml:space="preserve">
-    <value>Recording audio stopped. An error occurs while saving the file.</value>
-  </data>
-  <data name="str_lblGrabarStatus_detenida_error_ES_AR" xml:space="preserve">
-    <value>Detenida la grabación. Ocurrió un error al guardar el archivo</value>
-  </data>
-  <data name="str_lblGrabarStatus_detenida_ES_AR" xml:space="preserve">
-    <value>Detenida la grabación</value>
-  </data>
-  <data name="str_lblGrabarStatus_detenida_guardado_EN" xml:space="preserve">
-    <value>Recording audio stopped.</value>
-  </data>
-  <data name="str_lblGrabarStatus_detenida_guardado_ES_AR" xml:space="preserve">
-    <value>Detenida la grabación. Guardado el archivo</value>
-  </data>
-  <data name="str_lblGrabarStatus_detenida_no_guardada_EN" xml:space="preserve">
-    <value>Recording audio stopped. The file wasn't save by user choose.</value>
-  </data>
-  <data name="str_lblGrabarStatus_detenida_no_guardada_ES_AR" xml:space="preserve">
-    <value>Detenida la grabación. El archivo no se guardó por elección del usuario</value>
-  </data>
-  <data name="str_lblGrabarStatus_grabando_EN" xml:space="preserve">
-    <value>Recording audio</value>
-  </data>
-  <data name="str_lblGrabarStatus_grabando_ES_AR" xml:space="preserve">
-    <value>Grabando audio</value>
-  </data>
-  <data name="str_lblGrabarStatus_Inteligente_EN" xml:space="preserve">
-    <value> (handled by SmartRecording)</value>
-  </data>
-  <data name="str_lblGrabarStatus_Inteligente_ES_AR" xml:space="preserve">
-    <value> (controlado por Grabación Inteligente)</value>
-  </data>
-  <data name="str_lblGrabarStatus_pausada_EN" xml:space="preserve">
-    <value>Recording audio in pause</value>
-  </data>
-  <data name="str_lblGrabarStatus_pausada_ES_AR" xml:space="preserve">
-    <value>Pausada la grabación</value>
-  </data>
-  <data name="str_lblGrabarStatus_pausada_no_guardada_EN" xml:space="preserve">
-    <value>Recording audio in pause. The file wasn't save by user choose.</value>
-  </data>
-  <data name="str_lblGrabarStatus_pausada_no_guardada_ES_AR" xml:space="preserve">
-    <value>Pausada la grabación. El archivo no se guardó por elección del usuario</value>
-  </data>
-  <data name="str_lblStatus_EN" xml:space="preserve">
-    <value>Status: </value>
-  </data>
-  <data name="str_lblStatus_ES_AR" xml:space="preserve">
-    <value>Estado: </value>
-  </data>
-  <data name="str_patron_idioma_jw_EN" xml:space="preserve">
-    <value>E</value>
-  </data>
-  <data name="str_patron_idioma_jw_ES_AR" xml:space="preserve">
-    <value>S</value>
-  </data>
-  <data name="str_pdf_EN" xml:space="preserve">
-    <value>PDF</value>
-  </data>
-  <data name="str_pdf_ES_AR" xml:space="preserve">
-    <value>PDF</value>
-  </data>
-  <data name="str_por_defecto_EN" xml:space="preserve">
-    <value>Default</value>
-  </data>
-  <data name="str_por_defecto_ES_AR" xml:space="preserve">
-    <value>Por defecto</value>
-  </data>
-  <data name="str_versiculo_no_encontrado_EN" xml:space="preserve">
-    <value>Verse not found</value>
-  </data>
-  <data name="str_versiculo_no_encontrado_ES_AR" xml:space="preserve">
-    <value>Versículo no encontrado</value>
-  </data>
-  <data name="str_video_EN" xml:space="preserve">
-    <value>Video</value>
-  </data>
   <data name="str_video_ES_AR" xml:space="preserve">
     <value>Video</value>
   </data>
-  <data name="df_libros_biblia_EN" xml:space="preserve">
-    <value>Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|1 Samuel|2 Samuel|1 Kings|2 Kings|1 Chronicles|2 Chronicles|Ezra|Nehemiah|Esther|Job|Psalms|Proverbs|Ecclesiastes|Song of Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|1 Corinthians|2 Corinthians|Galatians|Ephesians|Philippians|Colossians|1 Thessalonians|2 Thessalonians|1 Timothy|2 Timothy|Titus|Philemon|Hebrews|James|1 Peter|2 Peter|1 John|2 John|3 John|Jude|Revelation</value>
+  <data name="ttip_btnAbreJWorg_EN" xml:space="preserve">
+    <value>Add to the list a link to official site. Require active Internet connection.</value>
   </data>
-  <data name="df_libros_biblia_ES_AR" xml:space="preserve">
-    <value>Génesis|Éxodo|Levítico|Números|Deuteronomio|Josué|Jueces|Rut|1 Samuel|2 Samuel|1 Reyes|2 Reyes|1 Crónicas|2 Crónicas|Esdras|Nehemías|Ester|Job|Salmos|Proverbios|Eclesiastés|El Cantar de los Cantares|Isaías|Jeremías|Lamentaciones|Ezequiel|Daniel|Oseas|Joel|Amós|Abdías|Jonás|Miqueas|Nahúm|Habacuc|Sofonías|Ageo|Zacarías|MalaquíasGénesis|Éxodo|Levítico|Números|Deuteronomio|Josué|Jueces|Rut|1 Samuel|2 Samuel|1 Reyes|2 Reyes|1 Crónicas|2 Crónicas|Esdras|Nehemías|Ester|Job|Salmos|Proverbios|Eclesiastés|El Cantar de los Cantares|Isaías|Jeremías|Lamentaciones|Ezequiel|Daniel|Oseas|Joel|Amós|Abdías|Jonás|Miqueas|Nahúm|Habacuc|Sofonías|Ageo|Zacarías|Malaquías|Mateo|Marcos|Lucas|Juan|Hechos|Romanos|1 Corintios|2 Corintios|Gálatas|Efesios|Filipenses|Colosenses|1 Tesalonicenses|2 Tesalonicenses|1 Timoteo|2 Timoteo|Tito|Filemón|Hebreos|Santiago|1 Pedro|2 Pedro|1 Juan|2 Juan|3 Juan|Judas|Revelación|Mateo|Marcos|Lucas|Juan|Hechos|Romanos|1 Corintios|2 Corintios|Gálatas|Efesios|Filipenses|Colosenses|1 Tesalonicenses|2 Tesalonicenses|1 Timoteo|2 Timoteo|Tito|Filemón|Hebreos|Santiago|1 Pedro|2 Pedro|1 Juan|2 Juan|3 Juan|Judas|Revelación</value>
+  <data name="msgb_finalizar_grabacion_ES_AR" xml:space="preserve">
+    <value>Finalice el proceso de grabación antes de cerrar </value>
   </data>
-  <data name="text_lblIdioma_EN" xml:space="preserve">
-    <value>Language:</value>
+  <data name="Silencio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Silencio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="text_lblIdioma_ES_AR" xml:space="preserve">
-    <value>Idioma:</value>
-  </data>
-  <data name="str_actualizar_final_EN" xml:space="preserve">
-    <value>Do you want start the download?</value>
-  </data>
-  <data name="str_actualizar_final_ES_AR" xml:space="preserve">
-    <value>¿Desea comenzar la descarga?</value>
-  </data>
-  <data name="str_actualizar_medio_EN" xml:space="preserve">
-    <value> of Presentador is already available.</value>
-  </data>
-  <data name="str_actualizar_medio_ES_AR" xml:space="preserve">
-    <value> de Presentador ya está disponible. Contiene correcciones, actualizaciones y mejoras de rendimiento.</value>
-  </data>
-  <data name="str_actualizar_principio_EN" xml:space="preserve">
-    <value>The new version </value>
-  </data>
-  <data name="str_actualizar_principio_ES_AR" xml:space="preserve">
-    <value>La nueva versión </value>
-  </data>
-  <data name="str_programa_nombre_EN" xml:space="preserve">
-    <value>Presentador</value>
-  </data>
-  <data name="str_programa_nombre_ES_AR" xml:space="preserve">
-    <value>Presentador</value>
-  </data>
-  <data name="str_ventana_panel_control_nombre_EN" xml:space="preserve">
-    <value>Control Panel</value>
-  </data>
-  <data name="str_ventana_panel_control_nombre_ES_AR" xml:space="preserve">
-    <value>Panel de Control</value>
-  </data>
-  <data name="str_version_EN" xml:space="preserve">
-    <value>1.3.2</value>
-  </data>
-  <data name="str_version_ES_AR" xml:space="preserve">
-    <value>1.3.2</value>
-  </data>
-  <data name="text_chkMelodias_EN" xml:space="preserve">
-    <value>Prefer melodic version</value>
-  </data>
-  <data name="text_chkMelodias_ES_AR" xml:space="preserve">
-    <value>Preferir versión melódica</value>
-  </data>
-  <data name="ttip_chkMelodias_EN" xml:space="preserve">
-    <value>When searching for the song will choose first the melodic version, if it isn't available yet the piano version will be picked</value>
-  </data>
-  <data name="ttip_chkMelodias_ES_AR" xml:space="preserve">
-    <value>Al elegir la canción buscará primero la versión melódica, si no existe una versión melódica para dicha canción aún se elegirá automáticamente la versión de piano.</value>
+  <data name="text_Label2_EN" xml:space="preserve">
+    <value>Add to list of content to present</value>
   </data>
   <data name="ttip_btnReacomodar_EN" xml:space="preserve">
     <value>Adjust window to fit in screen.</value>
   </data>
-  <data name="ttip_btnReacomodar_ES_AR" xml:space="preserve">
-    <value>Volver a acomodar la ventana para ajustar a la posición actual.</value>
+  <data name="str_archivos_pdf_EN" xml:space="preserve">
+    <value>PDF files</value>
   </data>
-  <data name="msgb_instalar_EN" xml:space="preserve">
-    <value>Are you sure to install it now? During the process the application will be closed.</value>
+  <data name="AgregarImagenes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AgregarImagenes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="msgb_instalar_ES_AR" xml:space="preserve">
-    <value>¿Está seguro que desea comenzar la instalación en este momento? Se cerrará la aplicación durante el proceso.</value>
+  <data name="status_presentacion_imagen_por_defecto_ES_AR" xml:space="preserve">
+    <value>Presentación ha sido restablecida correctamente. Muestra la imagen por defecto.</value>
+  </data>
+  <data name="text_numCanciones_ES_AR" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="PDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PDF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ttip_btnLimpiaItem_EN" xml:space="preserve">
+    <value>Delete selected item</value>
+  </data>
+  <data name="ttip_btnIniciaPresentador_ES_AR" xml:space="preserve">
+    <value> Inicia o cierra Presentación.</value>
+  </data>
+  <data name="ttip_btnPDFSiguiente_EN" xml:space="preserve">
+    <value>Go to next page</value>
+  </data>
+  <data name="Eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_btnBuscaCarpetaGrabaciones_EN" xml:space="preserve">
+    <value>…</value>
+  </data>
+  <data name="Ultimo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ultimo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="str_ppt_EN" xml:space="preserve">
+    <value>PPT</value>
+  </data>
+  <data name="str_lblGrabarStatus_detenida_EN" xml:space="preserve">
+    <value>Recording audio stopped.</value>
+  </data>
+  <data name="str_version_ES_AR" xml:space="preserve">
+    <value>1.4.0</value>
+  </data>
+  <data name="ttip_btnAgregaCitaLista_EN" xml:space="preserve">
+    <value>Add quote to list</value>
+  </data>
+  <data name="text_btnAbreWOL_EN" xml:space="preserve">
+    <value>Watchtower Online Library</value>
+  </data>
+  <data name="text_btnBuscaCarpetaCanciones_EN" xml:space="preserve">
+    <value>…</value>
+  </data>
+  <data name="ttip_btnBuscaCarpetaGrabaciones_ES_AR" xml:space="preserve">
+    <value>Establece la carpeta donde se guardarán los archivos de grabaciones de audio.</value>
+  </data>
+  <data name="msgb_eliminar_contenidos_validados_final_ES_AR" xml:space="preserve">
+    <value> archivos faltantes que se detallan a contiuación: </value>
+  </data>
+  <data name="text_Label4_ES_AR" xml:space="preserve">
+    <value>Lista de contenido a presentar </value>
+  </data>
+  <data name="status_default_en_presentacion_principal_ES_AR" xml:space="preserve">
+    <value>Presentación se muestra con fondo negro en la pantalla principal (Utilice las teclas Alt+Tab para cambiar de ventana.)</value>
+  </data>
+  <data name="ttip_btnCerrar_ES_AR" xml:space="preserve">
+    <value> Cerrar</value>
+  </data>
+  <data name="ttip_btnImagenLuz_EN" xml:space="preserve">
+    <value>Change background color of image</value>
+  </data>
+  <data name="AgregarMusica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AgregarMusica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ttip_btnAgregarCancionLista_ES_AR" xml:space="preserve">
+    <value>Agrega la canción a la lista</value>
+  </data>
+  <data name="msgb_noURL_ES_AR" xml:space="preserve">
+    <value>No se ingresó ninguna dirección para mostrar.</value>
+  </data>
+  <data name="text_Label6_ES_AR" xml:space="preserve">
+    <value>Cita:</value>
+  </data>
+  <data name="ValidarTodo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ValidarTodo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_Label19_ES_AR" xml:space="preserve">
+    <value>Canciones nuevas:</value>
+  </data>
+  <data name="str_versiculo_no_encontrado_ES_AR" xml:space="preserve">
+    <value>Versículo no encontrado</value>
+  </data>
+  <data name="status_presentacion_sitio_EN" xml:space="preserve">
+    <value>Presentation is showing the site: </value>
+  </data>
+  <data name="text_Label16_EN" xml:space="preserve">
+    <value>Songs names:</value>
+  </data>
+  <data name="CentrarImagen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CentrarImagen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="msgb_title_error_EN" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="str_archivos_video_EN" xml:space="preserve">
+    <value>Video files</value>
   </data>
   <data name="text_lblInstalarNuevaVersion_EN" xml:space="preserve">
     <value>Install new version</value>
   </data>
-  <data name="text_lblInstalarNuevaVersion_ES_AR" xml:space="preserve">
-    <value>Instalar nueva version</value>
+  <data name="status_default_en_presentacion_principal_EN" xml:space="preserve">
+    <value>Presentation is showing a black screen in the first display. (Use Alt+Tab combination to change the active window)</value>
   </data>
-  <data name="msgb_instalacion_ya_lista_EN" xml:space="preserve">
-    <value>The new version's installer is already available in your device. Do you want start the instalation immediatly? The process just take a few minutes (if any)</value>
+  <data name="MoverPDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoverPDF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="msgb_instalacion_ya_lista_ES_AR" xml:space="preserve">
-    <value>El archivo para instalar la nueva versión ya ha sido descargado previamente. ¿Desea comenzar la instalación en este momento? Solo tomará pocos minutos.</value>
+  <data name="ttip_btnConfiguracion_EN" xml:space="preserve">
+    <value>Open the Configuration Panel</value>
+  </data>
+  <data name="text_btnAbreSitioOficialTest_ES_AR" xml:space="preserve">
+    <value>Ir</value>
+  </data>
+  <data name="ic_slideshow_white_24dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_slideshow_white_24dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_btnAbreBroadcastingTest_EN" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="msgb_grabacion_compartir_no_ES_AR" xml:space="preserve">
+    <value>No hay ningún archivo abierto para compartir.</value>
+  </data>
+  <data name="str_cita_por_defecto_EN" xml:space="preserve">
+    <value>Matthew%2024:14</value>
+  </data>
+  <data name="text_btnAgregaCancion_ES_AR" xml:space="preserve">
+    <value>Canciones </value>
+  </data>
+  <data name="ttip_btnCancionCancelar_EN" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ttip_btnAgregaPPT_ES_AR" xml:space="preserve">
+    <value>Abre la ventana de selección de archivos permitiendo la elección de presentaciones de Power Point. Luego de ubicar los archivos los agregará a la lista.</value>
+  </data>
+  <data name="msgb_obtener_clave_error_fin_EN" xml:space="preserve">
+    <value>} from resources file. Contact developer for more information.</value>
+  </data>
+  <data name="text_chkMelodias_ES_AR" xml:space="preserve">
+    <value>Preferir versión melódica</value>
+  </data>
+  <data name="BackgroundLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background-Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_btnAgregaSitioLista_EN" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="ReestablecerPresentador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ReestablecerPresentador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_chkGrabacionInteligente_EN" xml:space="preserve">
+    <value>Smart Recording</value>
+  </data>
+  <data name="str_btnAmbientModeOn_EN" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Cerrar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cerrar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="msgb_instalar_no_archivo_EN" xml:space="preserve">
     <value>Instalation file missing.</value>
   </data>
-  <data name="msgb_instalar_no_archivo_ES_AR" xml:space="preserve">
-    <value>No se encontró el archivo de instalación.</value>
+  <data name="text_btnAgregaVideo_ES_AR" xml:space="preserve">
+    <value>Videos </value>
   </data>
-  <data name="text_chkMostrarCancioneroPDF_EN" xml:space="preserve">
-    <value>Show lyrics when the aditional screen is available</value>
+  <data name="ttip_ComboBox1_ES_AR" xml:space="preserve">
+    <value>Ingrese la cita tal como la ingresaría en el buscador de la Biblioteca en Línea.</value>
   </data>
-  <data name="text_chkMostrarCancioneroPDF_ES_AR" xml:space="preserve">
-    <value>Mostrar letra de canción si la pantalla adicional está disponible</value>
+  <data name="msgb_instalar_EN" xml:space="preserve">
+    <value>Are you sure to install it now? During the process the application will be closed.</value>
   </data>
-  <data name="msgb_no_hay_cancion_EN" xml:space="preserve">
-    <value>The specified song isn't in the indicated folder.</value>
+  <data name="ttip_numCanciones_EN" xml:space="preserve">
+    <value>Write song's number. Require the correct configuraction of songs resources path.</value>
   </data>
-  <data name="msgb_no_hay_cancion_ES_AR" xml:space="preserve">
-    <value>La canción especificada no se encuentra en la carpeta indicada.</value>
+  <data name="str_audio_ES_AR" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="msgb_title_error_ES_AR" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="AjustarImagen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AjustarImagen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="msgb_obtener_clave_error_fin_ES_AR" xml:space="preserve">
+    <value>} del archivo de recursos. Contacte al desarrollador para más información.</value>
+  </data>
+  <data name="LimpiarLista" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LimpiarLista.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_lblInstalarNuevaVersion_ES_AR" xml:space="preserve">
+    <value>Instalar nueva version</value>
+  </data>
+  <data name="ttip_btnValidarContenido_ES_AR" xml:space="preserve">
+    <value> Valida la existencia de todos los archivos de la lista de contenidos actual</value>
+  </data>
+  <data name="Fullscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fullscreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CerrarPresentador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CerrarPresentador_nuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="msgb_quitar_contenido_ES_AR" xml:space="preserve">
+    <value>¿Está seguro que desea quitar de la lista el contenido seleccionado?</value>
+  </data>
+  <data name="msgb_eliminar_contenido_validado_EN" xml:space="preserve">
+    <value>One missing file, cleaned: </value>
+  </data>
+  <data name="ttip_btnPDFSiguiente_ES_AR" xml:space="preserve">
+    <value>Ir a la página siguiente</value>
+  </data>
+  <data name="ttip_btnReestablecer_ES_AR" xml:space="preserve">
+    <value>Restablece los cambios a sus valores por defecto.</value>
+  </data>
+  <data name="text_Label18_EN" xml:space="preserve">
+    <value>Recording controls</value>
+  </data>
+  <data name="str_programa_nombre_EN" xml:space="preserve">
+    <value>Presentador</value>
+  </data>
+  <data name="text_Label16_ES_AR" xml:space="preserve">
+    <value>Nombre canciones:</value>
+  </data>
+  <data name="ttip_btnAgregaAudio_EN" xml:space="preserve">
+    <value>Open the file selector allowing choose only audio files. After that will add the selected files to the list.</value>
+  </data>
+  <data name="ttip_btnImagenPosicion_ES_AR" xml:space="preserve">
+    <value>Ajusta la imagen a la pantalla o la centra.</value>
+  </data>
+  <data name="ttip_chkAgregaAutomaticamente_ES_AR" xml:space="preserve">
+    <value> Si está activo en cuanto se agregue un contenido a la lista también comenzará a mostrarse o reproducirse interrupiendo el contenido que se esté presentando actualmente.</value>
+  </data>
+  <data name="status_presentacion_sitio_ES_AR" xml:space="preserve">
+    <value>Presentación está mostrando el sitio: </value>
+  </data>
+  <data name="str_actualizar_medio_EN" xml:space="preserve">
+    <value> of Presentador is already available.</value>
+  </data>
+  <data name="text_btnAgregaVideo_EN" xml:space="preserve">
+    <value>Videos</value>
+  </data>
+  <data name="msgb_archivo_presentacion_vacio_ES_AR" xml:space="preserve">
+    <value>No se pueden guardar listas vacías.</value>
+  </data>
+  <data name="ttip_btnBuscaImagenFondo_EN" xml:space="preserve">
+    <value>Search image to set as background image for Presentation</value>
+  </data>
+  <data name="msgb_archivo_presentacion_error_integridad_EN" xml:space="preserve">
+    <value>An error occurs saving the file. The integrity validation fails. Try saving again the file in a different location.</value>
+  </data>
+  <data name="IniciarPresentador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IniciarPresentador_nuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_btnAbreCancionero_ES_AR" xml:space="preserve">
+    <value>Cantemos a Jehová *</value>
+  </data>
+  <data name="msgb_archivo_presentacion_vacio_EN" xml:space="preserve">
+    <value>You can't save empty lists.</value>
+  </data>
+  <data name="ttip_btnBuscaCarpetaCanciones_EN" xml:space="preserve">
+    <value>Search path to songs of "Sing to Jehovah" files. Setting this content "Songs" will work properly.</value>
+  </data>
+  <data name="text_btnAgregaPPT_ES_AR" xml:space="preserve">
+    <value>PPT</value>
+  </data>
+  <data name="msgb_instalar_ES_AR" xml:space="preserve">
+    <value>¿Está seguro que desea comenzar la instalación en este momento? Se cerrará la aplicación durante el proceso.</value>
+  </data>
+  <data name="text_Label3_EN" xml:space="preserve">
+    <value>Songs' list:</value>
+  </data>
+  <data name="ttip_btnAbreSitioOficialTest_ES_AR" xml:space="preserve">
+    <value>Probar la URL en el navegador por defecto. </value>
+  </data>
+  <data name="ttip_btnCerrarArchivo_EN" xml:space="preserve">
+    <value>Finish the edit of current file</value>
+  </data>
+  <data name="status_presentacion_cerrado_ES_AR" xml:space="preserve">
+    <value>Presentación ha sido cerrada correctamente.</value>
+  </data>
+  <data name="ttip_btnCancelarConfig_EN" xml:space="preserve">
+    <value>Cancel changes made in configurations</value>
+  </data>
+  <data name="Detener" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Detener.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="msgb_ejecutar_como_admin_final_ES_AR" xml:space="preserve">
+    <value>Reinicie la aplicación haciendo click con el botón derecho sobre el ícono y eligiendo la opción 'Ejecutar como Administrador' para poder realizar la acción. No se le volverá a pedir esta acción.</value>
+  </data>
+  <data name="FlechaArriba" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FlechaArriba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="msgb_grabacion_compartir_error_desconocido_ES_AR" xml:space="preserve">
+    <value>Reintente la acción.</value>
+  </data>
+  <data name="msgb_grabacion_compartir_error_ES_AR" xml:space="preserve">
+    <value>Ocurrió un error al compartir el archivo. Reintente compartir.</value>
+  </data>
+  <data name="str_cortar_reproduccion_EN" xml:space="preserve">
+    <value>Are you sure to stop the current track playing?</value>
+  </data>
+  <data name="msgb_archivo_presentacion_error_integridad_ES_AR" xml:space="preserve">
+    <value>Ocurrió un error al guardar el archivo. La verificación de integridad del archivo generó un error desconocido. Intente grabar nuevamente sino elija otra ubicación.</value>
+  </data>
+  <data name="status_presentacion_cerrado_EN" xml:space="preserve">
+    <value>Presentation has been closed successfully.</value>
+  </data>
+  <data name="ttip_btnCerrarArchivo_ES_AR" xml:space="preserve">
+    <value> Finaliza la edición del archivo actual.</value>
+  </data>
+  <data name="text_Label7_EN" xml:space="preserve">
+    <value>Control of content currently in Presentation</value>
+  </data>
+  <data name="text_btnAgregaCita_EN" xml:space="preserve">
+    <value>Bible quote</value>
+  </data>
+  <data name="msgb_contenidos_validados_medio_ES_AR" xml:space="preserve">
+    <value> archivos faltantes que se detallan a contiuación: </value>
+  </data>
+  <data name="str_archivos_audio_EN" xml:space="preserve">
+    <value>Audio files</value>
+  </data>
+  <data name="str_archivos_pdf_ES_AR" xml:space="preserve">
+    <value>Archivos PDF</value>
+  </data>
+  <data name="ttip_btnAbreWOLTest_EN" xml:space="preserve">
+    <value>Test the URL in default browser</value>
+  </data>
+  <data name="text_btnBuscaImagenFondo_EN" xml:space="preserve">
+    <value>…</value>
+  </data>
+  <data name="AgregarCancion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AgregarCancion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="str_cancion_ES_AR" xml:space="preserve">
+    <value>Canción</value>
+  </data>
+  <data name="str_actualizar_medio_ES_AR" xml:space="preserve">
+    <value> de Presentador ya está disponible. Contiene correcciones, actualizaciones y mejoras de rendimiento.</value>
+  </data>
+  <data name="ttip_btnCancelarConfig_ES_AR" xml:space="preserve">
+    <value>Cancela los cambios hechos.</value>
+  </data>
+  <data name="str_versiculo_no_encontrado_EN" xml:space="preserve">
+    <value>Verse not found</value>
+  </data>
+  <data name="str_pdf_ES_AR" xml:space="preserve">
+    <value>PDF</value>
+  </data>
+  <data name="str_version_EN" xml:space="preserve">
+    <value>1.4.0</value>
+  </data>
+  <data name="msgb_archivo_presentacion_error_existencia_EN" xml:space="preserve">
+    <value>An error occurs saving the file. Verify the permissions to save in the desired location. Try saving again the file in a different location.</value>
+  </data>
+  <data name="ttip_chkGrabacionInteligente_ES_AR" xml:space="preserve">
+    <value>Cuando está activado no permite que la grabación continúe mientras el presentador esté reproduciendo audio que provenga de un archivo de música, canción o video.</value>
+  </data>
+  <data name="str_archivos_imagen_EN" xml:space="preserve">
+    <value>Image files</value>
+  </data>
+  <data name="msgb_contenidos_validados_principio_EN" xml:space="preserve">
+    <value>There are </value>
+  </data>
+  <data name="text_lblIdioma_EN" xml:space="preserve">
+    <value>Language:</value>
+  </data>
+  <data name="status_versiculo_no_encontrado_EN" xml:space="preserve">
+    <value>Presentation failed showing content from WOL, verify the verse. The error mesage is: </value>
+  </data>
+  <data name="str_actualizar_final_EN" xml:space="preserve">
+    <value>Do you want start the download?</value>
+  </data>
+  <data name="status_cita_en_presentacion_de_cache_EN" xml:space="preserve">
+    <value>Presentation is showing content previously got from WOL. Result from search of '</value>
+  </data>
+  <data name="text_lblGrabarStatus_ES_AR" xml:space="preserve">
+    <value>No se ha grabado nada aún</value>
+  </data>
+  <data name="ttip_btnBuscaImagenFondo_ES_AR" xml:space="preserve">
+    <value>Busca una imagen para establecer el fondo de pantalla de la presentación por defecto para Presentación.</value>
+  </data>
+  <data name="msgb_contenidos_validados_principio_ES_AR" xml:space="preserve">
+    <value>Hay </value>
+  </data>
+  <data name="VistaPrevia_Icon_purple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VistaPrevia.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ttip_btnAbreSitioOficialTest_EN" xml:space="preserve">
+    <value>Test the URL in default browser</value>
+  </data>
+  <data name="Problema" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Problema.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="status_imagen_en_presentacion_EN" xml:space="preserve">
+    <value>Presentation is showing the image: </value>
+  </data>
+  <data name="str_lblGrabarStatus_detenida_ES_AR" xml:space="preserve">
+    <value>Detenida la grabación</value>
+  </data>
+  <data name="text_btnAbreNuevasCanciones_ES_AR" xml:space="preserve">
+    <value>Ir</value>
+  </data>
+  <data name="text_btnAbreSitioWeb_EN" xml:space="preserve">
+    <value>Website *</value>
+  </data>
+  <data name="text_btnBuscaCarpetaGrabaciones_ES_AR" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="text_lblStatus_ES_AR" xml:space="preserve">
+    <value>Presentación nunca ha sido abierta durante esta ejecución. </value>
+  </data>
+  <data name="status_cita_en_presentacion_EN" xml:space="preserve">
+    <value>Presentation is showing content got from WOL. Result from search of '</value>
+  </data>
+  <data name="msgb_contenidos_validados_medio_EN" xml:space="preserve">
+    <value> missing files, detailed as following: </value>
+  </data>
+  <data name="ttip_btnLimpiarContenido_ES_AR" xml:space="preserve">
+    <value> Elimina el contenido de la lista actual</value>
+  </data>
+  <data name="str_archivos_ppt_ES_AR" xml:space="preserve">
+    <value>Archivos de Power Point</value>
+  </data>
+  <data name="ListaArchivos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ListaArchivos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="str_lblGrabarStatus_grabando_ES_AR" xml:space="preserve">
+    <value>Grabando audio</value>
+  </data>
+  <data name="ttip_btnReestablecer_EN" xml:space="preserve">
+    <value>Reset to default values</value>
+  </data>
+  <data name="AgregarVersiculo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AgregarVersiculo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="msgb_contenido_encontrado_ES_AR" xml:space="preserve">
+    <value>Todos los archivos han sido encontrados correctamente.</value>
+  </data>
+  <data name="text_lblConfiguracion_EN" xml:space="preserve">
+    <value>Configurations Panel</value>
+  </data>
+  <data name="LuzPrendida" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LuzPrendida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="str_lblGrabarStatus_pausada_no_guardada_ES_AR" xml:space="preserve">
+    <value>Pausada la grabación. El archivo no se guardó por elección del usuario</value>
+  </data>
+  <data name="text_Label4_EN" xml:space="preserve">
+    <value>List of content to present</value>
+  </data>
+  <data name="ttip_numCanciones_ES_AR" xml:space="preserve">
+    <value>Ingrese el número de la canción. Requiere que esté configurada la ubicación de la carpeta de recursos musicales.</value>
+  </data>
+  <data name="msgb_url_vacia_ES_AR" xml:space="preserve">
+    <value>La dirección está vacía.</value>
+  </data>
+  <data name="ttip_btnPDFUltimo_ES_AR" xml:space="preserve">
+    <value>Ir a la última página</value>
+  </data>
+  <data name="ttip_btnReestablecePresentador_EN" xml:space="preserve">
+    <value>Clear Presentation. Show the default background image.</value>
+  </data>
+  <data name="status_presentacion_sitio_final_EN" xml:space="preserve">
+    <value> (or the result of navigating from it)</value>
+  </data>
+  <data name="status_default_en_presentacion_EN" xml:space="preserve">
+    <value>Presentation is showing a black screen in the second display.</value>
+  </data>
+  <data name="msgb_presentacion_no_disponible_encender_ES_AR" xml:space="preserve">
+    <value>La pantalla de presentación no está disponible. ¿Desea encenderla?</value>
+  </data>
+  <data name="FullscreenExit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FullscreenExit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ttip_btnLimpiarContenido_EN" xml:space="preserve">
+    <value>Clear the list's content</value>
+  </data>
+  <data name="str_archivo_default_titulo_ES_AR" xml:space="preserve">
+    <value>PresentacionNueva1</value>
+  </data>
+  <data name="ttip_btnPDFZoomIn_ES_AR" xml:space="preserve">
+    <value>Acercar</value>
+  </data>
+  <data name="msgb_title_atencion_ES_AR" xml:space="preserve">
+    <value>Atención</value>
+  </data>
+  <data name="status_presentacion_sitio_final_ES_AR" xml:space="preserve">
+    <value> (o el resultado de su navegación desde el mismo)</value>
+  </data>
+  <data name="str_audio_EN" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="text_lblTitle_ES_AR" xml:space="preserve">
+    <value>              Presentador 1.0.0 |  Panel de Control </value>
+  </data>
+  <data name="ttip_btnMinimizar_ES_AR" xml:space="preserve">
+    <value> Minimizar</value>
+  </data>
+  <data name="ttip_btnAgregaCita_ES_AR" xml:space="preserve">
+    <value> Permite ingresar una cita bíblica y devuleve el resultado obtenido en la WOL. Requiere conexión activa a Internet cuando se arma la lista, el contenido del versículo se guarda para poder usarlo sin conexión luego.</value>
+  </data>
+  <data name="str_lblGrabarStatus_detenida_guardado_ES_AR" xml:space="preserve">
+    <value>Detenida la grabación. Guardado el archivo</value>
+  </data>
+  <data name="text_btnAbreTV_ES_AR" xml:space="preserve">
+    <value>Broadcasting</value>
+  </data>
+  <data name="msgb_no_segundo_monitor_EN" xml:space="preserve">
+    <value>There aren't a second display. Do you want show Presentation in the first display?</value>
+  </data>
+  <data name="ttip_btnAmbientModeOn_EN" xml:space="preserve">
+    <value>Add music to list up to indicated minutes.</value>
+  </data>
+  <data name="text_btnAbreJWorg_EN" xml:space="preserve">
+    <value>Official Site</value>
+  </data>
+  <data name="str_archivos_video_ES_AR" xml:space="preserve">
+    <value>Archivos de video</value>
+  </data>
+  <data name="text_btnCancelarConfig_EN" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="text_btnAgregaAudio_ES_AR" xml:space="preserve">
+    <value>Archivos de Audio </value>
+  </data>
+  <data name="str_lblGrabarStatus_grabando_EN" xml:space="preserve">
+    <value>Recording audio</value>
+  </data>
+  <data name="ttip_chkMelodias_ES_AR" xml:space="preserve">
+    <value>Al elegir la canción buscará primero la versión melódica, si no existe una versión melódica para dicha canción aún se elegirá automáticamente la versión de piano.</value>
+  </data>
+  <data name="str_lblStatus_EN" xml:space="preserve">
+    <value>Status: </value>
+  </data>
+  <data name="Primero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Primero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="text_Label18_ES_AR" xml:space="preserve">
+    <value>Controles de grabación </value>
+  </data>
+  <data name="ttip_btnAbreBroadcastingTest_EN" xml:space="preserve">
+    <value>Test the URL in default browser</value>
+  </data>
+  <data name="msgb_quitar_contenido_EN" xml:space="preserve">
+    <value>Are you sure to delete from list the selected content?</value>
+  </data>
+  <data name="text_btnReestablecer_EN" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="text_lblAudioPosition_EN" xml:space="preserve">
+    <value>00:00 / 00:00</value>
+  </data>
+  <data name="text_btnBuscaImagenFondo_ES_AR" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="ttip_btnGrabarCompartir_ES_AR" xml:space="preserve">
+    <value>Compartir la grabación de audio actual</value>
+  </data>
+  <data name="text_btnGuardarConfig_EN" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ttip_btnAgregaCita_EN" xml:space="preserve">
+    <value>Allows select a bible quote and returns the result from the WOL. Require active Internet connection when the user is creating the list, the content of each quote is cached to be used offline later.</value>
+  </data>
+  <data name="str_actualizar_principio_ES_AR" xml:space="preserve">
+    <value>La nueva versión </value>
+  </data>
+  <data name="ttip_btnPDFAnterior_EN" xml:space="preserve">
+    <value>Go to previous page</value>
   </data>
   <data name="ttip_btnPreview_EN" xml:space="preserve">
     <value>Present content</value>
   </data>
+  <data name="str_actualizar_principio_EN" xml:space="preserve">
+    <value>The new version </value>
+  </data>
+  <data name="status_video_en_presentacion_ES_AR" xml:space="preserve">
+    <value>Presentación está reproduciendo el archivo de video: </value>
+  </data>
+  <data name="str_archivo_grabar_titulo_por_defecto_ES_AR" xml:space="preserve">
+    <value>Grabacion_</value>
+  </data>
+  <data name="text_lblVideoPosition_EN" xml:space="preserve">
+    <value>00:00 / 00:00</value>
+  </data>
+  <data name="Volumen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Volumen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="str_ventana_panel_control_nombre_ES_AR" xml:space="preserve">
+    <value>Panel de Control</value>
+  </data>
+  <data name="str_archivo_grabar_mp3_ES_AR" xml:space="preserve">
+    <value>Archivo MP3</value>
+  </data>
+  <data name="text_btnAgregaPDF_EN" xml:space="preserve">
+    <value>PDF Files</value>
+  </data>
+  <data name="ttip_btnCancionCancelar_ES_AR" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
   <data name="ttip_btnPreview_ES_AR" xml:space="preserve">
     <value>Presentar contenido</value>
+  </data>
+  <data name="msgb_configuracion_guardar_EN" xml:space="preserve">
+    <value>Are you sure to save the changes made in configurations?</value>
+  </data>
+  <data name="Programa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Programa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ttip_trackPDFZoom_EN" xml:space="preserve">
+    <value>Adjust Zoom</value>
+  </data>
+  <data name="ttip_btnAbreURLBuscador_ES_AR" xml:space="preserve">
+    <value>Probar la URL en el navegador por defecto. Note que se agregará el filtro de búsqueda "Mateo 24:14" para que no arroje error el sitio.</value>
+  </data>
+  <data name="msgb_archivo_presentacion_abrir_importar_EN" xml:space="preserve">
+    <value>Do you want to clean the list before to add the new content?</value>
+  </data>
+  <data name="ttip_btnMinimizar_EN" xml:space="preserve">
+    <value>Minimize</value>
+  </data>
+  <data name="text_btnCancelarConfig_ES_AR" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="status_default_en_presentacion_ES_AR" xml:space="preserve">
+    <value>Presentación se muestra con fondo negro en la pantalla auxiliar.</value>
+  </data>
+  <data name="str_por_defecto_ES_AR" xml:space="preserve">
+    <value>Por defecto</value>
+  </data>
+  <data name="status_presentacion_imagen_por_defecto_EN" xml:space="preserve">
+    <value>Presentation has been reset succesfully. Shows the default image.</value>
+  </data>
+  <data name="text_Label7_ES_AR" xml:space="preserve">
+    <value>Control de contenido en Presentación actualmente </value>
+  </data>
+  <data name="ttip_btnImagenPosicion_EN" xml:space="preserve">
+    <value>Adjust image layout: in center or fill screen</value>
+  </data>
+  <data name="msgb_instalacion_ya_lista_EN" xml:space="preserve">
+    <value>The new version's installer is already available in your device. Do you want start the instalation immediatly? The process just take a few minutes (if any)</value>
+  </data>
+  <data name="text_chkAgregaAutomaticamente_ES_AR" xml:space="preserve">
+    <value>Mostrar o reproducir el contenido en cuanto se agrega </value>
+  </data>
+  <data name="str_archivo_presentacion_EN" xml:space="preserve">
+    <value>Presentation files</value>
+  </data>
+  <data name="str_lblGrabarStatus_detenida_no_guardada_EN" xml:space="preserve">
+    <value>Recording audio stopped. The file wasn't save by user choose.</value>
+  </data>
+  <data name="status_error_presentacion_sitio_EN" xml:space="preserve">
+    <value>Presentation can't show site: </value>
+  </data>
+  <data name="text_Label11_ES_AR" xml:space="preserve">
+    <value>Sitio oficial:</value>
+  </data>
+  <data name="msgb_instalar_no_archivo_ES_AR" xml:space="preserve">
+    <value>No se encontró el archivo de instalación.</value>
+  </data>
+  <data name="ttip_btnGuardarConfig_ES_AR" xml:space="preserve">
+    <value>Guarda las configuraciones actuales</value>
+  </data>
+  <data name="ttip_btnAgregaCitaLista_ES_AR" xml:space="preserve">
+    <value>Agrega la cita a la lista</value>
+  </data>
+  <data name="status_pdf_en_presentacion_EN" xml:space="preserve">
+    <value>Presentation is showing the PDF file: </value>
+  </data>
+  <data name="text_chkMostrarCancioneroPDF_ES_AR" xml:space="preserve">
+    <value>Mostrar letra de canción si la pantalla adicional está disponible</value>
+  </data>
+  <data name="ttip_btnAgregaCancion_ES_AR" xml:space="preserve">
+    <value> Permite agregar canciones del cancionero solo ingresando el número.</value>
+  </data>
+  <data name="msgb_configuracion_guardar_ES_AR" xml:space="preserve">
+    <value>¿Está seguro que desea guardar las configuraciones ingresadas?</value>
+  </data>
+  <data name="text_chkAgregaAutomaticamente_EN" xml:space="preserve">
+    <value>Show or play the content when is added</value>
+  </data>
+  <data name="ttip_btnImagenLuz_ES_AR" xml:space="preserve">
+    <value>Cambia el color de fondo de la imagen para permitir el énfasis correcto en todas las situaciones.</value>
+  </data>
+  <data name="msgb_noURL_EN" xml:space="preserve">
+    <value>No valid address to show.</value>
+  </data>
+  <data name="Pausa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pausa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ttip_btnAudioMute_ES_AR" xml:space="preserve">
+    <value>Alejar</value>
+  </data>
+  <data name="Guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="msgb_archivo_presentacion_error_existencia_ES_AR" xml:space="preserve">
+    <value>Ocurrió un error al guardar el archivo. Verifique si tiene los permisos necesarios para guardar en la ubicación seleccionada y guarde nuevamente de lo contrario elija otra ubicación.</value>
+  </data>
+  <data name="ttip_btnBug_EN" xml:space="preserve">
+    <value>Report a bug / Contact with the developer</value>
+  </data>
+  <data name="msgb_configuracion_restablecer_ES_AR" xml:space="preserve">
+    <value>¿Está seguro que desea restablecer los valores a su configuración por defecto?</value>
+  </data>
+  <data name="text_lblIdioma_ES_AR" xml:space="preserve">
+    <value>Idioma:</value>
+  </data>
+  <data name="Luz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Luz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="msgb_no_hay_canciones_en_carpeta_ES_AR" xml:space="preserve">
+    <value>No se encontró ningún archivo válido dentro de la carpeta especificada: </value>
+  </data>
+  <data name="status_imagen_en_presentacion_ES_AR" xml:space="preserve">
+    <value>Presentación está mostrando la imagen: </value>
+  </data>
+  <data name="VistaPrevia_Blanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VistaPrevia_Blanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="str_lblGrabarStatus_detenida_error_EN" xml:space="preserve">
+    <value>Recording audio stopped. An error occurs while saving the file.</value>
+  </data>
+  <data name="text_btnAgregaCitaLista_EN" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="status_presentacion_cerrado_de_antes_EN" xml:space="preserve">
+    <value>Presentation was already closed. Status is updated.</value>
+  </data>
+  <data name="ttip_btnAgregaPDF_EN" xml:space="preserve">
+    <value>Open the file selector allowing choose only PDF files. After that will add the selected files to the list</value>
+  </data>
+  <data name="text_chkMelodias_EN" xml:space="preserve">
+    <value>Prefer melodic version</value>
+  </data>
+  <data name="Configuracion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Configuracion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="msgb_no_segundo_monitor_ES_AR" xml:space="preserve">
+    <value>No se detectó ningún otro monitor conectado. ¿Desea mostrarlo en esta misma pantalla?</value>
+  </data>
+  <data name="text_Label6_EN" xml:space="preserve">
+    <value>Quote:</value>
+  </data>
+  <data name="str_lblGrabarStatus_Inteligente_ES_AR" xml:space="preserve">
+    <value> (controlado por Grabación Inteligente)</value>
+  </data>
+  <data name="text_Label9_ES_AR" xml:space="preserve">
+    <value>Audio:</value>
+  </data>
+  <data name="ttip_btnGrabarToogle_EN" xml:space="preserve">
+    <value>Record audio</value>
+  </data>
+  <data name="ttip_btnBajarItem_EN" xml:space="preserve">
+    <value>Move down the selected item in the list</value>
+  </data>
+  <data name="status_versiculo_no_encontrado_ES_AR" xml:space="preserve">
+    <value>Presentación falló al mostrar el contenido de la WOL, verifique que el versículo que intenta buscar exista y que no esté mal escrito. El error es: </value>
+  </data>
+  <data name="text_lblTitle_EN" xml:space="preserve">
+    <value>              Presentador 1.0.0 | Control Panel</value>
+  </data>
+  <data name="ttip_btnLimpiaItem_ES_AR" xml:space="preserve">
+    <value> Elimina el item seleccionado actualmente</value>
+  </data>
+  <data name="str_archivo_default_titulo_EN" xml:space="preserve">
+    <value>NewPresentation1</value>
+  </data>
+  <data name="text_btnAgregaCita_ES_AR" xml:space="preserve">
+    <value>Cita Bíblica</value>
+  </data>
+  <data name="str_lblGrabarStatus_detenida_guardado_EN" xml:space="preserve">
+    <value>Recording audio stopped.</value>
+  </data>
+  <data name="ttip_chkGrabacionInteligente_EN" xml:space="preserve">
+    <value>Prevent the recording process continue when the playing process of audio, song or video file is active. Resume the recording process automatically when playing process is paused or finished. Recommended.</value>
+  </data>
+  <data name="text_Label13_EN" xml:space="preserve">
+    <value>Broadcasting:</value>
+  </data>
+  <data name="msgb_obtener_clave_error_ES_AR" xml:space="preserve">
+    <value>Ocurrió un error consiguiendo la clave {</value>
+  </data>
+  <data name="str_archivo_grabar_titulo_por_defecto_EN" xml:space="preserve">
+    <value>Recording_</value>
+  </data>
+  <data name="text_btnGuardarConfig_ES_AR" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="ttip_btnAgregaVideo_EN" xml:space="preserve">
+    <value>Open the file selector allowing choose only image files. After that will add the selected files to the list.</value>
+  </data>
+  <data name="FlechaAbajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FlechaAbajo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="msgb_grabacion_compartir_error_EN" xml:space="preserve">
+    <value>An error occurs while sharing the file. Retry the action.</value>
+  </data>
+  <data name="text_btnAbreCancioneroNuevo_ES_AR" xml:space="preserve">
+    <value>Canciones nuevas *</value>
+  </data>
+  <data name="msgb_configuracion_cancelar_ES_AR" xml:space="preserve">
+    <value>¿Está seguro que desea cancelar las configuraciones?</value>
+  </data>
+  <data name="msgb_eliminar_contenidos_validados_principio_EN" xml:space="preserve">
+    <value>Missing files: </value>
+  </data>
+  <data name="msgb_no_versiculo_EN" xml:space="preserve">
+    <value>You didn't put a verse to search for.</value>
+  </data>
+  <data name="text_btnAbreURLBuscador_EN" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="ttip_btnAgregaImagen_EN" xml:space="preserve">
+    <value>Open the file selector allowing choose only video files. After that will add the selected files to the list.</value>
+  </data>
+  <data name="str_btnAmbientModeOn_ES_AR" xml:space="preserve">
+    <value>Iniciar</value>
+  </data>
+  <data name="text_btnAbreCancionero_EN" xml:space="preserve">
+    <value>Sing to Jehovah</value>
+  </data>
+  <data name="text_Label13_ES_AR" xml:space="preserve">
+    <value>Broadcasting:</value>
+  </data>
+  <data name="text_btnAgregarCancionLista_EN" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="ttip_btnReacomodar_ES_AR" xml:space="preserve">
+    <value>Volver a acomodar la ventana para ajustar a la posición actual.</value>
+  </data>
+  <data name="ttip_btnGuardarContenidos_ES_AR" xml:space="preserve">
+    <value> Guarda la lista de contenidos actual</value>
+  </data>
+  <data name="AgregarSitioWeb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AgregarSitioWeb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ttip_btnAbreCancioneroNuevo_EN" xml:space="preserve">
+    <value>Add to list the official new songs' list from the WOL.</value>
+  </data>
+  <data name="ttip_btnAbreCancioneroNuevo_ES_AR" xml:space="preserve">
+    <value>Agrega a la lista la página de las nuevas canciones oficiales obtenidas de la Biblioteca en Línea.</value>
+  </data>
+  <data name="ttip_btnAbreCancionero_EN" xml:space="preserve">
+    <value>Add to list the official songs website list from the WOL.</value>
+  </data>
+  <data name="ttip_btnAbreCancionero_ES_AR" xml:space="preserve">
+    <value>Agrega a la lista la página del cancionero oficial obtenido de la Biblioteca en Línea</value>
+  </data>
+  <data name="ttip_btnAbreCanciones_EN" xml:space="preserve">
+    <value>Test the URL in default browser</value>
+  </data>
+  <data name="ttip_btnAbreCanciones_ES_AR" xml:space="preserve">
+    <value>Probar la URL en el navegador por defecto</value>
+  </data>
+  <data name="ttip_btnAbreNuevasCanciones_EN" xml:space="preserve">
+    <value>Test the URL in default browser</value>
+  </data>
+  <data name="ttip_btnAbreNuevasCanciones_ES_AR" xml:space="preserve">
+    <value>Probar la URL en el navegador por defecto</value>
+  </data>
+  <data name="ttip_btnAbreSitioWeb_EN" xml:space="preserve">
+    <value>Allow to input a website address to add to list.</value>
+  </data>
+  <data name="ttip_btnAbreSitioWeb_ES_AR" xml:space="preserve">
+    <value>Permite ingresar la dirección de un sitio web para agregar a la lista.</value>
+  </data>
+  <data name="ttip_btnAgregaSitioLista_EN" xml:space="preserve">
+    <value>Add website to list.</value>
+  </data>
+  <data name="ttip_btnAgregaSitioLista_ES_AR" xml:space="preserve">
+    <value>Agrega el sitio a la lista.</value>
+  </data>
+  <data name="ttip_btnCancelaSitio_EN" xml:space="preserve">
+    <value>Cancel website input</value>
+  </data>
+  <data name="ttip_btnCancelaSitio_ES_AR" xml:space="preserve">
+    <value>Cancela el ingreso del sitio</value>
+  </data>
+  <data name="ttip_txtCustomURL_EN" xml:space="preserve">
+    <value>Website address</value>
+  </data>
+  <data name="ttip_txtCustomURL_ES_AR" xml:space="preserve">
+    <value>Ingrese la dirección del sitio aquí</value>
+  </data>
+  <data name="ttip_txtURLCanciones_EN" xml:space="preserve">
+    <value>URL of website with songs' list from WOL</value>
+  </data>
+  <data name="ttip_txtURLCanciones_ES_AR" xml:space="preserve">
+    <value>URL del sitio con la lista de canciones de la Biblioteca en Línea</value>
+  </data>
+  <data name="ttip_txtURLNuevasCanciones_EN" xml:space="preserve">
+    <value>URL of website with new songs' list from WOL</value>
+  </data>
+  <data name="ttip_txtURLNuevasCanciones_ES_AR" xml:space="preserve">
+    <value>URL del sitio con la lista de canciones nuevas de la Biblioteca en Línea</value>
   </data>
 </root>

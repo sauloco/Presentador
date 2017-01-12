@@ -22,11 +22,14 @@ Partial Class Presentacion
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Presentacion))
         Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.AxAcroPDF1 = New AxAcroPDFLib.AxAcroPDF()
+        Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.CheckScreens = New System.Windows.Forms.Timer(Me.components)
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AxAcroPDF1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,14 +70,34 @@ Partial Class Presentacion
         Me.AxAcroPDF1.Location = New System.Drawing.Point(288, 236)
         Me.AxAcroPDF1.Name = "AxAcroPDF1"
         Me.AxAcroPDF1.OcxState = CType(resources.GetObject("AxAcroPDF1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxAcroPDF1.Size = New System.Drawing.Size(257, 250)
+        Me.AxAcroPDF1.Size = New System.Drawing.Size(192, 192)
         Me.AxAcroPDF1.TabIndex = 4
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnCerrar.BackgroundImage = Global.Presentador.My.Resources.Resources.Cerrar1
+        Me.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCerrar.Location = New System.Drawing.Point(513, 0)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(50, 50)
+        Me.btnCerrar.TabIndex = 38
+        Me.btnCerrar.UseVisualStyleBackColor = False
+        Me.btnCerrar.Visible = False
+        '
+        'CheckScreens
+        '
+        Me.CheckScreens.Interval = 1000
         '
         'Presentacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(563, 500)
+        Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.AxAcroPDF1)
         Me.Controls.Add(Me.WebBrowser1)
         Me.Controls.Add(Me.PictureBox1)
@@ -93,4 +116,6 @@ Partial Class Presentacion
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents WebBrowser1 As WebBrowser
     Friend WithEvents AxAcroPDF1 As AxAcroPDFLib.AxAcroPDF
+    Friend WithEvents btnCerrar As Button
+    Friend WithEvents CheckScreens As Timer
 End Class
