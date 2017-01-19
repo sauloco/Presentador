@@ -827,7 +827,7 @@
     <value>Recording audio stopped.</value>
   </data>
   <data name="str_version_ES_AR" xml:space="preserve">
-    <value>1.4.0</value>
+    <value>1.4.1</value>
   </data>
   <data name="ttip_btnAgregaCitaLista_EN" xml:space="preserve">
     <value>Add quote to list</value>
@@ -1142,7 +1142,7 @@
     <value>PDF</value>
   </data>
   <data name="str_version_EN" xml:space="preserve">
-    <value>1.4.0</value>
+    <value>1.4.1</value>
   </data>
   <data name="msgb_archivo_presentacion_error_existencia_EN" xml:space="preserve">
     <value>An error occurs saving the file. Verify the permissions to save in the desired location. Try saving again the file in a different location.</value>

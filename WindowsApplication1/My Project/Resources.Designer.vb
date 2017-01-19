@@ -2263,7 +2263,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 1.4.0.
+        '''  Looks up a localized string similar to 1.4.1.
         '''</summary>
         Friend ReadOnly Property str_version_EN() As String
             Get
@@ -2272,7 +2272,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 1.4.0.
+        '''  Looks up a localized string similar to 1.4.1.
         '''</summary>
         Friend ReadOnly Property str_version_ES_AR() As String
             Get

@@ -32,25 +32,34 @@
         End If
     End Sub
     Private Sub Presentacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Me.Location = Screen.AllScreens(0).Bounds.Location + New Point(0, 0) Then
+        If Me.Location = Screen.PrimaryScreen.Bounds.Location + New Point(0, 0) Then
             Me.TopMost = False
             btnCerrar.Visible = True
             CheckScreens.Enabled = True
-            btnCerrar.Left = Screen.AllScreens(0).WorkingArea.Width - btnCerrar.Width
+            ControlPanel.monitorPrincipal = True
+            btnCerrar.Left = Screen.PrimaryScreen.WorkingArea.Width - btnCerrar.Width
+        Else
+            ControlPanel.monitorPrincipal = False
         End If
 
     End Sub
     Private Sub Presentacion_PermiteCerrar() Handles Me.Move, Me.ResizeEnd
         Try
-            If Me.Location = Screen.AllScreens(0).Bounds.Location + New Point(0, 0) Then
-                btnCerrar.Left = Screen.AllScreens(0).WorkingArea.Width - btnCerrar.Width
+            If Me.Location = Screen.PrimaryScreen.Bounds.Location + New Point(0, 0) Then
+                btnCerrar.Left = Screen.PrimaryScreen.WorkingArea.Width - btnCerrar.Width
                 Me.TopMost = False
                 btnCerrar.Visible = True
                 CheckScreens.Enabled = True
+                ControlPanel.monitorPrincipal = True
+                Update()
+                UpdateBounds()
             Else
                 btnCerrar.Visible = False
                 Me.TopMost = True
                 CheckScreens.Enabled = False
+                ControlPanel.monitorPrincipal = False
+                Update()
+                UpdateBounds()
             End If
         Catch ex As Exception
 
@@ -64,21 +73,29 @@
 
     Private Sub CheckScreens_Tick(sender As Object, e As EventArgs) Handles CheckScreens.Tick
         CheckScreens.Enabled = False
-        If Location = Screen.AllScreens(0).Bounds.Location + New Point(0, 0) Then
+        If Location = Screen.PrimaryScreen.Bounds.Location + New Point(0, 0) Then
+            Dim screen As Screen
+            If Screen.AllScreens.Length > 1 Then
+                For Each tempScreen In Screen.AllScreens
+                    If tempScreen Is Screen.PrimaryScreen Then
+                        Continue For
+                    Else
+                        Screen = tempScreen
+                    End If
+                Next
+            Else
+                Screen = Screen.PrimaryScreen
+            End If
+            WindowState = FormWindowState.Normal
+            TopMost = True
+            StartPosition = FormStartPosition.Manual
+            Location = screen.Bounds.Location + New Point(0, 0)
+            FormBorderStyle = FormBorderStyle.None
+            WindowState = FormWindowState.Maximized
+            Update()
+            UpdateBounds()
+            screen = Nothing
 
-            Try
-                Dim tempScreen As Screen = Screen.AllScreens(1)
-                WindowState = FormWindowState.Normal
-                TopMost = True
-                StartPosition = FormStartPosition.Manual
-                Location = tempScreen.Bounds.Location + New Point(0, 0)
-                FormBorderStyle = FormBorderStyle.None
-                WindowState = FormWindowState.Maximized
-                Update()
-                UpdateBounds()
-                tempScreen = Nothing
-            Catch ex As Exception
-            End Try
         End If
         CheckScreens.Enabled = True
     End Sub

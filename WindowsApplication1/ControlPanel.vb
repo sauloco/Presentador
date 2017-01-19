@@ -19,6 +19,10 @@
     Dim df_NombreArchivoCancionesDespues = ".mp3"
     Dim df_LanguageID = "ES_AR"
     Dim df_Melodias = vbTrue
+    Dim df_DataSeparator = "|"
+    Dim df_SafeReplaceDataSeparator = "$$"
+    Dim df_ContentSeparator = ";"
+    Dim df_SafeReplaceContentSeparator = "@@"
     ' Valores que se usarán
     Dim videoFilters As String = df_videoFilters
     Dim imageFilters As String = df_imageFilters
@@ -39,8 +43,8 @@
     ' Variables de entorno
     Private WithEvents webClient As System.Net.WebClient
     Dim Presentacion As Presentacion
-    Dim panelsTop As Integer = 351
-    Dim panelLeft As Integer = 12
+    Dim panelsTop As Integer = 358
+    Dim panelLeft As Integer = 16
     Dim panelControlsTop As Integer = 92
     Dim panelControlsLeft As Integer = 694
     Public nombreGlobalArchivo As String = ""
@@ -52,6 +56,7 @@
     Dim PointerOverAudioTrack As Boolean = False
     Dim PointerOverVideoTrack As Boolean = False
     Dim versionEnDescarga As String = ""
+    Public monitorPrincipal As Boolean = False
     Public Sub btnIniciaPresentador_Click(sender As Object, e As EventArgs) Handles btnIniciaPresentador.Click
         tooglePresentacion(Nothing)
     End Sub
@@ -60,14 +65,19 @@
     ''' </summary>
     ''' <returns>Devuelve true/false en caso de que se haya completado la tarea o no.</returns>
     Public Function tooglePresentacion(senderForm As Form)
-        Dim monitorPrincipal As Boolean = False
+        Dim screen As Screen
         If Not PresentadorDisponible() Then
-            Dim screen As Screen
-            Try
-                screen = Screen.AllScreens(1)
+            If Screen.AllScreens.Length > 1 Then
+                For Each tempScreen In Screen.AllScreens
+                    If tempScreen Is Screen.PrimaryScreen Then
+                        Continue For
+                    Else
+                        screen = tempScreen
+                    End If
+                Next
                 MostrarStatus(devuelveResourceString("status", "default_en_presentacion"))
-            Catch
-                screen = Screen.AllScreens(0)
+            Else
+                screen = Screen.PrimaryScreen
                 monitorPrincipal = True
 
                 If MsgBox(devuelveResourceString("msgb", "no_segundo_monitor"), MsgBoxStyle.YesNo, devuelveResourceString("msgb_title", "atencion")) = MsgBoxResult.No Then
@@ -80,7 +90,7 @@
                     Return False
                 End If
                 MostrarStatus(devuelveResourceString("status", "default_en_presentacion_principal"))
-            End Try
+            End If
             Presentacion = New Presentacion()
             Presentacion.TopMost = Not monitorPrincipal
             Presentacion.StartPosition = FormStartPosition.Manual
@@ -310,7 +320,7 @@
         End If
         Dim resultado As String = ""
         For Each item In lstContenidos.Items
-            resultado += item.Text + "|" + item.SubItems(1).Text + ";"
+            resultado += item.Text + df_DataSeparator + item.SubItems(1).Text + df_ContentSeparator
         Next
         If My.Computer.FileSystem.ReadAllText(nombreGlobalArchivo) = resultado Then
             Return False
@@ -1053,7 +1063,7 @@
             Dim item As ListViewItem
             Dim resultado As String = ""
             For Each item In lstContenidos.Items
-                resultado += item.Text + "|" + item.SubItems(1).Text + ";"
+                resultado += item.Text + df_DataSeparator + item.SubItems(1).Text.Replace(df_ContentSeparator, df_SafeReplaceContentSeparator).Replace(df_DataSeparator, df_SafeReplaceDataSeparator) + df_ContentSeparator
             Next
             If nombreGlobalArchivo = "" Then
                 Dim saveFileDialog1 As SaveFileDialog = New SaveFileDialog()
@@ -1104,17 +1114,17 @@
                 nombreGlobalArchivo = openFileDialog1.FileName
                 lblNombreArchivo.Text = openFileDialog1.FileName
             End If
-            For Each line In My.Computer.FileSystem.ReadAllText(openFileDialog1.FileName).Split(";")
+            For Each line In My.Computer.FileSystem.ReadAllText(openFileDialog1.FileName).Split(df_ContentSeparator)
                 If line = "" Then
                     Exit For
                 End If
                 Dim lstItem = New ListViewItem()
                 lstItem.Checked = False
-                lstItem.Text = line.Split("|")(0)
-                lstItem.BackColor = coloreaItem(line.Split("|")(0).ToString())
+                lstItem.Text = line.Split(df_DataSeparator)(0)
+                lstItem.BackColor = coloreaItem(line.Split(df_DataSeparator)(0).ToString())
                 lstItem.ForeColor = Color.White
-                lstItem.ToolTipText = line.Split("|")(1)
-                lstItem.SubItems.Add(line.Split("|")(1))
+                lstItem.ToolTipText = line.Split(df_DataSeparator)(1).Replace(df_SafeReplaceContentSeparator, df_ContentSeparator).Replace(df_SafeReplaceDataSeparator, df_DataSeparator)
+                lstItem.SubItems.Add(line.Split(df_DataSeparator)(1).Replace(df_SafeReplaceContentSeparator, df_ContentSeparator).Replace(df_SafeReplaceDataSeparator, df_DataSeparator))
                 lstContenidos.Items.Add(lstItem)
                 lstItem = Nothing
             Next
@@ -1271,17 +1281,17 @@
             nombreGlobalArchivo = file
             lblNombreArchivo.Text = file
 
-            For Each line In My.Computer.FileSystem.ReadAllText(file).Split(";")
+            For Each line In My.Computer.FileSystem.ReadAllText(file).Split(df_ContentSeparator)
                 If line = "" Then
                     Exit For
                 End If
                 Dim lstItem = New ListViewItem()
                 lstItem.Checked = False
-                lstItem.Text = line.Split("|")(0)
-                lstItem.BackColor = coloreaItem(line.Split("|")(0).ToString())
+                lstItem.Text = line.Split(df_DataSeparator)(0)
+                lstItem.BackColor = coloreaItem(line.Split(df_DataSeparator)(0).ToString())
                 lstItem.ForeColor = Color.White
-                lstItem.ToolTipText = line.Split("|")(1)
-                lstItem.SubItems.Add(line.Split("|")(1))
+                lstItem.ToolTipText = line.Split(df_DataSeparator)(1).Replace(df_SafeReplaceContentSeparator, df_ContentSeparator).Replace(df_SafeReplaceDataSeparator, df_DataSeparator)
+                lstItem.SubItems.Add(line.Split(df_DataSeparator)(1).Replace(df_SafeReplaceContentSeparator, df_ContentSeparator).Replace(df_SafeReplaceDataSeparator, df_DataSeparator))
                 lstContenidos.Items.Add(lstItem)
                 lstItem = Nothing
             Next
@@ -1308,7 +1318,7 @@
         df_fileImageBackgroundDefault = devuelveResourceString("str", "por_defecto")
         ComboBox1.Items.Clear()
         Dim libros As String = devuelveResourceString("df", "libros_biblia")
-        For Each libro In libros.Split("|")
+        For Each libro In libros.Split(df_DataSeparator)
             ComboBox1.Items.Add(libro)
         Next
         'Actualiza el nombre de la ventana
@@ -1853,6 +1863,8 @@
         panConfigs.Top = 28
         panConfigs.Left = btnConfiguracion.Left + btnConfiguracion.Width - panConfigs.Width
         btnBug.Left = btnConfiguracion.Left - btnBug.Width
+        panelsTop = chkAgregaAutomaticamente.Top + chkAgregaAutomaticamente.Height + 4
+        panelLeft = btnAbreCancionero.Left
         'StatusBar.Width = Me.Width
         'StatusBar.Left = 0
         Me.Refresh()

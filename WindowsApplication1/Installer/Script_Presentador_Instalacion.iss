@@ -7,8 +7,8 @@
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{10608935-3B70-4BD3-9FC8-6DAFEDADADDF}
 AppName=Presentador
-AppVersion=1.3.2
-AppVerName=Presentador 1.3.2
+AppVersion=1.4.0
+AppVerName=Presentador 1.4.0
 AppPublisher=RusticIT
 AppPublisherURL=http://www.rusticit.com/
 AppSupportURL=http://www.rusticit.com/
@@ -36,7 +36,7 @@ Source: "C:\Users\SauloUsr\Documents\Visual Studio 2015\Projects\WindowsApplicat
 Source: "C:\Users\SauloUsr\Documents\Visual Studio 2015\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\Interop.AcroPDFLib.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\SauloUsr\Documents\Visual Studio 2015\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\Interop.WMPLib.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\SauloUsr\Downloads\Instalador Acrobat Reader (Sin agregados).exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\SauloUsr\Downloads\Manual de instalación y uso - Presentador 1.3.2.pdf"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\SauloUsr\Downloads\Manual de instalación y uso - Presentador 1.4.0.pdf"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Recursos_Ejemplo\Final\VistaPrevia.ico"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Recursos_Ejemplo\Final\VistaPrevia.png"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
